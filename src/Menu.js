@@ -6,8 +6,10 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Button} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Image } from 'react-native';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right, Title } from 'native-base'
+import { bold, gray } from 'ansi-colors';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,10 +21,39 @@ const instructions = Platform.select({
 export default class Menu extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Edutec</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <Container>
+        <Header>
+          <Body>
+            <Title>Edutec</Title>
+          </Body>
+        </Header>
+        <Content>
+          <Card>
+            <CardItem >
+              <Left>
+                <Body>
+                  <Text style={{fontSize: 24}}>Quimico</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem style={{height: 200}} cardBody  button onPress={() => this.props.navigation.navigate('Chemical')}>
+              <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={{ height: 200, width: null, flex: 1 }} />
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem style={{backgroundColor: 'gray'}}>
+              <Left>
+                <Body>
+                  <Text style={{fontSize: 24}}>Recepción</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={{ height: 180, width: null, flex: 1, opacity: 0.5, backgroundColor: 'gray'}} />
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }
