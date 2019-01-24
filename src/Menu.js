@@ -16,11 +16,11 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class Main extends Component {
+export default class Menu extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Toma de sangre</Text>
+        <Text style={styles.welcome}>Edutec</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     );
