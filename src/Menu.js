@@ -37,11 +37,11 @@ export default class Menu extends Component {
               </Left>
             </CardItem>
             <CardItem style={{height: 200}} cardBody  button onPress={() => this.props.navigation.navigate('Chemical')}>
-              <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={{ height: 200, width: null, flex: 1 }} />
+              <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={{ height: 200, width: null, flex: 1, resizeMode: 'contain' }} />
             </CardItem>
           </Card>
           <Card>
-            <CardItem style={{backgroundColor: 'gray'}}>
+            <CardItem style={{backgroundColor: 'gray', opacity: 0.5}}>
               <Left>
                 <Body>
                   <Text style={{fontSize: 24}}>Recepción</Text>
@@ -49,7 +49,7 @@ export default class Menu extends Component {
               </Left>
             </CardItem>
             <CardItem cardBody>
-              <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={{ height: 180, width: null, flex: 1, opacity: 0.5, backgroundColor: 'gray'}} />
+              <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={{ height: 200, width: null, flex: 1, opacity: 0.5, backgroundColor: 'gray', resizeMode: 'contain'}} />
             </CardItem>
           </Card>
         </Content>

@@ -19,7 +19,10 @@ import BloodTest from './chemical/BloodTest'
 
 const ChemicalStack = createStackNavigator ({
   HomeChemical: {
-    screen: MainChemical
+    screen: MainChemical,
+    navigationOptions: {
+      header: null
+    }
   },
   BloodTest: {
     screen: BloodTest

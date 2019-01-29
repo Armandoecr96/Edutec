@@ -4816,7 +4816,7 @@ react-native-drawer@2.5.1:
     prop-types "^15.5.8"
     tween-functions "^1.0.1"
 
-react-native-easy-grid@0.2.0:
+react-native-easy-grid@0.2.0, react-native-easy-grid@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/react-native-easy-grid/-/react-native-easy-grid-0.2.0.tgz#4718031aa1baaa2613b829fc807da288eb0d2797"
   integrity sha512-ZTi84+nJq2wwov55s1rHez0twk/8bs/AGnA5ERF8eYsMbOhBhOzzclj+TyY+/woB/2REAd9QQmWmIT/L999n6Q==
@@ -4866,6 +4866,11 @@ react-native-safe-area-view@^0.11.0:
   version "1.0.0-alpha.22"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
   integrity sha512-kSyAt0AeVU6N7ZonfV6dP6iZF8B7Bce+tk3eujXhzBGsLg0VSLnU7uE9VqJF0xdQrHR91ZjGgVMieo/8df9KTA==
+
+react-native-sound@^0.10.9:
+  version "0.10.9"
+  resolved "https://registry.yarnpkg.com/react-native-sound/-/react-native-sound-0.10.9.tgz#6b00b0f4afd017cde09fbb9d171df1b5d5b851a8"
+  integrity sha1-awCw9K/QF83gn7udFx3xtdW4Uag=
 
 react-native-tab-view@^1.0.0, react-native-tab-view@^1.2.0:
   version "1.3.1"
