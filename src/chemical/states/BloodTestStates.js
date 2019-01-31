@@ -3,8 +3,9 @@ export default this.state = {
     questionary: [
         {
             id: 0,
-            spanishText: 'frase en español',
-            mayanText: "Analte'o' ich maya",
+            spanishText: 'Tome asiento, por favor',
+            mayanText: "Mèent uts a kutàal",
+            audio: '../../assets/audio/AUD-20190127-WA0001.m4a',
             yesID: 0,
             noID: 0,
         }

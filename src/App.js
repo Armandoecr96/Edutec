@@ -25,7 +25,10 @@ const ChemicalStack = createStackNavigator ({
     }
   },
   BloodTest: {
-    screen: BloodTest
+    screen: BloodTest,
+    navigationOptions: {
+      title: 'Muestra Sanguinea' 
+    }
   }
 })
 

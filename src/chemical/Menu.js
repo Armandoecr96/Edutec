@@ -27,7 +27,7 @@ export default class Menu extends Component {
             <Row style={styles.row}>
               <Col style={styles.col}>
                 <Card style={{ borderRadius: 8 }}>
-                  <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('Chemical')}>
+                  <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('BloodTest')}>
                     <Left>
                       <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={styles.image} />
                     </Left>
