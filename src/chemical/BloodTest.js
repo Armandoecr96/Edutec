@@ -18,22 +18,19 @@ const instructions = Platform.select({
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
+
+
 export default class Main extends Component {
 
   constructor(props) {
     super(props)
-    this.state={
+    this.state = {
       index: 0
     }
   }
 
-  play = (audio) => {
-    try {
-      // or play from url
-      SoundPlayer.playSoundFile(audio, 'm4a')
-  } catch (e) {
-      console.log(`cannot play the sound file`, e)
-  }
+  play(audio) {
+    console.log(audio)
   }
 
   render() {
@@ -44,7 +41,7 @@ export default class Main extends Component {
         }</Text>
         <Text style={styles.instructions}>{states.questionary[this.state.index].mayanText}</Text>
         <Button
-          onPress={() => this.play(states.questionary[this.state.index].audio, this)}
+          onPress={() => this.play(states.questionary[this.state.index].audio)}
           title="Play"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
