@@ -137,7 +137,6 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-sound-player')
     compile project(':react-native-sound')
     compile project(':react-native-vector-icons')
     compile project(':react-native-gesture-handler')

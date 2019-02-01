@@ -9,31 +9,65 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import states from './states/BloodTestStates'
-import Sound from 'react-native-sound'
-import SoundPlayer from 'react-native-sound-player'
+var SoundPlayer = require('react-native-sound');
+var song = null
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-
-export default class Main extends Component {
+export default class BloodTest extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      index: 0
+      index: 0,
+      pause: false
     }
   }
 
-  play(audio) {
-    console.log(audio)
+  componentWillMount() {
+    song = new SoundPlayer(states.questionary[0].audio, null, (error) => {
+      if (error) {
+        console.log('failed to load the sound', error);
+        return;
+      }
+      console.log('duration in seconds: ' + song.getDuration() + 'number of channels: ' + song.getNumberOfChannels());
+
+    });
+  }
+
+  play() {
+    if(song !== null){
+      song.play((succes) => {
+        if(!succes){
+          console.log('Error en reproducción')
+        }
+
+      })
+    }
+  }
+
+  pause() {
+    if(song !== null){
+      song.pause((succes) => {
+        if(!succes){
+          console.log('Error en reproducción')
+        }
+
+      })
+    }
+  }
+
+  stop() {
+    if(song !== null){
+      song.stop((succes) => {
+        if(!succes){
+          console.log('Error en reproducción')
+        }
+
+      })
+    }
   }
 
   render() {
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>{
@@ -41,8 +75,20 @@ export default class Main extends Component {
         }</Text>
         <Text style={styles.instructions}>{states.questionary[this.state.index].mayanText}</Text>
         <Button
-          onPress={() => this.play(states.questionary[this.state.index].audio)}
+          onPress={() => this.play()}
           title="Play"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+        />
+        <Button
+          onPress={() => this.pause()}
+          title="Pause"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+        />
+        <Button
+          onPress={() => this.stop()}
+          title="Stop"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
         />
