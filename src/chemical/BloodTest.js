@@ -28,15 +28,14 @@ export default class BloodTest extends Component {
         console.log('failed to load the sound', error);
         return;
       }
-      console.log('duration in seconds: ' + song.getDuration() + 'number of channels: ' + song.getNumberOfChannels());
 
     });
   }
 
   play() {
-    if(song !== null){
+    if (song !== null) {
       song.play((succes) => {
-        if(!succes){
+        if (!succes) {
           console.log('Error en reproducción')
         }
 
@@ -45,9 +44,9 @@ export default class BloodTest extends Component {
   }
 
   pause() {
-    if(song !== null){
+    if (song !== null) {
       song.pause((succes) => {
-        if(!succes){
+        if (!succes) {
           console.log('Error en reproducción')
         }
 
@@ -56,14 +55,26 @@ export default class BloodTest extends Component {
   }
 
   stop() {
-    if(song !== null){
+    if (song !== null) {
       song.stop((succes) => {
-        if(!succes){
+        if (!succes) {
           console.log('Error en reproducción')
         }
 
       })
     }
+  }
+
+  changeQuestion(id) {
+    this.setState({index: id})
+    song = null
+    song = new SoundPlayer(states.questionary[id].audio, null, (error) => {
+      if (error) {
+        console.log('failed to load the sound', error);
+        return;
+      }
+
+    });
   }
 
   render() {
@@ -92,6 +103,11 @@ export default class BloodTest extends Component {
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
         />
+        {states.questionary[this.state.index].options.map((selection, key) => {
+          return (
+            <Button title={selection.title} key={key} onPress={() => this.changeQuestion(selection.nextID)}/>
+          )
+        })}
       </View>
     );
   }

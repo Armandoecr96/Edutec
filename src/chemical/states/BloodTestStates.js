@@ -1,13 +1,37 @@
 export default this.state = {
-    // Estructura propuesta para las transiciones
     questionary: [
         {
             id: 0,
             spanishText: 'Tome asiento, por favor',
             mayanText: "Mèent uts a kutàal",
             audio: 'audio.m4a',
-            yesID: 0,
-            noID: 0,
+            options: [
+                {
+                    nextID: 1,
+                    title: 'Si'
+                },
+                {
+                    nextID: 1,
+                    title: 'No'
+                }
+            ]
+
+        },
+        {
+            id: 1,
+            spanishText: 'Cambio de palabra',
+            mayanText: "Mèent",
+            audio: 'audio1.m4a',
+            options: [
+                {
+                    nextID: 0,
+                    title: 'Si'
+                },
+                {
+                    nextID: 0,
+                    title: 'No'
+                }
+            ]
         }
     ]
 }
