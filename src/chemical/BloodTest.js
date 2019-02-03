@@ -10,7 +10,6 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import states from './states/BloodTestStates'
 var SoundPlayer = require('react-native-sound');
-var song = null
 
 export default class BloodTest extends Component {
 
@@ -18,23 +17,23 @@ export default class BloodTest extends Component {
     super(props)
     this.state = {
       index: 0,
-      pause: false
+      pause: false,
+      song: null
     }
   }
 
   componentWillMount() {
-    song = new SoundPlayer(states.questionary[0].audio, null, (error) => {
+    this.state.song = new SoundPlayer(states.questionary[0].audio, SoundPlayer.MAIN_BUNDLE, (error) => {
       if (error) {
         console.log('failed to load the sound', error);
         return;
       }
-
     });
   }
 
   play() {
-    if (song !== null) {
-      song.play((succes) => {
+    if (this.state.song !== null) {
+      this.state.song.play((succes) => {
         if (!succes) {
           console.log('Error en reproducción')
         }
@@ -44,8 +43,8 @@ export default class BloodTest extends Component {
   }
 
   pause() {
-    if (song !== null) {
-      song.pause((succes) => {
+    if (this.state.song !== null) {
+      this.state.song.pause((succes) => {
         if (!succes) {
           console.log('Error en reproducción')
         }
@@ -55,8 +54,8 @@ export default class BloodTest extends Component {
   }
 
   stop() {
-    if (song !== null) {
-      song.stop((succes) => {
+    if (this.state.song !== null) {
+      this.state.song.stop((succes) => {
         if (!succes) {
           console.log('Error en reproducción')
         }
@@ -66,15 +65,15 @@ export default class BloodTest extends Component {
   }
 
   changeQuestion(id) {
-    this.setState({index: id})
-    song = null
-    song = new SoundPlayer(states.questionary[id].audio, null, (error) => {
+    this.setState({ index: id })
+    delete this.state.song
+    this.state.song = new SoundPlayer(states.questionary[id].audio, SoundPlayer.MAIN_BUNDLE, (error) => {
       if (error) {
         console.log('failed to load the sound', error);
         return;
       }
-
     });
+    console.log(this.state.song)
   }
 
   render() {
@@ -105,7 +104,7 @@ export default class BloodTest extends Component {
         />
         {states.questionary[this.state.index].options.map((selection, key) => {
           return (
-            <Button title={selection.title} key={key} onPress={() => this.changeQuestion(selection.nextID)}/>
+            <Button title={selection.title} key={key} onPress={() => this.changeQuestion(selection.nextID)} />
           )
         })}
       </View>
