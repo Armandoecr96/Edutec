@@ -7,10 +7,10 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, ImageBackground } from 'react-native';
 import states from './states/BloodTestStates'
 var SoundPlayer = require('react-native-sound');
-import { Container, Header, Content, Card, Title, CardItem, Thumbnail, Icon, Left, Body, Right } from 'native-base';
+import { Container, Content, Card, CardItem } from 'native-base';
 import textBox from '../assets/images/caja-de-texto-1.png'
 
 export default class BloodTest extends Component {
@@ -81,46 +81,55 @@ export default class BloodTest extends Component {
   render() {
 
     return (
-      <View style={styles.container}>
-        <Card transparent>
-          <CardItem style={styles.cardItem}>
-            <Image source={textBox} style={styles.image} />
-            <Text style={styles.title}>Español</Text>
-            <Text style={[styles.cardText]}>{states.questionary[this.state.index].spanishText}</Text>
-          </CardItem>
-          <CardItem style={styles.cardItem}>
-            <Image source={textBox} style={styles.image} />
-            <Text style={styles.title}>Maya</Text>
-            <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText}</Text>
-          </CardItem>
-        </Card>
+      <Container>
+        <Content style={styles.container}>
+          <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
+            <View style={{height: 620}}>
+              <Card transparent>
+                <CardItem style={styles.cardItem}>
+                  <Image source={textBox} style={styles.image} />
+                  <Text style={styles.title}>Español</Text>
+                  <Text style={[styles.cardText]}>{states.questionary[this.state.index].spanishText}</Text>
+                </CardItem>
+                <CardItem style={styles.cardItem}>
+                  <Image source={textBox} style={styles.image} />
+                  <Text style={styles.title}>Maya</Text>
+                  <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText}</Text>
+                </CardItem>
+              </Card>
 
-        <Button
-          onPress={() => this.play()}
-          title="Play"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
-        <Button
-          onPress={() => this.pause()}
-          title="Pause"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
-        <Button
-          onPress={() => this.stop()}
-          title="Stop"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
-        {states.questionary[this.state.index].options.map((selection, key) => {
-          return (
-            <View key={key}>
-              <Button title={selection.title} onPress={() => this.changeQuestion(selection.nextID)} />
+              <View style={{ display: 'flex', flexDirection: 'column' }}>
+                <Button
+                  onPress={() => this.play()}
+                  title="Play"
+                  color="#841584"
+                  accessibilityLabel="Learn more about this purple button"
+                  style={{ width: '30%' }}
+                />
+                <Button
+                  onPress={() => this.pause()}
+                  title="Pause"
+                  color="#841584"
+                  accessibilityLabel="Learn more about this purple button"
+                />
+                <Button
+                  onPress={() => this.stop()}
+                  title="Stop"
+                  color="#841584"
+                  accessibilityLabel="Learn more about this purple button"
+                />
+              </View>
+              {states.questionary[this.state.index].options.map((selection, key) => {
+                return (
+                  <View key={key}>
+                    <Button title={selection.title} onPress={() => this.changeQuestion(selection.nextID)} />
+                  </View>
+                )
+              })}
             </View>
-          )
-        })}
-      </View>
+          </ImageBackground>
+        </Content>
+      </Container>
     );
   }
 }
@@ -129,6 +138,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F5FCFF',
+    height: 620
+
+  },
+  background: {
+    flex: 1
   },
   welcome: {
     fontSize: 20,
@@ -146,16 +160,13 @@ const styles = StyleSheet.create({
     position: 'absolute'
   },
   cardItem: {
-    height: 100,
-    backgroundColor: '#F5FCFF',
-    alignSelf: 'flex-start',
     paddingTop: 32,
-    position: 'relative',
-    marginLeft: 10
+    marginLeft: 10,
+    backgroundColor: 'rgba(0,0,0,0)'
   },
   title: {
     color: 'black',
-    fontWeight: '900', 
+    fontWeight: '900',
     fontSize: 16,
     color: '#FFFFFF',
     marginBottom: 80,
@@ -166,7 +177,6 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     marginLeft: -40,
     fontSize: 16,
-    width: 240, 
     marginRight: 40
   }
 });
