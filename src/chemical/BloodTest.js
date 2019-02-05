@@ -7,9 +7,11 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button } from 'react-native';
+import { Platform, StyleSheet, Text, View, Button, Image } from 'react-native';
 import states from './states/BloodTestStates'
 var SoundPlayer = require('react-native-sound');
+import { Container, Header, Content, Card, Title, CardItem, Thumbnail, Icon, Left, Body, Right } from 'native-base';
+import textBox from '../assets/images/caja-de-texto-1.png'
 
 export default class BloodTest extends Component {
 
@@ -80,10 +82,19 @@ export default class BloodTest extends Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>{
-          states.questionary[this.state.index].spanishText
-        }</Text>
-        <Text style={styles.instructions}>{states.questionary[this.state.index].mayanText}</Text>
+        <Card transparent>
+          <CardItem style={styles.cardItem}>
+            <Image source={textBox} style={styles.image} />
+            <Text style={styles.title}>Español</Text>
+            <Text style={[styles.cardText]}>{states.questionary[this.state.index].spanishText}</Text>
+          </CardItem>
+          <CardItem style={styles.cardItem}>
+            <Image source={textBox} style={styles.image} />
+            <Text style={styles.title}>Maya</Text>
+            <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText}</Text>
+          </CardItem>
+        </Card>
+
         <Button
           onPress={() => this.play()}
           title="Play"
@@ -104,7 +115,9 @@ export default class BloodTest extends Component {
         />
         {states.questionary[this.state.index].options.map((selection, key) => {
           return (
-            <Button title={selection.title} key={key} onPress={() => this.changeQuestion(selection.nextID)} />
+            <View key={key}>
+              <Button title={selection.title} onPress={() => this.changeQuestion(selection.nextID)} />
+            </View>
           )
         })}
       </View>
@@ -115,8 +128,6 @@ export default class BloodTest extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
@@ -129,4 +140,33 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  image: {
+    width: 340,
+    resizeMode: 'contain',
+    position: 'absolute'
+  },
+  cardItem: {
+    height: 100,
+    backgroundColor: '#F5FCFF',
+    alignSelf: 'flex-start',
+    paddingTop: 32,
+    position: 'relative',
+    marginLeft: 10
+  },
+  title: {
+    color: 'black',
+    fontWeight: '900', 
+    fontSize: 16,
+    color: '#FFFFFF',
+    marginBottom: 80,
+    marginLeft: 24
+  },
+  cardText: {
+    color: '#FFFFFF',
+    fontWeight: '900',
+    marginLeft: -40,
+    fontSize: 16,
+    width: 240, 
+    marginRight: 40
+  }
 });

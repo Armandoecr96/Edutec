@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, View, Image } from 'react-native';
+import { Platform, StyleSheet, View, Image, ImageBackground } from 'react-native';
 import { Container, Header, Content, Text, Card, Title, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
@@ -23,7 +23,7 @@ export default class Menu extends Component {
     return (
       <Container>
         <Content>
-          <Grid>
+          <Grid style={styles.grid}>
             <Row style={styles.row}>
               <Col style={styles.col}>
                 <Card style={{ borderRadius: 8 }}>
