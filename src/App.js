@@ -17,7 +17,7 @@ import BloodTest from './chemical/BloodTest'
 
 // Recepción
 
-const ChemicalStack = createStackNavigator ({
+const ChemicalStack = createStackNavigator({
   HomeChemical: {
     screen: MainChemical,
     navigationOptions: {
@@ -27,12 +27,12 @@ const ChemicalStack = createStackNavigator ({
   BloodTest: {
     screen: BloodTest,
     navigationOptions: {
-      title: 'Muestra Sanguinea' 
+      title: 'Muestra Sanguinea'
     }
   }
 })
 
-const RootStack = createStackNavigator ({
+const RootStack = createStackNavigator({
   Home: {
     screen: Main,
     navigationOptions: {
@@ -47,6 +47,6 @@ const RootStack = createStackNavigator ({
   }
 })
 
-const App = createAppContainer(RootStack);
+const App = createAppContainer(RootStack)
 
 export default (App)
