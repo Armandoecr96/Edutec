@@ -7,10 +7,13 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Button, Image, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native'
 import states from './states/BloodTestStates'
-import { Container, Content, Card, CardItem } from 'native-base'
+import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
+import playButtom from '../assets/images/play.png'
+import pauseButtom from '../assets/images/pausa.png'
+import stopButtom from '../assets/images/stop.png'
 var SoundPlayer = require('react-native-sound')
 
 export default class BloodTest extends Component {
@@ -19,7 +22,9 @@ export default class BloodTest extends Component {
     this.state = {
       index: 0,
       pause: false,
-      song: null
+      song: null,
+      playVisibility: 'flex',
+      pauseVisibbility: 'none'
     }
   }
 
@@ -31,14 +36,25 @@ export default class BloodTest extends Component {
     })
   }
 
+  pauseToPlay () {
+    this.setState({
+      playVisibility: 'flex',
+      pauseVisibbility: 'none'
+    })
+  }
+
   play () {
     if (this.state.song !== null) {
       this.state.song.play((succes) => {
-        if (!succes) {
-          console.log('Error en reproducción')
+        if (succes) {
+          this.pauseToPlay()
         }
       })
     }
+    this.setState({
+      playVisibility: 'none',
+      pauseVisibbility: 'flex'
+    })
   }
 
   pause () {
@@ -49,13 +65,15 @@ export default class BloodTest extends Component {
         }
       })
     }
+    this.pauseToPlay()
   }
 
   stop () {
     if (this.state.song !== null) {
+      this.state.song.play()
       this.state.song.stop((succes) => {
         if (!succes) {
-          console.log('Error en reproducción')
+          this.pauseToPlay()
         }
       })
     }
@@ -91,31 +109,32 @@ export default class BloodTest extends Component {
                 </CardItem>
               </Card>
 
-              <View style={{ display: 'flex', flexDirection: 'column' }}>
+              <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
                 <Button
+                  transparent
                   onPress={() => this.play()}
-                  title='Play'
-                  color='#841584'
-                  accessibilityLabel='Learn more about this purple button'
-                  style={{ width: '30%' }}
-                />
+                  style={{ width: 80, height: 80, display: this.state.playVisibility }}
+                >
+                  <Image source={playButtom} style={styles.imageButton} /></Button>
                 <Button
+                  transparent
                   onPress={() => this.pause()}
-                  title='Pause'
-                  color='#841584'
-                  accessibilityLabel='Learn more about this purple button'
-                />
+                  style={{ width: 80, height: 80, display: this.state.pauseVisibbility }}
+                >
+                  <Image source={pauseButtom} style={styles.imageButton} /></Button>
                 <Button
+                  transparent
                   onPress={() => this.stop()}
-                  title='Stop'
-                  color='#841584'
-                  accessibilityLabel='Learn more about this purple button'
-                />
+                  style={{ width: 80, height: 80 }}
+                >
+                  <Image source={stopButtom} style={styles.imageButton} /></Button>
               </View>
               {states.questionary[this.state.index].options.map((selection, key) => {
                 return (
-                  <View key={key}>
-                    <Button title={selection.title} onPress={() => this.changeQuestion(selection.nextID)} />
+                  <View key={key} style={{ marginTop: 24 }}>
+                    <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ alignSelf: 'center' }} >
+                      <Text style={{ color: '#FFFFFF', fontSize: 16 }}>{selection.title}</Text>
+                    </Button>
                   </View>
                 )
               })}
@@ -141,6 +160,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10
+  },
+  imageButton: {
+    width: 80,
+    height: 80
+  },
+  playerButtom: {
+    width: 80,
+    height: 80
   },
   instructions: {
     textAlign: 'center',
