@@ -5,6 +5,7 @@ export default this.state = {
       spanishText: 'Tome asiento, por favor',
       mayanText: 'Mèent uts a kutàal',
       audio: 'audio.m4a',
+      hora: false,
       options: [
         {
           nextID: 1,
@@ -18,6 +19,7 @@ export default this.state = {
       spanishText: 'Voy a corroborar sus datos',
       mayanText: 'Bin in ka’ah in ch’a’a a k’aaba’',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 2,
@@ -30,6 +32,7 @@ export default this.state = {
       spanishText: '¿Cuál es su nombre completo?',
       mayanText: 'Bix a k’àaba’, a’alten tu láakal',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 3,
@@ -42,6 +45,7 @@ export default this.state = {
       spanishText: '¿Cuántos años tiene?',
       mayanText: 'Hay p’éel ya’ab yantech.',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 4,
@@ -54,6 +58,7 @@ export default this.state = {
       spanishText: '¿Cuál es su número telefónico?',
       mayanText: 'Máakal máak u xòokil u nu’ukul a t’àan',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 5,
@@ -66,6 +71,7 @@ export default this.state = {
       spanishText: '¿Por qué le solicitan las pruebas?',
       mayanText: 'Ba’axten ku k’áatal tech le xíixo’',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 6,
@@ -78,6 +84,7 @@ export default this.state = {
       spanishText: 'Ahora le voy a hacer unas preguntas de rutina',
       mayanText: 'Bin in ka’ah in bèet tech wa hayp’e’el k’at chí sùuk u bèeta’al',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 7,
@@ -90,6 +97,7 @@ export default this.state = {
       spanishText: '¿Presenta en ayuno de 10 a 12 horas?',
       mayanText: 'Ma’ a hàant mixba’al ichil lo wa 12 tsíil k’ìini’ bey hàanen, ma’, mixba’al hàanteh.',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 10,
@@ -106,6 +114,7 @@ export default this.state = {
       spanishText: '¿A que hora comió?',
       mayanText: 'Ba’ax tsíil k’ìinil ka hàaneh',
       audio: 'audio2.m4a',
+      hora: true,
       options: [
         {
           nextID: 0,
@@ -118,6 +127,7 @@ export default this.state = {
       spanishText: '¿Que comió?',
       mayanText: 'Ba’ax ta hàantah',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 10,
@@ -130,6 +140,7 @@ export default this.state = {
       spanishText: '¿Puede esperar a que se cumpla el tiempo requerido?',
       mayanText: 'Ba’ax ta hàantah',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 11,
@@ -146,6 +157,7 @@ export default this.state = {
       spanishText: 'Espere el tiempo que falta para cumplir con el ayuno',
       mayanText: "Páa'teh u k’uchul le tsíil k’íinil ku binehtik ti’ a su’uk’ino’",
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 13,
@@ -158,6 +170,7 @@ export default this.state = {
       spanishText: 'Regrese otro día en ayuno de 10 a 12 horas',
       mayanText: 'Ba’ax ta hàantah',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 0,
@@ -174,6 +187,7 @@ export default this.state = {
       spanishText: '¿Ha tomado ningún tipo de medicamento antes de venir?',
       mayanText: 'Ta wuk’ah wa ts’àak ma’ili’ talakechi’',
       audio: 'audio2.m4a',
+      hora: false,
       options: [
         {
           nextID: 13,
@@ -187,8 +201,9 @@ export default this.state = {
     },
     {
       id: 14,
-      spanishText: '¿Qué medicamento?',
+      spanishText: '¿Qué tipo de medicamento?',
       mayanText: 'Ba’ax ts’àakil',
+      hora: false,
       audio: 'audio2.m4a',
       options: [
         {
@@ -210,6 +225,7 @@ export default this.state = {
       spanishText: '¿A que hora lo tomó?',
       mayanText: 'Ba’ax tsíil k’ìinil ka ta wuk’ah',
       audio: 'audio2.m4a',
+      hora: true,
       options: [
         {
           nextID: 16,
