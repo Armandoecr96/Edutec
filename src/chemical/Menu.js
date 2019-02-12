@@ -38,9 +38,7 @@ export default class Menu extends Component {
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>
                     <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('Chemical')}>
-                      <Left>
-                        <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={styles.image} />
-                      </Left>
+                      <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={styles.image} />
                       <Text style={{ fontSize: 16 }}>Cultivo microbiologico</Text>
                       <Right>
                         <Icon name='arrow-forward' />

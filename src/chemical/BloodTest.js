@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native'
 import states from './states/BloodTestStates'
 import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
@@ -15,6 +15,8 @@ import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 var SoundPlayer = require('react-native-sound')
+
+var { height } = Dimensions.get('window')
 
 export default class BloodTest extends Component {
   constructor (props) {
@@ -95,13 +97,16 @@ export default class BloodTest extends Component {
       <Container>
         <Content style={styles.container}>
           <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
-            <View style={{ height: 620 }}>
+            <View style={{ height: height }}>
               <Card transparent>
                 <CardItem style={styles.cardItem}>
                   <Image source={textBox} style={styles.image} />
                   <Text style={styles.title}>Español</Text>
                   <Text style={[styles.cardText]}>{states.questionary[this.state.index].spanishText}</Text>
                 </CardItem>
+              </Card>
+
+              <Card transparent>
                 <CardItem style={styles.cardItem}>
                   <Image source={textBox} style={styles.image} />
                   <Text style={styles.title}>Maya</Text>
@@ -175,20 +180,20 @@ const styles = StyleSheet.create({
     marginBottom: 5
   },
   image: {
-    width: 340,
+    width: '100%',
     resizeMode: 'contain',
     position: 'absolute'
   },
   cardItem: {
     paddingTop: 32,
-    marginLeft: 10,
+    width: '100%',
     backgroundColor: 'rgba(0,0,0,0)'
   },
   title: {
     fontWeight: '900',
     fontSize: 16,
     color: '#FFFFFF',
-    marginBottom: 80,
+    marginBottom: '25%',
     marginLeft: 24
   },
   cardText: {
@@ -196,6 +201,7 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     marginLeft: -40,
     fontSize: 16,
-    marginRight: 40
+    marginRight: 40,
+    maxWidth: 300
   }
 })
