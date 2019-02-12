@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native'
 import states from './states/BloodTestStates'
 import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
@@ -15,8 +15,6 @@ import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 var SoundPlayer = require('react-native-sound')
-
-var { height } = Dimensions.get('window')
 
 export default class BloodTest extends Component {
   constructor (props) {
@@ -95,20 +93,20 @@ export default class BloodTest extends Component {
   render () {
     return (
       <Container>
-        <Content style={styles.container}>
+        <Content>
           <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
-            <View style={{ height: height }}>
-              <Card transparent>
+            <View style={{ height: 620 }}>
+              <Card transparent style={styles.card}>
                 <CardItem style={styles.cardItem}>
-                  <Image source={textBox} style={styles.image} />
+                  <Image source={textBox} style={styles.cardImage} />
                   <Text style={styles.title}>Español</Text>
-                  <Text style={[styles.cardText]}>{states.questionary[this.state.index].spanishText}</Text>
+                  <Text style={[styles.cardText, styles.ajuste]}>{states.questionary[this.state.index].spanishText}</Text>
                 </CardItem>
               </Card>
 
-              <Card transparent>
+              <Card transparent style={styles.card}>
                 <CardItem style={styles.cardItem}>
-                  <Image source={textBox} style={styles.image} />
+                  <Image source={textBox} style={styles.cardImage} />
                   <Text style={styles.title}>Maya</Text>
                   <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText}</Text>
                 </CardItem>
@@ -154,16 +152,13 @@ export default class BloodTest extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
-    height: 620
-
+    backgroundColor: '#F5FCFF'
   },
   background: {
     flex: 1
   },
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
     margin: 10
   },
   imageButton: {
@@ -174,34 +169,33 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
-  },
-  image: {
-    width: '100%',
-    resizeMode: 'contain',
-    position: 'absolute'
+  card: {
+    width: '100%'
   },
   cardItem: {
-    paddingTop: 32,
     width: '100%',
     backgroundColor: 'rgba(0,0,0,0)'
   },
+  cardImage: {
+    width: '100%',
+    resizeMode: 'stretch'
+  },
+  ajuste: {
+    marginLeft: -90
+  },
   title: {
-    fontWeight: '900',
-    fontSize: 16,
+    marginLeft: '-90%',
     color: '#FFFFFF',
-    marginBottom: '25%',
-    marginLeft: 24
+    fontWeight: '900',
+    fontSize: 24,
+    marginTop: -120
   },
   cardText: {
     color: '#FFFFFF',
-    fontWeight: '900',
-    marginLeft: -40,
-    fontSize: 16,
-    marginRight: 40,
-    maxWidth: 300
+    marginLeft: -60,
+    fontSize: 20,
+    maxWidth: '80%',
+    marginTop: 32,
+    alignItems: 'center'
   }
 })
