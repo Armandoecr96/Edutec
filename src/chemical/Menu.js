@@ -7,9 +7,11 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Image, ImageBackground } from 'react-native'
+import { StyleSheet, Image, ImageBackground, Dimensions } from 'react-native'
 import { Container, Content, Text, Card, CardItem, Icon, Left, Right } from 'native-base'
 import { Col, Row, Grid } from 'react-native-easy-grid'
+
+var { height } = Dimensions.get('window')
 
 export default class Menu extends Component {
   render () {
@@ -99,6 +101,6 @@ const styles = StyleSheet.create({
   },
   grid: {
     flex: 1,
-    height: 616
+    height: height
   }
 })
