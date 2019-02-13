@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native'
 import states from './states/BloodTestStates'
 import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
@@ -15,6 +15,8 @@ import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 var SoundPlayer = require('react-native-sound')
+
+var {height, width} = Dimensions.get('window');
 
 export default class BloodTest extends Component {
   constructor (props) {
@@ -94,8 +96,9 @@ export default class BloodTest extends Component {
     return (
       <Container>
         <Content>
+          {console.log(height)}
           <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
-            <View style={{ height: 620 }}>
+            <View style={{ height: height }}>
               <Card transparent style={styles.card}>
                 <CardItem style={styles.cardItem}>
                   <Image source={textBox} style={styles.cardImage} />
