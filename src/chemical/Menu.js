@@ -12,7 +12,7 @@ import { Container, Content, Text, Card, CardItem, Icon, Left, Right } from 'nat
 import { Col, Row, Grid } from 'react-native-easy-grid'
 
 export default class Menu extends Component {
-  render () {
+  render() {
     return (
       <Container>
         <Content>
