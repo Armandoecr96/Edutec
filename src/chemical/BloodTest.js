@@ -34,7 +34,7 @@ export default class BloodTest extends Component {
       isVisible: false,
       dateChoose: "",
       time: "",
-      verificacion:false
+      verificacion:false,
       playVisibility: 'flex',
       pauseVisibbility: 'none'
     }
@@ -89,7 +89,6 @@ export default class BloodTest extends Component {
     })
   }
 
-  play() {
   pauseToPlay () {
     this.setState({
       playVisibility: 'flex',
@@ -285,7 +284,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     color: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
     marginLeft: -60,
     fontSize: 20,
     maxWidth: '80%',
