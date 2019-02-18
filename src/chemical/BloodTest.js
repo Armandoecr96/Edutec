@@ -13,6 +13,7 @@ import { Container, Content, Card, CardItem } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
 import moment  from "moment";
 import DateTimePicker from 'react-native-modal-datetime-picker';
+import { bold } from 'ansi-colors';
 var SoundPlayer = require('react-native-sound')
 
 
@@ -24,7 +25,9 @@ export default class BloodTest extends Component {
       pause: false,
       song: null,
       isVisible: false,
-      dateChoose: ""
+      dateChoose: "",
+      time: "",
+      verificacion:false
     }
   }
 
@@ -42,12 +45,27 @@ export default class BloodTest extends Component {
       dateChoose: moment(datetime, "MMMM, Do YYYY HH:mm").fromNow()
     })
 
-    console.log(this.state.dateChoose);
-    
-    // console.log(datetime);
-    // moment(datetime).fromNow(true);
-    // console.log(tiempo);
-    // this.hidePicker();
+    var regex = /(\d+)/g;
+    var hour = this.state.dateChoose.match(regex);
+    this.verificacionDate(hour);
+  }
+
+  verificacionDate = (time) => {
+    var hour = parseInt(time[0]);
+
+    if (hour >= 8) {
+      this.setState({
+        time: "Han pasado " + hour + " horas",
+        verificacionDate: true
+      })
+    }
+    if (hour < 8 && hour >= 1) {
+      this.setState({
+        time: "Han pasado " + hour + " horas",
+        verificacionDate: false
+      })
+      
+    }
   }
 
   hidePicker = () => {
@@ -93,7 +111,7 @@ export default class BloodTest extends Component {
   }
 
   changeQuestion(id) {
-    this.setState({ index: id })
+    this.setState({ index: id, time: "" })
     delete this.state.song
     this.state.song = new SoundPlayer(states.questionary[id].audio, SoundPlayer.MAIN_BUNDLE, (error) => {
       if (error) {
@@ -124,6 +142,8 @@ export default class BloodTest extends Component {
                   <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText}</Text>
                 </CardItem>
               </Card>
+
+              <Text style={{ textAlign: "center", color: "#FFFFFF", fontSize:17, fontWeight: 'bold'}}>{this.state.time}</Text>
 
               <View style={{ display: 'flex', flexDirection: 'column' }}>
                 
