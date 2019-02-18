@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -22,6 +23,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		2B72CA2583EC4F74817D76EE /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD38AC35C4245FE826DC758 /* libRNSound.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -35,30 +37,163 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* edutecTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* edutecTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		A6717618FE584AAEA9390194 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 393F97E00BE54E069D73C9CC /* libRNGestureHandler.a */; };
-		FAB94394D1824C3FB8D75B5C /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 701294EFCA5F4652A303658C /* AntDesign.ttf */; };
-		C003F3DDBEF541039630B350 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22CAEC629ECA4BB1886BC60A /* Entypo.ttf */; };
-		45474D167CD642EBBE7A2694 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F9E5324C30A4E969F774AA1 /* EvilIcons.ttf */; };
-		7864C24FD9ED4D87ADAF3851 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B4B79D731D4210A4716BEE /* Feather.ttf */; };
-		3962B4A6915443AB83FE22D1 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6F340D4029F4B3CBAF68EDA /* FontAwesome.ttf */; };
-		4D692F19C6974E258D0A88DC /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D7590AC74DC466FB38BA7AF /* FontAwesome5_Brands.ttf */; };
-		7F7A6AAA30E8488BB95A61C7 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97E3ABE82E084887BF712EE9 /* FontAwesome5_Regular.ttf */; };
-		409911EF191C4CD897561FAD /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F23237DCCD466C8CC8CAE8 /* FontAwesome5_Solid.ttf */; };
-		496C34E68201472F8AC44A15 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC03816F0E284F12A9F3C3BF /* Foundation.ttf */; };
-		C2057ED5762A4C47BA3526B9 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D1E4EA7CB84257BEA74686 /* Ionicons.ttf */; };
-		6221BA2316C7430FB5E2E1CA /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B5BDCE2D50E44479B0B846D /* MaterialCommunityIcons.ttf */; };
-		6F369969D07A4C5DA8207A55 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B78703D44366A17622C8 /* MaterialIcons.ttf */; };
-		63D811D270BE47B5A1A970B8 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF96059B04740BC50D61B /* Octicons.ttf */; };
-		377C779392124F7DA29B7E6B /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB57D4162D7C4C4482205D02 /* Roboto_medium.ttf */; };
-		CEA47A1908B24407A68B93C2 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0654EF06166348CCA51B3DF9 /* Roboto.ttf */; };
 		3394FAB15D544108A0D614B3 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE3F6E54606946AFB5ED3071 /* rubicon-icon-font.ttf */; };
+		377C779392124F7DA29B7E6B /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB57D4162D7C4C4482205D02 /* Roboto_medium.ttf */; };
+		3962B4A6915443AB83FE22D1 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6F340D4029F4B3CBAF68EDA /* FontAwesome.ttf */; };
+		409911EF191C4CD897561FAD /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56F23237DCCD466C8CC8CAE8 /* FontAwesome5_Solid.ttf */; };
+		45474D167CD642EBBE7A2694 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F9E5324C30A4E969F774AA1 /* EvilIcons.ttf */; };
 		45FF859FF79441CB8619E588 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EBE0BB978744B408524C1DC /* SimpleLineIcons.ttf */; };
-		5C869A39D3694061811585A1 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01105288DBD04E978640F0B6 /* Zocial.ttf */; };
-		9C3953A1B52C42DA9CA989AD /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9220B8B975054647A0E2C0A7 /* libRNVectorIcons.a */; };
+		496C34E68201472F8AC44A15 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC03816F0E284F12A9F3C3BF /* Foundation.ttf */; };
+		4D692F19C6974E258D0A88DC /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D7590AC74DC466FB38BA7AF /* FontAwesome5_Brands.ttf */; };
 		4F8B526037C0418D8A17A368 /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F76EA5637D427980609A3B /* libRNVectorIcons-tvOS.a */; };
-		2B72CA2583EC4F74817D76EE /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD38AC35C4245FE826DC758 /* libRNSound.a */; };
+		5C869A39D3694061811585A1 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01105288DBD04E978640F0B6 /* Zocial.ttf */; };
+		6221BA2316C7430FB5E2E1CA /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B5BDCE2D50E44479B0B846D /* MaterialCommunityIcons.ttf */; };
+		63D811D270BE47B5A1A970B8 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC8FF96059B04740BC50D61B /* Octicons.ttf */; };
+		6F369969D07A4C5DA8207A55 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D61B78703D44366A17622C8 /* MaterialIcons.ttf */; };
+		7864C24FD9ED4D87ADAF3851 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B4B79D731D4210A4716BEE /* Feather.ttf */; };
+		7F7A6AAA30E8488BB95A61C7 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97E3ABE82E084887BF712EE9 /* FontAwesome5_Regular.ttf */; };
+		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		9C3953A1B52C42DA9CA989AD /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9220B8B975054647A0E2C0A7 /* libRNVectorIcons.a */; };
+		A6717618FE584AAEA9390194 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 393F97E00BE54E069D73C9CC /* libRNGestureHandler.a */; };
+		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		C003F3DDBEF541039630B350 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22CAEC629ECA4BB1886BC60A /* Entypo.ttf */; };
+		C2057ED5762A4C47BA3526B9 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D1E4EA7CB84257BEA74686 /* Ionicons.ttf */; };
+		CEA47A1908B24407A68B93C2 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0654EF06166348CCA51B3DF9 /* Roboto.ttf */; };
+		DD33A46C22136AFA00AC0E42 /* audio52.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42922136AF400AC0E42 /* audio52.m4a */; };
+		DD33A46D22136AFA00AC0E42 /* audio52.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42922136AF400AC0E42 /* audio52.m4a */; };
+		DD33A46E22136AFA00AC0E42 /* audio59.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42A22136AF400AC0E42 /* audio59.m4a */; };
+		DD33A46F22136AFA00AC0E42 /* audio59.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42A22136AF400AC0E42 /* audio59.m4a */; };
+		DD33A47022136AFA00AC0E42 /* audio54.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42B22136AF400AC0E42 /* audio54.m4a */; };
+		DD33A47122136AFA00AC0E42 /* audio54.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42B22136AF400AC0E42 /* audio54.m4a */; };
+		DD33A47222136AFA00AC0E42 /* audio37.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42C22136AF400AC0E42 /* audio37.m4a */; };
+		DD33A47322136AFA00AC0E42 /* audio37.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42C22136AF400AC0E42 /* audio37.m4a */; };
+		DD33A47422136AFA00AC0E42 /* audio26.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42D22136AF400AC0E42 /* audio26.m4a */; };
+		DD33A47522136AFA00AC0E42 /* audio26.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42D22136AF400AC0E42 /* audio26.m4a */; };
+		DD33A47622136AFA00AC0E42 /* audio41.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42E22136AF400AC0E42 /* audio41.m4a */; };
+		DD33A47722136AFA00AC0E42 /* audio41.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42E22136AF400AC0E42 /* audio41.m4a */; };
+		DD33A47822136AFA00AC0E42 /* audio51.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42F22136AF500AC0E42 /* audio51.m4a */; };
+		DD33A47922136AFA00AC0E42 /* audio51.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A42F22136AF500AC0E42 /* audio51.m4a */; };
+		DD33A47A22136AFA00AC0E42 /* audio46.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43022136AF500AC0E42 /* audio46.m4a */; };
+		DD33A47B22136AFA00AC0E42 /* audio46.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43022136AF500AC0E42 /* audio46.m4a */; };
+		DD33A47C22136AFA00AC0E42 /* audio56.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43122136AF500AC0E42 /* audio56.m4a */; };
+		DD33A47D22136AFA00AC0E42 /* audio56.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43122136AF500AC0E42 /* audio56.m4a */; };
+		DD33A47E22136AFA00AC0E42 /* audio18.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43222136AF500AC0E42 /* audio18.m4a */; };
+		DD33A47F22136AFA00AC0E42 /* audio18.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43222136AF500AC0E42 /* audio18.m4a */; };
+		DD33A48022136AFA00AC0E42 /* audio38.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43322136AF500AC0E42 /* audio38.m4a */; };
+		DD33A48122136AFA00AC0E42 /* audio38.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43322136AF500AC0E42 /* audio38.m4a */; };
+		DD33A48222136AFA00AC0E42 /* audio53.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43422136AF500AC0E42 /* audio53.m4a */; };
+		DD33A48322136AFA00AC0E42 /* audio53.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43422136AF500AC0E42 /* audio53.m4a */; };
+		DD33A48422136AFA00AC0E42 /* audio68.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43522136AF500AC0E42 /* audio68.m4a */; };
+		DD33A48522136AFA00AC0E42 /* audio68.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43522136AF500AC0E42 /* audio68.m4a */; };
+		DD33A48622136AFA00AC0E42 /* audio40.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43622136AF500AC0E42 /* audio40.m4a */; };
+		DD33A48722136AFA00AC0E42 /* audio40.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43622136AF500AC0E42 /* audio40.m4a */; };
+		DD33A48822136AFA00AC0E42 /* audio8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43722136AF500AC0E42 /* audio8.m4a */; };
+		DD33A48922136AFA00AC0E42 /* audio8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43722136AF500AC0E42 /* audio8.m4a */; };
+		DD33A48A22136AFA00AC0E42 /* audio47.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43822136AF600AC0E42 /* audio47.m4a */; };
+		DD33A48B22136AFA00AC0E42 /* audio47.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43822136AF600AC0E42 /* audio47.m4a */; };
+		DD33A48C22136AFA00AC0E42 /* audio67.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43922136AF600AC0E42 /* audio67.m4a */; };
+		DD33A48D22136AFA00AC0E42 /* audio67.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43922136AF600AC0E42 /* audio67.m4a */; };
+		DD33A48E22136AFA00AC0E42 /* audio23.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43A22136AF600AC0E42 /* audio23.m4a */; };
+		DD33A48F22136AFA00AC0E42 /* audio23.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43A22136AF600AC0E42 /* audio23.m4a */; };
+		DD33A49022136AFA00AC0E42 /* audio19.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43B22136AF600AC0E42 /* audio19.m4a */; };
+		DD33A49122136AFA00AC0E42 /* audio19.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43B22136AF600AC0E42 /* audio19.m4a */; };
+		DD33A49222136AFA00AC0E42 /* audio12.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43C22136AF600AC0E42 /* audio12.m4a */; };
+		DD33A49322136AFA00AC0E42 /* audio12.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43C22136AF600AC0E42 /* audio12.m4a */; };
+		DD33A49422136AFA00AC0E42 /* audio7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43D22136AF600AC0E42 /* audio7.m4a */; };
+		DD33A49522136AFA00AC0E42 /* audio7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43D22136AF600AC0E42 /* audio7.m4a */; };
+		DD33A49622136AFA00AC0E42 /* audio3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43E22136AF600AC0E42 /* audio3.m4a */; };
+		DD33A49722136AFA00AC0E42 /* audio3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43E22136AF600AC0E42 /* audio3.m4a */; };
+		DD33A49822136AFA00AC0E42 /* audio2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43F22136AF600AC0E42 /* audio2.m4a */; };
+		DD33A49922136AFA00AC0E42 /* audio2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A43F22136AF600AC0E42 /* audio2.m4a */; };
+		DD33A49A22136AFA00AC0E42 /* audio30.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44022136AF600AC0E42 /* audio30.m4a */; };
+		DD33A49B22136AFA00AC0E42 /* audio30.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44022136AF600AC0E42 /* audio30.m4a */; };
+		DD33A49C22136AFA00AC0E42 /* audio39.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44122136AF700AC0E42 /* audio39.m4a */; };
+		DD33A49D22136AFA00AC0E42 /* audio39.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44122136AF700AC0E42 /* audio39.m4a */; };
+		DD33A49E22136AFA00AC0E42 /* audio57.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44222136AF700AC0E42 /* audio57.m4a */; };
+		DD33A49F22136AFA00AC0E42 /* audio57.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44222136AF700AC0E42 /* audio57.m4a */; };
+		DD33A4A022136AFA00AC0E42 /* audio49.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44322136AF700AC0E42 /* audio49.m4a */; };
+		DD33A4A122136AFA00AC0E42 /* audio49.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44322136AF700AC0E42 /* audio49.m4a */; };
+		DD33A4A222136AFA00AC0E42 /* audio60.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44422136AF700AC0E42 /* audio60.m4a */; };
+		DD33A4A322136AFA00AC0E42 /* audio60.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44422136AF700AC0E42 /* audio60.m4a */; };
+		DD33A4A422136AFA00AC0E42 /* audio64.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44522136AF700AC0E42 /* audio64.m4a */; };
+		DD33A4A522136AFA00AC0E42 /* audio64.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44522136AF700AC0E42 /* audio64.m4a */; };
+		DD33A4A622136AFA00AC0E42 /* audio66.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44622136AF700AC0E42 /* audio66.m4a */; };
+		DD33A4A722136AFA00AC0E42 /* audio66.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44622136AF700AC0E42 /* audio66.m4a */; };
+		DD33A4A822136AFA00AC0E42 /* audio55.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44722136AF700AC0E42 /* audio55.m4a */; };
+		DD33A4A922136AFA00AC0E42 /* audio55.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44722136AF700AC0E42 /* audio55.m4a */; };
+		DD33A4AA22136AFA00AC0E42 /* audio9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44822136AF700AC0E42 /* audio9.m4a */; };
+		DD33A4AB22136AFA00AC0E42 /* audio9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44822136AF700AC0E42 /* audio9.m4a */; };
+		DD33A4AC22136AFA00AC0E42 /* audio61.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44922136AF700AC0E42 /* audio61.m4a */; };
+		DD33A4AD22136AFA00AC0E42 /* audio61.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44922136AF700AC0E42 /* audio61.m4a */; };
+		DD33A4AE22136AFA00AC0E42 /* audio33.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44A22136AF800AC0E42 /* audio33.m4a */; };
+		DD33A4AF22136AFA00AC0E42 /* audio33.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44A22136AF800AC0E42 /* audio33.m4a */; };
+		DD33A4B022136AFA00AC0E42 /* audio44.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44B22136AF800AC0E42 /* audio44.m4a */; };
+		DD33A4B122136AFA00AC0E42 /* audio44.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44B22136AF800AC0E42 /* audio44.m4a */; };
+		DD33A4B222136AFA00AC0E42 /* audio62.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44C22136AF800AC0E42 /* audio62.m4a */; };
+		DD33A4B322136AFA00AC0E42 /* audio62.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44C22136AF800AC0E42 /* audio62.m4a */; };
+		DD33A4B422136AFA00AC0E42 /* audio21.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44D22136AF800AC0E42 /* audio21.m4a */; };
+		DD33A4B522136AFA00AC0E42 /* audio21.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44D22136AF800AC0E42 /* audio21.m4a */; };
+		DD33A4B622136AFA00AC0E42 /* audio43.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44E22136AF800AC0E42 /* audio43.m4a */; };
+		DD33A4B722136AFA00AC0E42 /* audio43.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44E22136AF800AC0E42 /* audio43.m4a */; };
+		DD33A4B822136AFA00AC0E42 /* audio11.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44F22136AF800AC0E42 /* audio11.m4a */; };
+		DD33A4B922136AFA00AC0E42 /* audio11.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A44F22136AF800AC0E42 /* audio11.m4a */; };
+		DD33A4BA22136AFA00AC0E42 /* audio27.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45022136AF800AC0E42 /* audio27.m4a */; };
+		DD33A4BB22136AFA00AC0E42 /* audio27.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45022136AF800AC0E42 /* audio27.m4a */; };
+		DD33A4BC22136AFA00AC0E42 /* audio16.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45122136AF800AC0E42 /* audio16.m4a */; };
+		DD33A4BD22136AFA00AC0E42 /* audio16.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45122136AF800AC0E42 /* audio16.m4a */; };
+		DD33A4BE22136AFA00AC0E42 /* audio42.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45222136AF800AC0E42 /* audio42.m4a */; };
+		DD33A4BF22136AFA00AC0E42 /* audio42.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45222136AF800AC0E42 /* audio42.m4a */; };
+		DD33A4C022136AFA00AC0E42 /* audio20.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45322136AF900AC0E42 /* audio20.m4a */; };
+		DD33A4C122136AFA00AC0E42 /* audio20.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45322136AF900AC0E42 /* audio20.m4a */; };
+		DD33A4C222136AFA00AC0E42 /* audio45.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45422136AF900AC0E42 /* audio45.m4a */; };
+		DD33A4C322136AFA00AC0E42 /* audio45.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45422136AF900AC0E42 /* audio45.m4a */; };
+		DD33A4C422136AFA00AC0E42 /* audio5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45522136AF900AC0E42 /* audio5.m4a */; };
+		DD33A4C522136AFA00AC0E42 /* audio5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45522136AF900AC0E42 /* audio5.m4a */; };
+		DD33A4C622136AFA00AC0E42 /* audio22.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45622136AF900AC0E42 /* audio22.m4a */; };
+		DD33A4C722136AFA00AC0E42 /* audio22.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45622136AF900AC0E42 /* audio22.m4a */; };
+		DD33A4C822136AFA00AC0E42 /* audio14.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45722136AF900AC0E42 /* audio14.m4a */; };
+		DD33A4C922136AFA00AC0E42 /* audio14.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45722136AF900AC0E42 /* audio14.m4a */; };
+		DD33A4CA22136AFA00AC0E42 /* audio25.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45822136AF900AC0E42 /* audio25.m4a */; };
+		DD33A4CB22136AFA00AC0E42 /* audio25.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45822136AF900AC0E42 /* audio25.m4a */; };
+		DD33A4CC22136AFA00AC0E42 /* audio48.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45922136AF900AC0E42 /* audio48.m4a */; };
+		DD33A4CD22136AFA00AC0E42 /* audio48.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45922136AF900AC0E42 /* audio48.m4a */; };
+		DD33A4CE22136AFA00AC0E42 /* audio6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45A22136AF900AC0E42 /* audio6.m4a */; };
+		DD33A4CF22136AFA00AC0E42 /* audio6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45A22136AF900AC0E42 /* audio6.m4a */; };
+		DD33A4D022136AFA00AC0E42 /* audio17.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45B22136AF900AC0E42 /* audio17.m4a */; };
+		DD33A4D122136AFA00AC0E42 /* audio17.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45B22136AF900AC0E42 /* audio17.m4a */; };
+		DD33A4D222136AFA00AC0E42 /* audio58.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45C22136AF900AC0E42 /* audio58.m4a */; };
+		DD33A4D322136AFA00AC0E42 /* audio58.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45C22136AF900AC0E42 /* audio58.m4a */; };
+		DD33A4D422136AFA00AC0E42 /* audio29.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45D22136AF900AC0E42 /* audio29.m4a */; };
+		DD33A4D522136AFA00AC0E42 /* audio29.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45D22136AF900AC0E42 /* audio29.m4a */; };
+		DD33A4D622136AFA00AC0E42 /* audio13.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45E22136AF900AC0E42 /* audio13.m4a */; };
+		DD33A4D722136AFA00AC0E42 /* audio13.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45E22136AF900AC0E42 /* audio13.m4a */; };
+		DD33A4D822136AFA00AC0E42 /* audio10.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45F22136AFA00AC0E42 /* audio10.m4a */; };
+		DD33A4D922136AFA00AC0E42 /* audio10.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A45F22136AFA00AC0E42 /* audio10.m4a */; };
+		DD33A4DA22136AFA00AC0E42 /* audio36.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46022136AFA00AC0E42 /* audio36.m4a */; };
+		DD33A4DB22136AFA00AC0E42 /* audio36.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46022136AFA00AC0E42 /* audio36.m4a */; };
+		DD33A4DC22136AFA00AC0E42 /* audio35.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46122136AFA00AC0E42 /* audio35.m4a */; };
+		DD33A4DD22136AFA00AC0E42 /* audio35.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46122136AFA00AC0E42 /* audio35.m4a */; };
+		DD33A4DE22136AFA00AC0E42 /* audio34.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46222136AFA00AC0E42 /* audio34.m4a */; };
+		DD33A4DF22136AFA00AC0E42 /* audio34.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46222136AFA00AC0E42 /* audio34.m4a */; };
+		DD33A4E022136AFA00AC0E42 /* audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46322136AFA00AC0E42 /* audio.m4a */; };
+		DD33A4E122136AFA00AC0E42 /* audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46322136AFA00AC0E42 /* audio.m4a */; };
+		DD33A4E222136AFA00AC0E42 /* audio28.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46422136AFA00AC0E42 /* audio28.m4a */; };
+		DD33A4E322136AFA00AC0E42 /* audio28.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46422136AFA00AC0E42 /* audio28.m4a */; };
+		DD33A4E422136AFA00AC0E42 /* audio4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46522136AFA00AC0E42 /* audio4.m4a */; };
+		DD33A4E522136AFA00AC0E42 /* audio4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46522136AFA00AC0E42 /* audio4.m4a */; };
+		DD33A4E622136AFA00AC0E42 /* audio15.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46622136AFA00AC0E42 /* audio15.m4a */; };
+		DD33A4E722136AFA00AC0E42 /* audio15.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46622136AFA00AC0E42 /* audio15.m4a */; };
+		DD33A4E822136AFA00AC0E42 /* audio63.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46722136AFA00AC0E42 /* audio63.m4a */; };
+		DD33A4E922136AFA00AC0E42 /* audio63.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46722136AFA00AC0E42 /* audio63.m4a */; };
+		DD33A4EA22136AFA00AC0E42 /* audio50.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46822136AFA00AC0E42 /* audio50.m4a */; };
+		DD33A4EB22136AFA00AC0E42 /* audio50.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46822136AFA00AC0E42 /* audio50.m4a */; };
+		DD33A4EC22136AFA00AC0E42 /* audio69.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46922136AFA00AC0E42 /* audio69.m4a */; };
+		DD33A4ED22136AFA00AC0E42 /* audio69.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46922136AFA00AC0E42 /* audio69.m4a */; };
+		DD33A4EE22136AFA00AC0E42 /* audio24.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46A22136AFA00AC0E42 /* audio24.m4a */; };
+		DD33A4EF22136AFA00AC0E42 /* audio24.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46A22136AFA00AC0E42 /* audio24.m4a */; };
+		DD33A4F022136AFA00AC0E42 /* audio32.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46B22136AFA00AC0E42 /* audio32.m4a */; };
+		DD33A4F122136AFA00AC0E42 /* audio32.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46B22136AFA00AC0E42 /* audio32.m4a */; };
+		FAB94394D1824C3FB8D75B5C /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 701294EFCA5F4652A303658C /* AntDesign.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -347,6 +482,8 @@
 		00E356EE1AD99517003FC87E /* edutecTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = edutecTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* edutecTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = edutecTests.m; sourceTree = "<group>"; };
+		01105288DBD04E978640F0B6 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		0654EF06166348CCA51B3DF9 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* edutec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edutec.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -357,38 +494,103 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = edutec/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = edutec/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		22CAEC629ECA4BB1886BC60A /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* edutec-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "edutec-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* edutec-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "edutec-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9E5324C30A4E969F774AA1 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		393F97E00BE54E069D73C9CC /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
+		3D7590AC74DC466FB38BA7AF /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		49B4B79D731D4210A4716BEE /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		49F76EA5637D427980609A3B /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
+		56F23237DCCD466C8CC8CAE8 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6B5BDCE2D50E44479B0B846D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		6D61B78703D44366A17622C8 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		6FC7228CEA114BBEB0B99580 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		701294EFCA5F4652A303658C /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		9220B8B975054647A0E2C0A7 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		97E3ABE82E084887BF712EE9 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		9CD38AC35C4245FE826DC758 /* libRNSound.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSound.a; sourceTree = "<group>"; };
+		9EBE0BB978744B408524C1DC /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		A82D6A799ED3480B975C56DD /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		AC03816F0E284F12A9F3C3BF /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		AC68FAE0AAA0486F804D5380 /* RNSound.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		6FC7228CEA114BBEB0B99580 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		393F97E00BE54E069D73C9CC /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		701294EFCA5F4652A303658C /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		22CAEC629ECA4BB1886BC60A /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2F9E5324C30A4E969F774AA1 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		49B4B79D731D4210A4716BEE /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C6F340D4029F4B3CBAF68EDA /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3D7590AC74DC466FB38BA7AF /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		97E3ABE82E084887BF712EE9 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		56F23237DCCD466C8CC8CAE8 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AC03816F0E284F12A9F3C3BF /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F6D1E4EA7CB84257BEA74686 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6B5BDCE2D50E44479B0B846D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6D61B78703D44366A17622C8 /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EC8FF96059B04740BC50D61B /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CB57D4162D7C4C4482205D02 /* Roboto_medium.ttf */ = {isa = PBXFileReference; name = "Roboto_medium.ttf"; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0654EF06166348CCA51B3DF9 /* Roboto.ttf */ = {isa = PBXFileReference; name = "Roboto.ttf"; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AE3F6E54606946AFB5ED3071 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9EBE0BB978744B408524C1DC /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		01105288DBD04E978640F0B6 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A82D6A799ED3480B975C56DD /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; name = "RNVectorIcons.xcodeproj"; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		9220B8B975054647A0E2C0A7 /* libRNVectorIcons.a */ = {isa = PBXFileReference; name = "libRNVectorIcons.a"; path = "libRNVectorIcons.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		49F76EA5637D427980609A3B /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; name = "libRNVectorIcons-tvOS.a"; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		AC68FAE0AAA0486F804D5380 /* RNSound.xcodeproj */ = {isa = PBXFileReference; name = "RNSound.xcodeproj"; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		9CD38AC35C4245FE826DC758 /* libRNSound.a */ = {isa = PBXFileReference; name = "libRNSound.a"; path = "libRNSound.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		AE3F6E54606946AFB5ED3071 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
+		C6F340D4029F4B3CBAF68EDA /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		CB57D4162D7C4C4482205D02 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
+		DD33A42922136AF400AC0E42 /* audio52.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio52.m4a; path = ../android/app/src/main/res/raw/audio52.m4a; sourceTree = "<group>"; };
+		DD33A42A22136AF400AC0E42 /* audio59.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio59.m4a; path = ../android/app/src/main/res/raw/audio59.m4a; sourceTree = "<group>"; };
+		DD33A42B22136AF400AC0E42 /* audio54.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio54.m4a; path = ../android/app/src/main/res/raw/audio54.m4a; sourceTree = "<group>"; };
+		DD33A42C22136AF400AC0E42 /* audio37.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio37.m4a; path = ../android/app/src/main/res/raw/audio37.m4a; sourceTree = "<group>"; };
+		DD33A42D22136AF400AC0E42 /* audio26.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio26.m4a; path = ../android/app/src/main/res/raw/audio26.m4a; sourceTree = "<group>"; };
+		DD33A42E22136AF400AC0E42 /* audio41.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio41.m4a; path = ../android/app/src/main/res/raw/audio41.m4a; sourceTree = "<group>"; };
+		DD33A42F22136AF500AC0E42 /* audio51.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio51.m4a; path = ../android/app/src/main/res/raw/audio51.m4a; sourceTree = "<group>"; };
+		DD33A43022136AF500AC0E42 /* audio46.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio46.m4a; path = ../android/app/src/main/res/raw/audio46.m4a; sourceTree = "<group>"; };
+		DD33A43122136AF500AC0E42 /* audio56.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio56.m4a; path = ../android/app/src/main/res/raw/audio56.m4a; sourceTree = "<group>"; };
+		DD33A43222136AF500AC0E42 /* audio18.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio18.m4a; path = ../android/app/src/main/res/raw/audio18.m4a; sourceTree = "<group>"; };
+		DD33A43322136AF500AC0E42 /* audio38.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio38.m4a; path = ../android/app/src/main/res/raw/audio38.m4a; sourceTree = "<group>"; };
+		DD33A43422136AF500AC0E42 /* audio53.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio53.m4a; path = ../android/app/src/main/res/raw/audio53.m4a; sourceTree = "<group>"; };
+		DD33A43522136AF500AC0E42 /* audio68.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio68.m4a; path = ../android/app/src/main/res/raw/audio68.m4a; sourceTree = "<group>"; };
+		DD33A43622136AF500AC0E42 /* audio40.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio40.m4a; path = ../android/app/src/main/res/raw/audio40.m4a; sourceTree = "<group>"; };
+		DD33A43722136AF500AC0E42 /* audio8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio8.m4a; path = ../android/app/src/main/res/raw/audio8.m4a; sourceTree = "<group>"; };
+		DD33A43822136AF600AC0E42 /* audio47.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio47.m4a; path = ../android/app/src/main/res/raw/audio47.m4a; sourceTree = "<group>"; };
+		DD33A43922136AF600AC0E42 /* audio67.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio67.m4a; path = ../android/app/src/main/res/raw/audio67.m4a; sourceTree = "<group>"; };
+		DD33A43A22136AF600AC0E42 /* audio23.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio23.m4a; path = ../android/app/src/main/res/raw/audio23.m4a; sourceTree = "<group>"; };
+		DD33A43B22136AF600AC0E42 /* audio19.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio19.m4a; path = ../android/app/src/main/res/raw/audio19.m4a; sourceTree = "<group>"; };
+		DD33A43C22136AF600AC0E42 /* audio12.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio12.m4a; path = ../android/app/src/main/res/raw/audio12.m4a; sourceTree = "<group>"; };
+		DD33A43D22136AF600AC0E42 /* audio7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio7.m4a; path = ../android/app/src/main/res/raw/audio7.m4a; sourceTree = "<group>"; };
+		DD33A43E22136AF600AC0E42 /* audio3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio3.m4a; path = ../android/app/src/main/res/raw/audio3.m4a; sourceTree = "<group>"; };
+		DD33A43F22136AF600AC0E42 /* audio2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio2.m4a; path = ../android/app/src/main/res/raw/audio2.m4a; sourceTree = "<group>"; };
+		DD33A44022136AF600AC0E42 /* audio30.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio30.m4a; path = ../android/app/src/main/res/raw/audio30.m4a; sourceTree = "<group>"; };
+		DD33A44122136AF700AC0E42 /* audio39.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio39.m4a; path = ../android/app/src/main/res/raw/audio39.m4a; sourceTree = "<group>"; };
+		DD33A44222136AF700AC0E42 /* audio57.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio57.m4a; path = ../android/app/src/main/res/raw/audio57.m4a; sourceTree = "<group>"; };
+		DD33A44322136AF700AC0E42 /* audio49.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio49.m4a; path = ../android/app/src/main/res/raw/audio49.m4a; sourceTree = "<group>"; };
+		DD33A44422136AF700AC0E42 /* audio60.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio60.m4a; path = ../android/app/src/main/res/raw/audio60.m4a; sourceTree = "<group>"; };
+		DD33A44522136AF700AC0E42 /* audio64.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio64.m4a; path = ../android/app/src/main/res/raw/audio64.m4a; sourceTree = "<group>"; };
+		DD33A44622136AF700AC0E42 /* audio66.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio66.m4a; path = ../android/app/src/main/res/raw/audio66.m4a; sourceTree = "<group>"; };
+		DD33A44722136AF700AC0E42 /* audio55.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio55.m4a; path = ../android/app/src/main/res/raw/audio55.m4a; sourceTree = "<group>"; };
+		DD33A44822136AF700AC0E42 /* audio9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio9.m4a; path = ../android/app/src/main/res/raw/audio9.m4a; sourceTree = "<group>"; };
+		DD33A44922136AF700AC0E42 /* audio61.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio61.m4a; path = ../android/app/src/main/res/raw/audio61.m4a; sourceTree = "<group>"; };
+		DD33A44A22136AF800AC0E42 /* audio33.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio33.m4a; path = ../android/app/src/main/res/raw/audio33.m4a; sourceTree = "<group>"; };
+		DD33A44B22136AF800AC0E42 /* audio44.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio44.m4a; path = ../android/app/src/main/res/raw/audio44.m4a; sourceTree = "<group>"; };
+		DD33A44C22136AF800AC0E42 /* audio62.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio62.m4a; path = ../android/app/src/main/res/raw/audio62.m4a; sourceTree = "<group>"; };
+		DD33A44D22136AF800AC0E42 /* audio21.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio21.m4a; path = ../android/app/src/main/res/raw/audio21.m4a; sourceTree = "<group>"; };
+		DD33A44E22136AF800AC0E42 /* audio43.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio43.m4a; path = ../android/app/src/main/res/raw/audio43.m4a; sourceTree = "<group>"; };
+		DD33A44F22136AF800AC0E42 /* audio11.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio11.m4a; path = ../android/app/src/main/res/raw/audio11.m4a; sourceTree = "<group>"; };
+		DD33A45022136AF800AC0E42 /* audio27.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio27.m4a; path = ../android/app/src/main/res/raw/audio27.m4a; sourceTree = "<group>"; };
+		DD33A45122136AF800AC0E42 /* audio16.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio16.m4a; path = ../android/app/src/main/res/raw/audio16.m4a; sourceTree = "<group>"; };
+		DD33A45222136AF800AC0E42 /* audio42.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio42.m4a; path = ../android/app/src/main/res/raw/audio42.m4a; sourceTree = "<group>"; };
+		DD33A45322136AF900AC0E42 /* audio20.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio20.m4a; path = ../android/app/src/main/res/raw/audio20.m4a; sourceTree = "<group>"; };
+		DD33A45422136AF900AC0E42 /* audio45.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio45.m4a; path = ../android/app/src/main/res/raw/audio45.m4a; sourceTree = "<group>"; };
+		DD33A45522136AF900AC0E42 /* audio5.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio5.m4a; path = ../android/app/src/main/res/raw/audio5.m4a; sourceTree = "<group>"; };
+		DD33A45622136AF900AC0E42 /* audio22.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio22.m4a; path = ../android/app/src/main/res/raw/audio22.m4a; sourceTree = "<group>"; };
+		DD33A45722136AF900AC0E42 /* audio14.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio14.m4a; path = ../android/app/src/main/res/raw/audio14.m4a; sourceTree = "<group>"; };
+		DD33A45822136AF900AC0E42 /* audio25.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio25.m4a; path = ../android/app/src/main/res/raw/audio25.m4a; sourceTree = "<group>"; };
+		DD33A45922136AF900AC0E42 /* audio48.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio48.m4a; path = ../android/app/src/main/res/raw/audio48.m4a; sourceTree = "<group>"; };
+		DD33A45A22136AF900AC0E42 /* audio6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio6.m4a; path = ../android/app/src/main/res/raw/audio6.m4a; sourceTree = "<group>"; };
+		DD33A45B22136AF900AC0E42 /* audio17.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio17.m4a; path = ../android/app/src/main/res/raw/audio17.m4a; sourceTree = "<group>"; };
+		DD33A45C22136AF900AC0E42 /* audio58.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio58.m4a; path = ../android/app/src/main/res/raw/audio58.m4a; sourceTree = "<group>"; };
+		DD33A45D22136AF900AC0E42 /* audio29.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio29.m4a; path = ../android/app/src/main/res/raw/audio29.m4a; sourceTree = "<group>"; };
+		DD33A45E22136AF900AC0E42 /* audio13.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio13.m4a; path = ../android/app/src/main/res/raw/audio13.m4a; sourceTree = "<group>"; };
+		DD33A45F22136AFA00AC0E42 /* audio10.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio10.m4a; path = ../android/app/src/main/res/raw/audio10.m4a; sourceTree = "<group>"; };
+		DD33A46022136AFA00AC0E42 /* audio36.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio36.m4a; path = ../android/app/src/main/res/raw/audio36.m4a; sourceTree = "<group>"; };
+		DD33A46122136AFA00AC0E42 /* audio35.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio35.m4a; path = ../android/app/src/main/res/raw/audio35.m4a; sourceTree = "<group>"; };
+		DD33A46222136AFA00AC0E42 /* audio34.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio34.m4a; path = ../android/app/src/main/res/raw/audio34.m4a; sourceTree = "<group>"; };
+		DD33A46322136AFA00AC0E42 /* audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio.m4a; path = ../android/app/src/main/res/raw/audio.m4a; sourceTree = "<group>"; };
+		DD33A46422136AFA00AC0E42 /* audio28.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio28.m4a; path = ../android/app/src/main/res/raw/audio28.m4a; sourceTree = "<group>"; };
+		DD33A46522136AFA00AC0E42 /* audio4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio4.m4a; path = ../android/app/src/main/res/raw/audio4.m4a; sourceTree = "<group>"; };
+		DD33A46622136AFA00AC0E42 /* audio15.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio15.m4a; path = ../android/app/src/main/res/raw/audio15.m4a; sourceTree = "<group>"; };
+		DD33A46722136AFA00AC0E42 /* audio63.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio63.m4a; path = ../android/app/src/main/res/raw/audio63.m4a; sourceTree = "<group>"; };
+		DD33A46822136AFA00AC0E42 /* audio50.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio50.m4a; path = ../android/app/src/main/res/raw/audio50.m4a; sourceTree = "<group>"; };
+		DD33A46922136AFA00AC0E42 /* audio69.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio69.m4a; path = ../android/app/src/main/res/raw/audio69.m4a; sourceTree = "<group>"; };
+		DD33A46A22136AFA00AC0E42 /* audio24.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio24.m4a; path = ../android/app/src/main/res/raw/audio24.m4a; sourceTree = "<group>"; };
+		DD33A46B22136AFA00AC0E42 /* audio32.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio32.m4a; path = ../android/app/src/main/res/raw/audio32.m4a; sourceTree = "<group>"; };
+		EC8FF96059B04740BC50D61B /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		F6D1E4EA7CB84257BEA74686 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -625,12 +827,80 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				DD33A46322136AFA00AC0E42 /* audio.m4a */,
+				DD33A43F22136AF600AC0E42 /* audio2.m4a */,
+				DD33A43E22136AF600AC0E42 /* audio3.m4a */,
+				DD33A46522136AFA00AC0E42 /* audio4.m4a */,
+				DD33A45522136AF900AC0E42 /* audio5.m4a */,
+				DD33A45A22136AF900AC0E42 /* audio6.m4a */,
+				DD33A43D22136AF600AC0E42 /* audio7.m4a */,
+				DD33A43722136AF500AC0E42 /* audio8.m4a */,
+				DD33A44822136AF700AC0E42 /* audio9.m4a */,
+				DD33A45F22136AFA00AC0E42 /* audio10.m4a */,
+				DD33A44F22136AF800AC0E42 /* audio11.m4a */,
+				DD33A43C22136AF600AC0E42 /* audio12.m4a */,
+				DD33A45E22136AF900AC0E42 /* audio13.m4a */,
+				DD33A45722136AF900AC0E42 /* audio14.m4a */,
+				DD33A46622136AFA00AC0E42 /* audio15.m4a */,
+				DD33A45122136AF800AC0E42 /* audio16.m4a */,
+				DD33A45B22136AF900AC0E42 /* audio17.m4a */,
+				DD33A43222136AF500AC0E42 /* audio18.m4a */,
+				DD33A43B22136AF600AC0E42 /* audio19.m4a */,
+				DD33A45322136AF900AC0E42 /* audio20.m4a */,
+				DD33A44D22136AF800AC0E42 /* audio21.m4a */,
+				DD33A45622136AF900AC0E42 /* audio22.m4a */,
+				DD33A43A22136AF600AC0E42 /* audio23.m4a */,
+				DD33A46A22136AFA00AC0E42 /* audio24.m4a */,
+				DD33A45822136AF900AC0E42 /* audio25.m4a */,
+				DD33A42D22136AF400AC0E42 /* audio26.m4a */,
+				DD33A45022136AF800AC0E42 /* audio27.m4a */,
+				DD33A46422136AFA00AC0E42 /* audio28.m4a */,
+				DD33A45D22136AF900AC0E42 /* audio29.m4a */,
+				DD33A44022136AF600AC0E42 /* audio30.m4a */,
+				DD33A46B22136AFA00AC0E42 /* audio32.m4a */,
+				DD33A44A22136AF800AC0E42 /* audio33.m4a */,
+				DD33A46222136AFA00AC0E42 /* audio34.m4a */,
+				DD33A46122136AFA00AC0E42 /* audio35.m4a */,
+				DD33A46022136AFA00AC0E42 /* audio36.m4a */,
+				DD33A42C22136AF400AC0E42 /* audio37.m4a */,
+				DD33A43322136AF500AC0E42 /* audio38.m4a */,
+				DD33A44122136AF700AC0E42 /* audio39.m4a */,
+				DD33A43622136AF500AC0E42 /* audio40.m4a */,
+				DD33A42E22136AF400AC0E42 /* audio41.m4a */,
+				DD33A45222136AF800AC0E42 /* audio42.m4a */,
+				DD33A44E22136AF800AC0E42 /* audio43.m4a */,
+				DD33A44B22136AF800AC0E42 /* audio44.m4a */,
+				DD33A45422136AF900AC0E42 /* audio45.m4a */,
+				DD33A43022136AF500AC0E42 /* audio46.m4a */,
+				DD33A43822136AF600AC0E42 /* audio47.m4a */,
+				DD33A45922136AF900AC0E42 /* audio48.m4a */,
+				DD33A44322136AF700AC0E42 /* audio49.m4a */,
+				DD33A46822136AFA00AC0E42 /* audio50.m4a */,
+				DD33A42F22136AF500AC0E42 /* audio51.m4a */,
+				DD33A42922136AF400AC0E42 /* audio52.m4a */,
+				DD33A43422136AF500AC0E42 /* audio53.m4a */,
+				DD33A42B22136AF400AC0E42 /* audio54.m4a */,
+				DD33A44722136AF700AC0E42 /* audio55.m4a */,
+				DD33A43122136AF500AC0E42 /* audio56.m4a */,
+				DD33A44222136AF700AC0E42 /* audio57.m4a */,
+				DD33A45C22136AF900AC0E42 /* audio58.m4a */,
+				DD33A42A22136AF400AC0E42 /* audio59.m4a */,
+				DD33A44422136AF700AC0E42 /* audio60.m4a */,
+				DD33A44922136AF700AC0E42 /* audio61.m4a */,
+				DD33A44C22136AF800AC0E42 /* audio62.m4a */,
+				DD33A46722136AFA00AC0E42 /* audio63.m4a */,
+				DD33A44522136AF700AC0E42 /* audio64.m4a */,
+				DD33A44622136AF700AC0E42 /* audio66.m4a */,
+				DD33A43922136AF600AC0E42 /* audio67.m4a */,
+				DD33A43522136AF500AC0E42 /* audio68.m4a */,
+				DD33A46922136AFA00AC0E42 /* audio69.m4a */,
 				13B07FAE1A68108700A75B9A /* edutec */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* edutecTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BFFAF0F8F8AC45D78548B1AA /* Resources */,
+				DD33A42622136AC700AC0E42 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -658,7 +928,7 @@
 			sourceTree = "<group>";
 		};
 		BFFAF0F8F8AC45D78548B1AA /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				701294EFCA5F4652A303658C /* AntDesign.ttf */,
 				22CAEC629ECA4BB1886BC60A /* Entypo.ttf */,
@@ -681,7 +951,17 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
+		};
+		DD33A42622136AC700AC0E42 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				393F97E00BE54E069D73C9CC /* libRNGestureHandler.a */,
+				9220B8B975054647A0E2C0A7 /* libRNVectorIcons.a */,
+				9CD38AC35C4245FE826DC758 /* libRNSound.a */,
+				49F76EA5637D427980609A3B /* libRNVectorIcons-tvOS.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -1127,26 +1407,93 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD33A49222136AFA00AC0E42 /* audio12.m4a in Resources */,
+				DD33A4C622136AFA00AC0E42 /* audio22.m4a in Resources */,
+				DD33A4CE22136AFA00AC0E42 /* audio6.m4a in Resources */,
+				DD33A4A422136AFA00AC0E42 /* audio64.m4a in Resources */,
+				DD33A4DE22136AFA00AC0E42 /* audio34.m4a in Resources */,
+				DD33A4E622136AFA00AC0E42 /* audio15.m4a in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DD33A4E822136AFA00AC0E42 /* audio63.m4a in Resources */,
+				DD33A4EC22136AFA00AC0E42 /* audio69.m4a in Resources */,
+				DD33A4CC22136AFA00AC0E42 /* audio48.m4a in Resources */,
+				DD33A4E222136AFA00AC0E42 /* audio28.m4a in Resources */,
+				DD33A48422136AFA00AC0E42 /* audio68.m4a in Resources */,
+				DD33A46C22136AFA00AC0E42 /* audio52.m4a in Resources */,
+				DD33A48C22136AFA00AC0E42 /* audio67.m4a in Resources */,
+				DD33A4D422136AFA00AC0E42 /* audio29.m4a in Resources */,
+				DD33A49622136AFA00AC0E42 /* audio3.m4a in Resources */,
+				DD33A4AE22136AFA00AC0E42 /* audio33.m4a in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				FAB94394D1824C3FB8D75B5C /* AntDesign.ttf in Resources */,
+				DD33A49A22136AFA00AC0E42 /* audio30.m4a in Resources */,
+				DD33A4D622136AFA00AC0E42 /* audio13.m4a in Resources */,
+				DD33A47E22136AFA00AC0E42 /* audio18.m4a in Resources */,
+				DD33A4A622136AFA00AC0E42 /* audio66.m4a in Resources */,
+				DD33A4C022136AFA00AC0E42 /* audio20.m4a in Resources */,
+				DD33A47022136AFA00AC0E42 /* audio54.m4a in Resources */,
+				DD33A48822136AFA00AC0E42 /* audio8.m4a in Resources */,
+				DD33A49822136AFA00AC0E42 /* audio2.m4a in Resources */,
 				C003F3DDBEF541039630B350 /* Entypo.ttf in Resources */,
+				DD33A47C22136AFA00AC0E42 /* audio56.m4a in Resources */,
 				45474D167CD642EBBE7A2694 /* EvilIcons.ttf in Resources */,
+				DD33A4A022136AFA00AC0E42 /* audio49.m4a in Resources */,
+				DD33A4E422136AFA00AC0E42 /* audio4.m4a in Resources */,
+				DD33A47222136AFA00AC0E42 /* audio37.m4a in Resources */,
 				7864C24FD9ED4D87ADAF3851 /* Feather.ttf in Resources */,
+				DD33A4A222136AFA00AC0E42 /* audio60.m4a in Resources */,
+				DD33A46E22136AFA00AC0E42 /* audio59.m4a in Resources */,
+				DD33A4DA22136AFA00AC0E42 /* audio36.m4a in Resources */,
 				3962B4A6915443AB83FE22D1 /* FontAwesome.ttf in Resources */,
 				4D692F19C6974E258D0A88DC /* FontAwesome5_Brands.ttf in Resources */,
+				DD33A4AA22136AFA00AC0E42 /* audio9.m4a in Resources */,
+				DD33A48A22136AFA00AC0E42 /* audio47.m4a in Resources */,
 				7F7A6AAA30E8488BB95A61C7 /* FontAwesome5_Regular.ttf in Resources */,
+				DD33A4C822136AFA00AC0E42 /* audio14.m4a in Resources */,
+				DD33A4D222136AFA00AC0E42 /* audio58.m4a in Resources */,
 				409911EF191C4CD897561FAD /* FontAwesome5_Solid.ttf in Resources */,
+				DD33A4A822136AFA00AC0E42 /* audio55.m4a in Resources */,
+				DD33A47422136AFA00AC0E42 /* audio26.m4a in Resources */,
+				DD33A4AC22136AFA00AC0E42 /* audio61.m4a in Resources */,
 				496C34E68201472F8AC44A15 /* Foundation.ttf in Resources */,
+				DD33A4EE22136AFA00AC0E42 /* audio24.m4a in Resources */,
+				DD33A4B422136AFA00AC0E42 /* audio21.m4a in Resources */,
+				DD33A48022136AFA00AC0E42 /* audio38.m4a in Resources */,
+				DD33A47622136AFA00AC0E42 /* audio41.m4a in Resources */,
+				DD33A4B822136AFA00AC0E42 /* audio11.m4a in Resources */,
 				C2057ED5762A4C47BA3526B9 /* Ionicons.ttf in Resources */,
+				DD33A4B222136AFA00AC0E42 /* audio62.m4a in Resources */,
+				DD33A48222136AFA00AC0E42 /* audio53.m4a in Resources */,
+				DD33A48622136AFA00AC0E42 /* audio40.m4a in Resources */,
+				DD33A49422136AFA00AC0E42 /* audio7.m4a in Resources */,
+				DD33A4BE22136AFA00AC0E42 /* audio42.m4a in Resources */,
+				DD33A4EA22136AFA00AC0E42 /* audio50.m4a in Resources */,
+				DD33A4F022136AFA00AC0E42 /* audio32.m4a in Resources */,
+				DD33A4D822136AFA00AC0E42 /* audio10.m4a in Resources */,
+				DD33A4E022136AFA00AC0E42 /* audio.m4a in Resources */,
 				6221BA2316C7430FB5E2E1CA /* MaterialCommunityIcons.ttf in Resources */,
+				DD33A4CA22136AFA00AC0E42 /* audio25.m4a in Resources */,
+				DD33A47A22136AFA00AC0E42 /* audio46.m4a in Resources */,
+				DD33A49C22136AFA00AC0E42 /* audio39.m4a in Resources */,
+				DD33A47822136AFA00AC0E42 /* audio51.m4a in Resources */,
 				6F369969D07A4C5DA8207A55 /* MaterialIcons.ttf in Resources */,
 				63D811D270BE47B5A1A970B8 /* Octicons.ttf in Resources */,
+				DD33A4D022136AFA00AC0E42 /* audio17.m4a in Resources */,
 				377C779392124F7DA29B7E6B /* Roboto_medium.ttf in Resources */,
+				DD33A4B022136AFA00AC0E42 /* audio44.m4a in Resources */,
+				DD33A4DC22136AFA00AC0E42 /* audio35.m4a in Resources */,
 				CEA47A1908B24407A68B93C2 /* Roboto.ttf in Resources */,
+				DD33A4C222136AFA00AC0E42 /* audio45.m4a in Resources */,
+				DD33A49022136AFA00AC0E42 /* audio19.m4a in Resources */,
 				3394FAB15D544108A0D614B3 /* rubicon-icon-font.ttf in Resources */,
+				DD33A4BC22136AFA00AC0E42 /* audio16.m4a in Resources */,
 				45FF859FF79441CB8619E588 /* SimpleLineIcons.ttf in Resources */,
+				DD33A48E22136AFA00AC0E42 /* audio23.m4a in Resources */,
 				5C869A39D3694061811585A1 /* Zocial.ttf in Resources */,
+				DD33A4B622136AFA00AC0E42 /* audio43.m4a in Resources */,
+				DD33A4C422136AFA00AC0E42 /* audio5.m4a in Resources */,
+				DD33A4BA22136AFA00AC0E42 /* audio27.m4a in Resources */,
+				DD33A49E22136AFA00AC0E42 /* audio57.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,7 +1501,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD33A46D22136AFA00AC0E42 /* audio52.m4a in Resources */,
+				DD33A49F22136AFA00AC0E42 /* audio57.m4a in Resources */,
+				DD33A48722136AFA00AC0E42 /* audio40.m4a in Resources */,
+				DD33A47B22136AFA00AC0E42 /* audio46.m4a in Resources */,
+				DD33A49122136AFA00AC0E42 /* audio19.m4a in Resources */,
+				DD33A49722136AFA00AC0E42 /* audio3.m4a in Resources */,
+				DD33A4F122136AFA00AC0E42 /* audio32.m4a in Resources */,
+				DD33A49322136AFA00AC0E42 /* audio12.m4a in Resources */,
+				DD33A4E122136AFA00AC0E42 /* audio.m4a in Resources */,
+				DD33A49922136AFA00AC0E42 /* audio2.m4a in Resources */,
+				DD33A49D22136AFA00AC0E42 /* audio39.m4a in Resources */,
+				DD33A4ED22136AFA00AC0E42 /* audio69.m4a in Resources */,
+				DD33A4D322136AFA00AC0E42 /* audio58.m4a in Resources */,
+				DD33A4DF22136AFA00AC0E42 /* audio34.m4a in Resources */,
+				DD33A47522136AFA00AC0E42 /* audio26.m4a in Resources */,
+				DD33A4E722136AFA00AC0E42 /* audio15.m4a in Resources */,
+				DD33A48D22136AFA00AC0E42 /* audio67.m4a in Resources */,
+				DD33A4E522136AFA00AC0E42 /* audio4.m4a in Resources */,
+				DD33A48922136AFA00AC0E42 /* audio8.m4a in Resources */,
+				DD33A4AD22136AFA00AC0E42 /* audio61.m4a in Resources */,
+				DD33A4C722136AFA00AC0E42 /* audio22.m4a in Resources */,
+				DD33A4C522136AFA00AC0E42 /* audio5.m4a in Resources */,
+				DD33A47322136AFA00AC0E42 /* audio37.m4a in Resources */,
+				DD33A4A522136AFA00AC0E42 /* audio64.m4a in Resources */,
+				DD33A4AB22136AFA00AC0E42 /* audio9.m4a in Resources */,
+				DD33A4EF22136AFA00AC0E42 /* audio24.m4a in Resources */,
+				DD33A4BD22136AFA00AC0E42 /* audio16.m4a in Resources */,
+				DD33A4EB22136AFA00AC0E42 /* audio50.m4a in Resources */,
+				DD33A48122136AFA00AC0E42 /* audio38.m4a in Resources */,
+				DD33A4A122136AFA00AC0E42 /* audio49.m4a in Resources */,
+				DD33A4D522136AFA00AC0E42 /* audio29.m4a in Resources */,
+				DD33A48322136AFA00AC0E42 /* audio53.m4a in Resources */,
+				DD33A49B22136AFA00AC0E42 /* audio30.m4a in Resources */,
+				DD33A4CD22136AFA00AC0E42 /* audio48.m4a in Resources */,
+				DD33A47922136AFA00AC0E42 /* audio51.m4a in Resources */,
+				DD33A4D122136AFA00AC0E42 /* audio17.m4a in Resources */,
+				DD33A46F22136AFA00AC0E42 /* audio59.m4a in Resources */,
+				DD33A4D722136AFA00AC0E42 /* audio13.m4a in Resources */,
+				DD33A4BF22136AFA00AC0E42 /* audio42.m4a in Resources */,
+				DD33A49522136AFA00AC0E42 /* audio7.m4a in Resources */,
+				DD33A47722136AFA00AC0E42 /* audio41.m4a in Resources */,
+				DD33A48B22136AFA00AC0E42 /* audio47.m4a in Resources */,
+				DD33A4C122136AFA00AC0E42 /* audio20.m4a in Resources */,
+				DD33A4B722136AFA00AC0E42 /* audio43.m4a in Resources */,
+				DD33A4CF22136AFA00AC0E42 /* audio6.m4a in Resources */,
+				DD33A4DD22136AFA00AC0E42 /* audio35.m4a in Resources */,
+				DD33A4B122136AFA00AC0E42 /* audio44.m4a in Resources */,
+				DD33A4A922136AFA00AC0E42 /* audio55.m4a in Resources */,
+				DD33A4C322136AFA00AC0E42 /* audio45.m4a in Resources */,
+				DD33A4C922136AFA00AC0E42 /* audio14.m4a in Resources */,
+				DD33A4CB22136AFA00AC0E42 /* audio25.m4a in Resources */,
+				DD33A47122136AFA00AC0E42 /* audio54.m4a in Resources */,
+				DD33A47F22136AFA00AC0E42 /* audio18.m4a in Resources */,
+				DD33A47D22136AFA00AC0E42 /* audio56.m4a in Resources */,
+				DD33A4B922136AFA00AC0E42 /* audio11.m4a in Resources */,
+				DD33A4B322136AFA00AC0E42 /* audio62.m4a in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				DD33A4AF22136AFA00AC0E42 /* audio33.m4a in Resources */,
+				DD33A4E922136AFA00AC0E42 /* audio63.m4a in Resources */,
+				DD33A4DB22136AFA00AC0E42 /* audio36.m4a in Resources */,
+				DD33A4BB22136AFA00AC0E42 /* audio27.m4a in Resources */,
+				DD33A48F22136AFA00AC0E42 /* audio23.m4a in Resources */,
+				DD33A4B522136AFA00AC0E42 /* audio21.m4a in Resources */,
+				DD33A48522136AFA00AC0E42 /* audio68.m4a in Resources */,
+				DD33A4A322136AFA00AC0E42 /* audio60.m4a in Resources */,
+				DD33A4D922136AFA00AC0E42 /* audio10.m4a in Resources */,
+				DD33A4E322136AFA00AC0E42 /* audio28.m4a in Resources */,
+				DD33A4A722136AFA00AC0E42 /* audio66.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1269,9 +1683,19 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
+					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+				);
 				INFOPLIST_FILE = edutecTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1279,16 +1703,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/edutec.app/edutec";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
-					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
-					"$(SRCROOT)\..\node_modules\react-native-sound\RNSound",
-				);
 			};
 			name = Debug;
 		};
@@ -1297,9 +1711,19 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
+					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+				);
 				INFOPLIST_FILE = edutecTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1307,16 +1731,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/edutec.app/edutec";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
-					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
-					"$(SRCROOT)\..\node_modules\react-native-sound\RNSound",
-				);
 			};
 			name = Release;
 		};
@@ -1326,6 +1740,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
+					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+				);
 				INFOPLIST_FILE = edutec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1336,12 +1756,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = edutec;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
-					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
-					"$(SRCROOT)\..\node_modules\react-native-sound\RNSound",
-				);
 			};
 			name = Debug;
 		};
@@ -1350,6 +1764,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
+					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+				);
 				INFOPLIST_FILE = edutec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1360,12 +1780,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = edutec;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
-					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
-					"$(SRCROOT)\..\node_modules\react-native-sound\RNSound",
-				);
 			};
 			name = Release;
 		};
@@ -1381,8 +1795,18 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
+					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+				);
 				INFOPLIST_FILE = "edutec-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1392,16 +1816,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
-					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
-					"$(SRCROOT)\..\node_modules\react-native-sound\RNSound",
-				);
 			};
 			name = Debug;
 		};
@@ -1417,8 +1831,18 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
+					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+				);
 				INFOPLIST_FILE = "edutec-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1428,16 +1852,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
-					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
-					"$(SRCROOT)\..\node_modules\react-native-sound\RNSound",
-				);
 			};
 			name = Release;
 		};
@@ -1452,8 +1866,18 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
+					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+				);
 				INFOPLIST_FILE = "edutec-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1463,16 +1887,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/edutec-tvOS.app/edutec-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
-					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
-					"$(SRCROOT)\..\node_modules\react-native-sound\RNSound",
-				);
 			};
 			name = Debug;
 		};
@@ -1487,8 +1901,18 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
+					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+				);
 				INFOPLIST_FILE = "edutec-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1498,16 +1922,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/edutec-tvOS.app/edutec-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
-					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
-					"$(SRCROOT)\..\node_modules\react-native-sound\RNSound",
-				);
 			};
 			name = Release;
 		};

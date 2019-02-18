@@ -7,9 +7,12 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Image, ImageBackground } from 'react-native'
+import { StyleSheet, Image, ImageBackground, Dimensions } from 'react-native'
 import { Container, Content, Text, Card, CardItem, Icon, Left, Right } from 'native-base'
 import { Col, Row, Grid } from 'react-native-easy-grid'
+import imageMuestraSanguinea from '../assets/images/gota.png'
+
+var { height } = Dimensions.get('window')
 
 export default class Menu extends Component {
   render() {
@@ -23,11 +26,11 @@ export default class Menu extends Component {
                   <Card style={{ borderRadius: 8 }}>
                     <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('BloodTest')}>
                       <Left>
-                        <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={styles.image} />
+                        <Image source={imageMuestraSanguinea} style={styles.image} />
                       </Left>
                       <Text style={{ fontSize: 16 }}>Muestra sanguinea</Text>
                       <Right>
-                        <Icon name='arrow-forward' />
+                        <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
                     </CardItem>
                   </Card>
@@ -38,12 +41,10 @@ export default class Menu extends Component {
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>
                     <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('Chemical')}>
-                      <Left>
-                        <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={styles.image} />
-                      </Left>
+                      <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={styles.image} />
                       <Text style={{ fontSize: 16 }}>Cultivo microbiologico</Text>
                       <Right>
-                        <Icon name='arrow-forward' />
+                        <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
                     </CardItem>
                   </Card>
@@ -59,7 +60,7 @@ export default class Menu extends Component {
                       </Left>
                       <Text style={{ fontSize: 16 }}>Examen toxicologico</Text>
                       <Right>
-                        <Icon name='arrow-forward' />
+                        <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
                     </CardItem>
                   </Card>
@@ -81,11 +82,11 @@ const styles = StyleSheet.create({
     padding: 8
   },
   col: {
-    // backgroundColor: '#D2D2D2',
+    // backgroundColor: '#D59F0F',
     margin: 8
   },
   image: {
-    height: 80,
+    height: 60,
     width: null,
     marginRight: 8,
     flex: 1,
@@ -94,13 +95,17 @@ const styles = StyleSheet.create({
   cardItem: {
     borderRadius: 8,
     height: 80,
-    padding: 16
+    padding: 16,
+    backgroundColor: '#D59F0F'
   },
   background: {
     flex: 1
   },
   grid: {
     flex: 1,
-    height: 616
+    height: height
+  },
+  icon: {
+    color: '#000000'
   }
 })

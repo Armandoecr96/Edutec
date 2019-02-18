@@ -8,14 +8,21 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, Button, Image, ImageBackground, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native'
 import states from './states/BloodTestStates'
-import { Container, Content, Card, CardItem } from 'native-base'
+import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
 import moment  from "moment";
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import { bold } from 'ansi-colors';
 var SoundPlayer = require('react-native-sound')
 
+import playButtom from '../assets/images/play.png'
+import pauseButtom from '../assets/images/pausa.png'
+import stopButtom from '../assets/images/stop.png'
+var SoundPlayer = require('react-native-sound')
+
+var {height, width} = Dimensions.get('window');
 
 export default class BloodTest extends Component {
   constructor(props) {
@@ -28,6 +35,8 @@ export default class BloodTest extends Component {
       dateChoose: "",
       time: "",
       verificacion:false
+      playVisibility: 'flex',
+      pauseVisibbility: 'none'
     }
   }
 
@@ -81,13 +90,25 @@ export default class BloodTest extends Component {
   }
 
   play() {
+  pauseToPlay () {
+    this.setState({
+      playVisibility: 'flex',
+      pauseVisibbility: 'none'
+    })
+  }
+
+  play () {
     if (this.state.song !== null) {
       this.state.song.play((succes) => {
-        if (!succes) {
-          console.log('Error en reproducción')
+        if (succes) {
+          this.pauseToPlay()
         }
       })
     }
+    this.setState({
+      playVisibility: 'none',
+      pauseVisibbility: 'flex'
+    })
   }
 
   pause() {
@@ -98,13 +119,15 @@ export default class BloodTest extends Component {
         }
       })
     }
+    this.pauseToPlay()
   }
 
   stop() {
     if (this.state.song !== null) {
+      this.state.song.play()
       this.state.song.stop((succes) => {
         if (!succes) {
-          console.log('Error en reproducción')
+          this.pauseToPlay()
         }
       })
     }
@@ -127,17 +150,21 @@ export default class BloodTest extends Component {
     // })
     return (
       <Container>
-        <Content style={styles.container}>
+        <Content>
+          {console.log(height)}
           <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
-            <View style={{ height: 620 }}>
-              <Card transparent>
+            <View style={{ height: height }}>
+              <Card transparent style={styles.card}>
                 <CardItem style={styles.cardItem}>
-                  <Image source={textBox} style={styles.image} />
+                  <Image source={textBox} style={styles.cardImage} />
                   <Text style={styles.title}>Español</Text>
-                  <Text style={[styles.cardText]}>{states.questionary[this.state.index].spanishText}</Text>
+                  <Text style={[styles.cardText, styles.ajuste]}>{states.questionary[this.state.index].spanishText}</Text>
                 </CardItem>
+              </Card>
+
+              <Card transparent style={styles.card}>
                 <CardItem style={styles.cardItem}>
-                  <Image source={textBox} style={styles.image} />
+                  <Image source={textBox} style={styles.cardImage} />
                   <Text style={styles.title}>Maya</Text>
                   <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText}</Text>
                 </CardItem>
@@ -162,33 +189,36 @@ export default class BloodTest extends Component {
                   :
                   null}
 
+              <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
                 <Button
+                  transparent
                   onPress={() => this.play()}
-                  title='Reproducir'
-                  color='#841584'
-                  accessibilityLabel='Learn more about this purple button'
-                  style={{ width: '30%' }}
-                />
+                  style={{ width: 80, height: 80, display: this.state.playVisibility }}
+                >
+                  <Image source={playButtom} style={styles.imageButton} /></Button>
                 <Button
+                  transparent
                   onPress={() => this.pause()}
-                  title='Pausa'
-                  color='#841584'
-                  accessibilityLabel='Learn more about this purple button'
-                />
+                  style={{ width: 80, height: 80, display: this.state.pauseVisibbility }}
+                >
+                  <Image source={pauseButtom} style={styles.imageButton} /></Button>
                 <Button
+                  transparent
                   onPress={() => this.stop()}
-                  title='Stop'
-                  color='#841584'
-                  accessibilityLabel='Learn more about this purple button'
-                />
+                  style={{ width: 80, height: 80 }}
+                >
+                  <Image source={stopButtom} style={styles.imageButton} /></Button>
               </View>
               {states.questionary[this.state.index].options.map((selection, key) => {
                 return (
-                  <View key={key}>
-                    <Button title={selection.title} onPress={() => this.changeQuestion(selection.nextID)} />
+                  <View key={key} style={{ marginTop: 24 }}>
+                    <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ alignSelf: 'center' }} >
+                      <Text style={{ color: '#FFFFFF', fontSize: 16 }}>{selection.title}</Text>
+                    </Button>
                   </View>
                 )
               })}
+              </View>
             </View>
           </ImageBackground>
         </Content>
@@ -200,39 +230,43 @@ export default class BloodTest extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
-    height: 620
-
+    backgroundColor: '#F5FCFF'
   },
   background: {
     flex: 1
   },
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
     margin: 10
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
+  imageButton: {
+    width: 80,
+    height: 80
   },
-  image: {
-    width: 340,
-    resizeMode: 'contain',
-    position: 'absolute'
+  playerButtom: {
+    width: 80,
+    height: 80
+  },
+  card: {
+    width: '100%'
   },
   cardItem: {
-    paddingTop: 32,
-    marginLeft: 10,
+    width: '100%',
     backgroundColor: 'rgba(0,0,0,0)'
   },
+  cardImage: {
+    width: '100%',
+    resizeMode: 'stretch'
+  },
+  ajuste: {
+    marginLeft: -90
+  },
   title: {
-    fontWeight: '900',
-    fontSize: 16,
+    marginLeft: '-90%',
     color: '#FFFFFF',
-    marginBottom: 80,
-    marginLeft: 24
+    fontWeight: '900',
+    fontSize: 24,
+    marginTop: -120
   },
   cardText: {
     color: '#FFFFFF',
@@ -252,6 +286,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: 'white',
     textAlign: 'center'
+    marginLeft: -60,
+    fontSize: 20,
+    maxWidth: '80%',
+    marginTop: 32,
+    alignItems: 'center'
   }
 
 
