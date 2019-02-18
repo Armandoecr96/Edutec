@@ -7,8 +7,7 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Button, Image, ImageBackground, TouchableOpacity } from 'react-native'
-import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions, TouchableOpacity } from 'react-native'
 import states from './states/BloodTestStates'
 import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
@@ -152,7 +151,7 @@ export default class BloodTest extends Component {
         <Content>
           {console.log(height)}
           <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
-            <View style={{ height: height }}>
+            <View style={{ height: height, marginBottom: 32 }}>
               <Card transparent style={styles.card}>
                 <CardItem style={styles.cardItem}>
                   <Image source={textBox} style={styles.cardImage} />
@@ -208,15 +207,15 @@ export default class BloodTest extends Component {
                 >
                   <Image source={stopButtom} style={styles.imageButton} /></Button>
               </View>
+              <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
               {states.questionary[this.state.index].options.map((selection, key) => {
                 return (
-                  <View key={key} style={{ marginTop: 24 }}>
-                    <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ alignSelf: 'center' }} >
+                    <Button key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8 }} >
                       <Text style={{ color: '#FFFFFF', fontSize: 16 }}>{selection.title}</Text>
                     </Button>
-                  </View>
                 )
               })}
+              </View>
               </View>
             </View>
           </ImageBackground>
