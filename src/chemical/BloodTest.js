@@ -143,15 +143,11 @@ export default class BloodTest extends Component {
   }
 
   render() {
-    // this.setState({
-    //   hora: states.questionary[this.state.index].hora
-    // })
     return (
       <Container>
         <Content>
-          {console.log(height)}
           <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
-            <View style={{ height: height, marginBottom: 32 }}>
+            <View style={{ height: height, marginBottom: 88 }}>
               <Card transparent style={styles.card}>
                 <CardItem style={styles.cardItem}>
                   <Image source={textBox} style={styles.cardImage} />
@@ -174,9 +170,9 @@ export default class BloodTest extends Component {
                 
                 {states.questionary[this.state.index].hora ?
                   <View>
-                    <TouchableOpacity style={styles.button} onPress={this.showPicker}>
+                    <Button style={[styles.button, { alignSelf: 'center', marginBottom: 16 }]} onPress={this.showPicker}>
                       <Text style={styles.text}>Ingrese Hora</Text>
-                    </TouchableOpacity>
+                    </Button>
                     <DateTimePicker 
                     isVisible={this.state.isVisible} 
                     onConfirm={this.handlerPicker} 
@@ -210,7 +206,7 @@ export default class BloodTest extends Component {
               <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
               {states.questionary[this.state.index].options.map((selection, key) => {
                 return (
-                    <Button key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8 }} >
+                    <Button key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }} >
                       <Text style={{ color: '#FFFFFF', fontSize: 16 }}>{selection.title}</Text>
                     </Button>
                 )
@@ -271,23 +267,25 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     marginLeft: -40,
     fontSize: 16,
-    marginRight: 40
+    marginRight: 40,
+    maxWidth: 264
   },
   button:{
-    width: "100%",
-    height: 50,
+    width: null,
+    height: 60,
     backgroundColor: '#330066',
     justifyContent: 'center',
-    marginTop: 15
+    marginTop: 8,
+    marginLeft: 8,
+    marginRight: 8
   },
   text: {
     fontSize: 18,
     color: 'white',
     textAlign: 'center',
-    marginLeft: -60,
     fontSize: 20,
     maxWidth: '80%',
-    marginTop: 32,
+    padding: 8,
     alignItems: 'center'
   }
 

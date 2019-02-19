@@ -10,7 +10,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Image, ImageBackground, Dimensions } from 'react-native'
 import { Container, Content, Text, Card, CardItem, Icon, Left, Right } from 'native-base'
 import { Col, Row, Grid } from 'react-native-easy-grid'
-import imageMuestraSanguinea from '../assets/images/gota.png'
+import imageMuestraSanguinea from '../assets/images/gota_2.png'
 import imageCultivoBiologico from '../assets/images/cultivo_biologico.png'
 import imagePruebaToxico from '../assets/images/canavis.png'
 
