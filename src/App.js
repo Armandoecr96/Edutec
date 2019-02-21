@@ -10,6 +10,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 // Principal
 import Main from './Menu'
+import { Root } from "native-base";
 
 // Quimicos
 import MainChemical from './chemical/Menu'

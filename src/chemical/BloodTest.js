@@ -266,9 +266,10 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: '900',
     marginLeft: -40,
-    fontSize: 16,
+    fontSize: 24,
     marginRight: 40,
-    maxWidth: 264
+    marginTop: 48,
+    width: '80%'
   },
   button:{
     width: null,

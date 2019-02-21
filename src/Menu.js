@@ -7,8 +7,9 @@
  */
 
 import React, { Component } from 'react'
-import { Image } from 'react-native'
-import { Container, Header, Content, Card, CardItem, Text, Left, Body, Title } from 'native-base'
+import { StyleSheet, Image } from 'react-native'
+import { Container, Header, Content, Card, CardItem, Text, Toast, Body, Title } from 'native-base'
+import PersonajesQuimicos from './assets/images/personajes_quimicos.jpg'
 
 export default class Menu extends Component {
   render () {
@@ -19,29 +20,15 @@ export default class Menu extends Component {
             <Title>Edutec</Title>
           </Body>
         </Header>
-        <Content>
+        <Content style={styles.content}>
           <Card style={{ borderRadius: 16 }}>
-            <CardItem style={{ borderRadius: 16 }}>
-              <Left>
-                <Body>
-                  <Text style={{ fontSize: 24 }}>Quimico</Text>
-                </Body>
-              </Left>
-            </CardItem>
             <CardItem style={{ borderRadius: 16 }} cardBody button onPress={() => this.props.navigation.navigate('Chemical')}>
-              <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={{ height: 200, width: null, flex: 1, resizeMode: 'contain' }} />
+              <Image source={PersonajesQuimicos} style={styles.images} />
             </CardItem>
           </Card>
           <Card style={{ borderRadius: 16 }}>
-            <CardItem style={{ backgroundColor: 'gray', opacity: 0.5, borderTopStartRadius: 16, borderTopEndRadius: 16 }}>
-              <Left>
-                <Body>
-                  <Text style={{ fontSize: 24 }}>Recepción</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody style={{ borderRadius: 16 }}>
-              <Image source={{ uri: 'http://restauranteamodo.com/wp-content/uploads/2017/03/ScreenClip-e1489436607533-535x400.png' }} style={{ height: 200, width: null, flex: 1, opacity: 0.5, resizeMode: 'contain' }} />
+            <CardItem cardBody style={{ borderRadius: 16 }} button onPress={() => alert('En Construcción')}>
+              <Image source={PersonajesQuimicos} style={styles.images} />
             </CardItem>
           </Card>
         </Content>
@@ -49,3 +36,16 @@ export default class Menu extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  content: {
+    display: 'flex'
+  },
+  images: {
+    height: 200,
+    width: null,
+    flex: 1,
+    resizeMode: 'cover',
+    borderRadius: 16
+  }
+})

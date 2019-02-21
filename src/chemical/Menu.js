@@ -42,7 +42,7 @@ export default class Menu extends Component {
               <Row style={styles.row}>
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>
-                    <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('Chemical')}>
+                    <CardItem style={styles.cardItem} cardBody button onPress={() => alert('En Construcción')}>
                       <Left style={styles.left}>
                         <Image source={imageCultivoBiologico} style={[styles.image, { marginBottom: 4, marginTop: 4 }]} />
                       </Left>
@@ -58,7 +58,7 @@ export default class Menu extends Component {
               <Row style={styles.row}>
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>
-                    <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('Chemical')}>
+                    <CardItem style={styles.cardItem} cardBody button onPress={() => alert('En Construcción')}>
                       <Left style={styles.left}>
                         <Image source={imagePruebaToxico} style={[styles.image, { marginBottom: 8 }]} />
                       </Left>
