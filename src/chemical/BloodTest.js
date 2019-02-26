@@ -13,10 +13,10 @@ import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
 import yesButton from '../assets/images/si.png'
 import noButton from '../assets/images/no.png'
+import nextButton from '../assets/images/siguiente.png'
 import moment  from "moment";
 import DateTimePicker from 'react-native-modal-datetime-picker';
 var SoundPlayer = require('react-native-sound')
-
 import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
@@ -216,8 +216,8 @@ export default class BloodTest extends Component {
                   <Image source={noButton} style={styles.imageButton} />
                   </Button>
                   : selection.title === 'Siguiente' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }} >
-                    <Text>Siguiente</Text>
-                  </Button> : <Text />
+                    <Image source={nextButton} style={{height: 80, width: 124}}/>
+                  </Button> : <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}><Text>{selection.title}</Text></Button>
                 )
               })}
               </View>
