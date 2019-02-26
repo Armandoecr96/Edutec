@@ -7,13 +7,14 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Image, ImageBackground, Dimensions, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native'
 import states from './states/BloodTestStates'
 import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
+import yesButton from '../assets/images/si.png'
+import noButton from '../assets/images/no.png'
 import moment  from "moment";
 import DateTimePicker from 'react-native-modal-datetime-picker';
-import { bold } from 'ansi-colors';
 var SoundPlayer = require('react-native-sound')
 
 import playButtom from '../assets/images/play.png'
@@ -206,9 +207,17 @@ export default class BloodTest extends Component {
               <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
               {states.questionary[this.state.index].options.map((selection, key) => {
                 return (
-                    <Button key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }} >
-                      <Text style={{ color: '#FFFFFF', fontSize: 16 }}>{selection.title}</Text>
-                    </Button>
+                  selection.title === 'Si' ?
+                  <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
+                  <Image source={yesButton} style={styles.imageButton} />
+                  </Button> 
+                  : selection.title === 'No' 
+                  ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
+                  <Image source={noButton} style={styles.imageButton} />
+                  </Button>
+                  : selection.title === 'Siguiente' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }} >
+                    <Text>Siguiente</Text>
+                  </Button> : <Text />
                 )
               })}
               </View>
@@ -288,6 +297,12 @@ const styles = StyleSheet.create({
     maxWidth: '80%',
     padding: 8,
     alignItems: 'center'
+  },
+  buttonDecision: {
+    marginRight: 8,
+    marginBottom: 16,
+    width: 80,
+    height: 70
   }
 
 
