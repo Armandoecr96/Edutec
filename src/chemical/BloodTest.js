@@ -14,6 +14,7 @@ import textBox from '../assets/images/caja-de-texto-1.png'
 import yesButton from '../assets/images/si.png'
 import noButton from '../assets/images/no.png'
 import nextButton from '../assets/images/siguiente.png'
+import previewButtom from '../assets/images/atras.png'
 import moment  from "moment";
 import DateTimePicker from 'react-native-modal-datetime-picker';
 var SoundPlayer = require('react-native-sound')
@@ -171,9 +172,6 @@ export default class BloodTest extends Component {
                 
                 {states.questionary[this.state.index].hora ?
                   <View>
-                    <Button style={[styles.button, { alignSelf: 'center', marginBottom: 16 }]} onPress={this.showPicker}>
-                      <Text style={styles.text}>Ingrese Hora</Text>
-                    </Button>
                     <DateTimePicker 
                     isVisible={this.state.isVisible} 
                     onConfirm={this.handlerPicker} 
@@ -217,7 +215,13 @@ export default class BloodTest extends Component {
                   </Button>
                   : selection.title === 'Siguiente' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }} >
                     <Image source={nextButton} style={{height: 80, width: 124}}/>
-                  </Button> : <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}><Text>{selection.title}</Text></Button>
+                  </Button> 
+                  : selection.title === 'Atras' ? <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                    <Image source={previewButtom} style={{height: 80, width: 124}}/>
+                  </Button>
+                  : <Button style={[styles.button, { alignSelf: 'center', marginBottom: 16 }]} onPress={this.showPicker}>
+                  <Text style={styles.text}>Ingrese Hora</Text>
+                </Button>
                 )
               })}
               </View>

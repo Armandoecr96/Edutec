@@ -8,8 +8,8 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, Image } from 'react-native'
-import { Container, Header, Content, Card, CardItem, Text, Toast, Body, Title } from 'native-base'
-import PersonajesQuimicos from './assets/images/personajes_quimicos.jpg'
+import { Container, Header, Content, Card, CardItem, Body, Title } from 'native-base'
+import PersonajesQuimicos from './assets/images/quimicos.jpg'
 
 export default class Menu extends Component {
   render () {
