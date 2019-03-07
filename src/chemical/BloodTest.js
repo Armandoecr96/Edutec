@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions, TouchableOpacity } from 'react-native'
 import states from './states/BloodTestStates'
 import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/caja-de-texto-1.png'
@@ -170,7 +170,7 @@ export default class BloodTest extends Component {
 
               <View style={{ display: 'flex', flexDirection: 'column' }}>
                 
-                {states.questionary[this.state.index].hora ?
+              {states.questionary[this.state.index].hora ?
                   <View>
                     <DateTimePicker 
                     isVisible={this.state.isVisible} 
@@ -219,9 +219,9 @@ export default class BloodTest extends Component {
                   : selection.title === 'Atras' ? <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                     <Image source={previewButtom} style={{height: 80, width: 124}}/>
                   </Button>
-                  : <Button style={[styles.button, { alignSelf: 'center', marginBottom: 16 }]} onPress={this.showPicker}>
+                  : <TouchableOpacity style={styles.button} onPress={this.showPicker}>
                   <Text style={styles.text}>Ingrese Hora</Text>
-                </Button>
+                </TouchableOpacity>
                 )
               })}
               </View>
