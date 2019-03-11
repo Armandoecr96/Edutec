@@ -10,6 +10,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Image } from 'react-native'
 import { Container, Header, Content, Card, CardItem, Body, Title } from 'native-base'
 import PersonajesQuimicos from './assets/images/quimicos.jpg'
+import PersonajesRecepcion from './assets/images/recepcion.jpg'
 
 export default class Menu extends Component {
   render () {
@@ -28,7 +29,7 @@ export default class Menu extends Component {
           </Card>
           <Card style={{ borderRadius: 16 }}>
             <CardItem cardBody style={{ borderRadius: 16 }} button onPress={() => alert('En Construcción')}>
-              <Image source={PersonajesQuimicos} style={styles.images} />
+              <Image source={PersonajesRecepcion} style={styles.images} />
             </CardItem>
           </Card>
         </Content>
