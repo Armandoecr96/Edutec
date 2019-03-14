@@ -10,7 +10,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 // Principal
 import Main from './Menu'
-import { Root } from "native-base";
+import Ayuda from './Ayuda/Ayuda'
 
 // Quimicos
 import MainChemical from './chemical/Menu'
@@ -38,6 +38,12 @@ const RootStack = createStackNavigator({
     screen: Main,
     navigationOptions: {
       header: null
+    }
+  },
+  Ayuda: {
+    screen: Ayuda,
+    navigationOptions: {
+      title: 'Acerca de'
     }
   },
   Chemical: {
