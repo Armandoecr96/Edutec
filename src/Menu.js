@@ -56,15 +56,19 @@ const styles = StyleSheet.create({
     borderRadius: 16
   },
   logo: {
-    height: 100,
-    width: 100
+    height: 90,
+    width: 90
   },
   logoText: {
     fontSize: 24,
-    fontWeight: '900'
+    fontWeight: '900',
+    marginLeft: 16
   },
   contentLogo: {
     padding: 16,
-    alignItems: 'center'
+    marginLeft: '16%',
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row'
   }
 })
