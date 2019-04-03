@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, Image, ImageBackground, Dimensions, TouchableOpacity } from 'react-native'
 import states from './states/BloodTestStates'
@@ -15,7 +7,7 @@ import yesButton from '../assets/images/si.png'
 import noButton from '../assets/images/no.png'
 import nextButton from '../assets/images/siguiente.png'
 import previewButtom from '../assets/images/atras.png'
-import moment  from "moment";
+import moment from "moment";
 import DateTimePicker from 'react-native-modal-datetime-picker';
 var SoundPlayer = require('react-native-sound')
 import playButtom from '../assets/images/play.png'
@@ -23,7 +15,7 @@ import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 var SoundPlayer = require('react-native-sound')
 
-var {height, width} = Dimensions.get('window');
+var { height, width } = Dimensions.get('window');
 
 export default class BloodTest extends Component {
   constructor(props) {
@@ -35,7 +27,7 @@ export default class BloodTest extends Component {
       isVisible: false,
       dateChoose: "",
       time: "",
-      verificacion:false,
+      verificacion: false,
       playVisibility: 'flex',
       pauseVisibbility: 'none'
     }
@@ -51,7 +43,7 @@ export default class BloodTest extends Component {
 
   handlerPicker = (datetime) => {
     this.setState({
-      isVisible:false,
+      isVisible: false,
       dateChoose: moment(datetime, "MMMM, Do YYYY HH:mm").fromNow()
     })
 
@@ -74,7 +66,7 @@ export default class BloodTest extends Component {
         time: "Han pasado " + hour + " horas",
         verificacionDate: false
       })
-      
+
     }
   }
 
@@ -90,14 +82,14 @@ export default class BloodTest extends Component {
     })
   }
 
-  pauseToPlay () {
+  pauseToPlay() {
     this.setState({
       playVisibility: 'flex',
       pauseVisibbility: 'none'
     })
   }
 
-  play () {
+  play() {
     if (this.state.song !== null) {
       this.state.song.play((succes) => {
         if (succes) {
@@ -166,65 +158,76 @@ export default class BloodTest extends Component {
                 </CardItem>
               </Card>
 
-              <Text style={{ textAlign: "center", color: "#FFFFFF", fontSize:17, fontWeight: 'bold'}}>{this.state.time}</Text>
+              <Text style={{ textAlign: "center", color: "#FFFFFF", fontSize: 17, fontWeight: 'bold' }}>{this.state.time}</Text>
 
               <View style={{ display: 'flex', flexDirection: 'column' }}>
-                
-              {states.questionary[this.state.index].hora ?
+
+                {states.questionary[this.state.index].hora ?
                   <View>
-                    <DateTimePicker 
-                    isVisible={this.state.isVisible} 
-                    onConfirm={this.handlerPicker} 
-                    onCancel={this.hidePicker} 
-                    maximumDate = {new Date()}
-                    mode={'datetime'} />
+                    <DateTimePicker
+                      isVisible={this.state.isVisible}
+                      onConfirm={this.handlerPicker}
+                      onCancel={this.hidePicker}
+                      maximumDate={new Date()}
+                      mode={'datetime'} />
                   </View>
                   :
                   null}
 
-              <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
-                <Button
-                  transparent
-                  onPress={() => this.play()}
-                  style={{ width: 80, height: 80, display: this.state.playVisibility }}
-                >
-                  <Image source={playButtom} style={styles.imageButton} /></Button>
-                <Button
-                  transparent
-                  onPress={() => this.pause()}
-                  style={{ width: 80, height: 80, display: this.state.pauseVisibbility }}
-                >
-                  <Image source={pauseButtom} style={styles.imageButton} /></Button>
-                <Button
-                  transparent
-                  onPress={() => this.stop()}
-                  style={{ width: 80, height: 80 }}
-                >
-                  <Image source={stopButtom} style={styles.imageButton} /></Button>
-              </View>
-              <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-              {states.questionary[this.state.index].options.map((selection, key) => {
-                return (
-                  selection.title === 'Si' ?
-                  <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
-                  <Image source={yesButton} style={styles.imageButton} />
-                  </Button> 
-                  : selection.title === 'No' 
-                  ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
-                  <Image source={noButton} style={styles.imageButton} />
-                  </Button>
-                  : selection.title === 'Siguiente' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }} >
-                    <Image source={nextButton} style={{height: 80, width: 124}}/>
-                  </Button> 
-                  : selection.title === 'Atras' ? <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
-                    <Image source={previewButtom} style={{height: 80, width: 124}}/>
-                  </Button>
-                  : <TouchableOpacity style={styles.button} onPress={this.showPicker}>
-                  <Text style={styles.text}>Ingrese Hora</Text>
-                </TouchableOpacity>
-                )
-              })}
-              </View>
+                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                  <Button
+                    transparent
+                    onPress={() => this.play()}
+                    style={{ width: 80, height: 80, display: this.state.playVisibility }}
+                  >
+                    <Image source={playButtom} style={styles.imageButton} /></Button>
+                  <Button
+                    transparent
+                    onPress={() => this.pause()}
+                    style={{ width: 80, height: 80, display: this.state.pauseVisibbility }}
+                  >
+                    <Image source={pauseButtom} style={styles.imageButton} /></Button>
+                  <Button
+                    transparent
+                    onPress={() => this.stop()}
+                    style={{ width: 80, height: 80 }}
+                  >
+                    <Image source={stopButtom} style={styles.imageButton} /></Button>
+                </View>
+                <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                  {states.questionary[this.state.index].options.map((selection, key) => {
+                    return (
+                      selection.title === 'Si' ?
+                        <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
+                          <Image source={yesButton} style={styles.imageButton} />
+                        </Button>
+                        : selection.title === 'No'
+                          ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
+                            <Image source={noButton} style={styles.imageButton} />
+                          </Button>
+                          : selection.title === 'Siguiente' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }} >
+                            <Image source={nextButton} style={{ height: 80, width: 124 }} />
+                          </Button>
+                            : selection.title === 'Atras' ? <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                              <Image source={previewButtom} style={{ height: 80, width: 124 }} />
+                            </Button>
+                              : selection.title === 'Hora' ? (<View><TouchableOpacity style={styles.button} onPress={this.showPicker}>
+                                <Text style={styles.text}>Ingrese Hora</Text>
+                              </TouchableOpacity>
+                                <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{display: 'none'}}>
+                                  <Image source={yesButton} style={styles.imageButton} />
+                                </Button>
+                                <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{display: 'none'}}>
+                                  <Image source={noButton} style={styles.imageButton} />
+                                </Button>
+                              </View>
+                              )
+                                : <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                  <Text style={{ color: '#FFFFFF' }}>{selection.title}</Text>
+                                </Button>
+                    )
+                  })}
+                </View>
               </View>
             </View>
           </ImageBackground>
@@ -284,7 +287,7 @@ const styles = StyleSheet.create({
     marginTop: 48,
     width: '80%'
   },
-  button:{
+  button: {
     width: null,
     height: 60,
     backgroundColor: '#330066',
