@@ -8,11 +8,11 @@ import noButton from '../assets/images/no.png'
 import nextButton from '../assets/images/siguiente.png'
 import previewButtom from '../assets/images/atras.png'
 import moment from "moment";
-import DateTimePicker from 'react-native-modal-datetime-picker';
 var SoundPlayer = require('react-native-sound')
 import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
+import DatePicker from 'react-native-datepicker'
 var SoundPlayer = require('react-native-sound')
 
 var { height, width } = Dimensions.get('window');
@@ -27,6 +27,7 @@ export default class BloodTest extends Component {
       isVisible: false,
       dateChoose: "",
       time: "",
+      date: new Date(),
       verificacion: false,
       playVisibility: 'flex',
       pauseVisibbility: 'none'
@@ -44,29 +45,55 @@ export default class BloodTest extends Component {
   handlerPicker = (datetime) => {
     this.setState({
       isVisible: false,
-      dateChoose: moment(datetime, "MMMM, Do YYYY HH:mm").fromNow()
+      date: datetime,
+      dateChoose: moment(datetime, "YYYY-MM-DD HH:mm").utc().startOf('hour').fromNow()
     })
-
-    var regex = /(\d+)/g;
-    var hour = this.state.dateChoose.match(regex);
-    this.verificacionDate(hour);
+    this.verificacionDate(this.state.dateChoose);
   }
 
   verificacionDate = (time) => {
-    var hour = parseInt(time[0]);
-
-    if (hour >= 8) {
+    var hour = ''
+    var verificacionDate = false
+    if (time.includes('day') || time.includes('days')) {
       this.setState({
-        time: "Han pasado " + hour + " horas",
-        verificacionDate: true
+        time: "Ha pasado más de un día"
       })
+      verificacionDate = 'yes'
     }
-    if (hour < 8 && hour >= 1) {
+    if (time === 'an hour ago') {
+      hour = 1
+    } else {
+      let obtainHours = time.split(' ')
+      hour = parseInt(obtainHours[0])
+    }
+    if (hour > 10) {
       this.setState({
-        time: "Han pasado " + hour + " horas",
-        verificacionDate: false
+        time: "Han pasado " + hour + " hora(s)",
       })
+      verificacionDate = 'yes'
+    }
+    if (hour <= 10 && hour >= 8) {
+      this.setState({
+        time: "Han pasado " + hour + " hora(s)",
+      })
+      verificacionDate = 'wait'
+    }
+    if (hour < 8) {
+      this.setState({
+        time: "Han pasado " + hour + " hora(s)",
+      })
+      verificacionDate = 'no'
+    }
+    if (verificacionDate === 'yes') {
+      setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[0].nextYes }), 5000)
+    }
 
+    if (verificacionDate === 'wait') {
+      setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[0].nextProp }), 5000)
+    }
+
+    if (verificacionDate === 'no') {
+      setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[0].nextNo }), 5000)
     }
   }
 
@@ -133,7 +160,6 @@ export default class BloodTest extends Component {
         console.log('failed to load the sound', error)
       }
     })
-    console.log(this.state.song)
   }
 
   render() {
@@ -161,18 +187,6 @@ export default class BloodTest extends Component {
               <Text style={{ textAlign: "center", color: "#FFFFFF", fontSize: 17, fontWeight: 'bold' }}>{this.state.time}</Text>
 
               <View style={{ display: 'flex', flexDirection: 'column' }}>
-
-                {states.questionary[this.state.index].hora ?
-                  <View>
-                    <DateTimePicker
-                      isVisible={this.state.isVisible}
-                      onConfirm={this.handlerPicker}
-                      onCancel={this.hidePicker}
-                      maximumDate={new Date()}
-                      mode={'datetime'} />
-                  </View>
-                  :
-                  null}
 
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
                   <Button
@@ -211,18 +225,32 @@ export default class BloodTest extends Component {
                             : selection.title === 'Atras' ? <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                               <Image source={previewButtom} style={{ height: 80, width: 124 }} />
                             </Button>
-                              : selection.title === 'Hora' ? (<View><TouchableOpacity style={styles.button} onPress={this.showPicker}>
-                                <Text style={styles.text}>Ingrese Hora</Text>
-                              </TouchableOpacity>
-                                <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{display: 'none'}}>
-                                  <Image source={yesButton} style={styles.imageButton} />
-                                </Button>
-                                <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{display: 'none'}}>
-                                  <Image source={noButton} style={styles.imageButton} />
-                                </Button>
-                              </View>
-                              )
-                                : <Button onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                              : selection.title === 'Hora' ? <DatePicker
+                                key={key}
+                                style={{ width: 200 }}
+                                date={this.state.date}
+                                mode="datetime"
+                                placeholder="select date"
+                                format="YYYY-MM-DD HH:mm"
+                                maxDate={new Date()}
+                                confirmBtnText="Confirm"
+                                cancelBtnText="Cancel"
+                                is24Hour={true}
+                                customStyles={{
+                                  dateIcon: {
+                                    position: 'absolute',
+                                    left: 0,
+                                    top: 4,
+                                    marginLeft: 0
+                                  },
+                                  dateInput: {
+                                    color: '#FFFFFF',
+                                    marginLeft: 36
+                                  }
+                                }}
+                                onDateChange={this.handlerPicker}
+                              />
+                                : <Button key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                   <Text style={{ color: '#FFFFFF' }}>{selection.title}</Text>
                                 </Button>
                     )

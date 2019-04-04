@@ -31,7 +31,7 @@ export default this.state = {
       id: 2,
       spanishText: '¿Cuál es su nombre completo?',
       mayanText: 'Bix a k’àaba’, a’alten tu láakal',
-      audio: 'audio2.m4a',
+      audio: 'audio25.m4a',
       hora: false,
       options: [
         {
@@ -45,7 +45,7 @@ export default this.state = {
       spanishText: '¿Cuántos años tiene?',
       mayanText: 'Hay p’éel ya’ab yantech.',
       hora: false,
-      audio: 'audio25.m4a',
+      audio: 'audio26.m4a',
       options: [
         {
           nextID: 4,
@@ -103,11 +103,13 @@ export default this.state = {
       spanishText: '¿A qué hora comió por última vez?',
       mayanText: 'Ba’ax tsíil k’ìinil ka hàanech',
       hora: false,
-      audio: 'audio20.m4a',
+      audio: 'audio29.m4a',
       options: [
         {
-          nextID: 8,
-          title: 'Hora'
+          title: 'Hora',
+          nextYes: 12,
+          nextNo: 10,
+          nextProp: 9
         }
       ]
     },
@@ -116,7 +118,7 @@ export default this.state = {
       spanishText: '¿Faltan menos de dos horas para cumplir con el ayuno?',
       mayanText: "Ka'ap’éel tsíil k’ìin u bin a su’uk’in",
       hora: true,
-      audio: 'audio29.m4a',
+      audio: 'audio28.m4a',
       options: [
         {
           nextID: 9,
@@ -133,8 +135,8 @@ export default this.state = {
     {
       id: 9,
       spanishText: '¿Puede esperar a que se cumpla el tiempo requerido?',
-      mayanText: 'Ba’ax ta hàantah',
-      audio: 'audio2.m4a',
+      mayanText: "He' a páatik u ts’o’okol a su'uk'ine’",
+      audio: 'voz45.3gp',
       hora: false,
       options: [
         {
@@ -175,7 +177,7 @@ export default this.state = {
     },
     {
       id: 12,
-      spanishText: '¿Ha tomado ningún tipo de medicamento antes de venir?',
+      spanishText: '¿Ha tomado algún tipo de medicamento antes de venir?',
       mayanText: 'Ta wuk’ah wa ts’àak ma’ili’ talakechi’',
       hora: false,
       audio: 'audio14.m4a',
@@ -214,22 +216,24 @@ export default this.state = {
     {
       id: 14,
       spanishText: '¿A que hora lo tomó?',
-      mayanText: 'Ba’ax tsíil k’ìinil ka ta wuk’ah',
+      mayanText: "Ba’ax tsíil k’ìinil ka ta wuk’ah le ts'àako'",
       hora: true,
       audio: 'audio6.m4a',
       options: [
         {
-          nextID: 15,
-          title: 'Hora'
+          title: 'Hora',
+          nextYes: 15,
+          nextNo: 15,
+          nextProp: 15
         }
       ]
     },
     {
       id: 15,
-      spanishText: 'El tomar un medicamento antes de un análisis podría afectar los resultado',
-      mayanText: 'A wuk’ik ts’aak ma’ili beeta’ak le x’ii he’ u k’exik u xuul le xíixo’',
+      spanishText: 'Puedo hacer el analisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
+      mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
       hora: true,
-      audio: 'audio6.m4a',
+      audio: 'audio48.m4a',
       options: [
         {
           nextID: 16,
@@ -248,7 +252,7 @@ export default this.state = {
           title: 'Si'
         },
         {
-          nextID: 0,
+          nextID: 20,
           title: 'No'
         }
       ]
@@ -256,7 +260,7 @@ export default this.state = {
     {
       id: 17,
       spanishText: 'Seleccione en la pantalla que tipo de ejercicio realizo',
-      mayanText: 'Ba’ax tsíil k’ìinil ka ta bèetah',
+      mayanText: 'yeey Ba’ax peksah wíinklal ta bèetah',
       audio: 'audio15.m4a',
       options: [
         {
@@ -278,7 +282,7 @@ export default this.state = {
       spanishText: '¿Por cuánto tiempo realizo el ejercicio?',
       mayanText: "Hay p’éel tsíil k'ìinil ta bèetah peksah wíinklalo’",
       hora: true,
-      audio: 'audio6.m4a',
+      audio: 'audio46.m4a',
       options: [
         {
           nextID: 20,
@@ -298,7 +302,7 @@ export default this.state = {
       options: [
         {
           nextID: 0,
-          title: 'Siguiente'
+          title: 'Salir'
         }
       ]
     },
@@ -395,7 +399,7 @@ export default this.state = {
       spanishText: '¿A qué hora bebió?',
       mayanText: 'Ba’ax tsíil k’ìinil ka ta wuk’ah',
       hora: false,
-      audio: 'audio20.m4a',
+      audio: 'audio.m4a',
       options: [
         {
           nextID: 26,
@@ -426,7 +430,7 @@ export default this.state = {
       id: 27,
       spanishText: '¿Puede esperar a que se cumpla el tiempo requerido?',
       mayanText: 'Ba’ax ta hàantah',
-      audio: 'audio2.m4a',
+      audio: 'voz45.3gp',
       hora: false,
       options: [
         {
@@ -442,7 +446,7 @@ export default this.state = {
     {
       id: 28,
       spanishText: 'Regrese otro día en ayuno de 10 a 12 horas',
-      mayanText: 'Ba’ax ta hàantah',
+      mayanText: 'Le k’oha’ano’ unah u tàal tu su’uk’in ichil 10 tak 12 tsíil k’ìin.',
       hora: false,
       audio: 'audio9.m4a',
       options: [
@@ -460,8 +464,8 @@ export default this.state = {
       audio: 'audio12.m4a',
       options: [
         {
-          nextID: 12,
-          title: 'Siguiente'
+          nextID: 0,
+          title: 'Salir'
         }
       ]
     },
@@ -543,7 +547,7 @@ export default this.state = {
     },
     {
       id: 35,
-      spanishText: '¿Está tomando algún tratamiento anticoagulante? Medicina que adelgaza la sangre',
+      spanishText: '¿Está tomando algún tratamiento anticoagulante?',
       mayanText: "Ta'an wa u ts’a’abaltech ts’àak yo’o’lal u ha’ach’tal k’i’ik’el",
       audio: 'audio35.m4a',
       options: [
@@ -685,7 +689,7 @@ export default this.state = {
       id: 45,
       spanishText: 'Flexione el brazo',
       mayanText: 'Wut’s a k’ab',
-      audio: 'audio55.m4a',
+      audio: 'voz54.3gp',
       options: [
         {
           nextID: 46,
@@ -721,7 +725,7 @@ export default this.state = {
       id: 48,
       spanishText: 'Hasta luego, que tenga un buen día',
       mayanText: 'Ma’alob tak tu láak k’ìin, ka yanaktech hunp’éel utsil k’íin',
-      audio: 'audio51.m4a',
+      audio: 'voz55.3gp',
       options: [
         {
           nextID: 0,
@@ -737,11 +741,7 @@ export default this.state = {
       options: [
         {
           nextID: 0,
-          title: 'Si'
-        },
-        {
-          nextID: 0,
-          title: 'No'
+          title: 'Salir'
         }
       ]
     },
