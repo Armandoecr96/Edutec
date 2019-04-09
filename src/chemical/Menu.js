@@ -21,7 +21,7 @@ export default class Menu extends Component {
     return (
       <Container>
         <Content>
-          <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
+          <ImageBackground source={require('../assets/images/bg1.jpg')} style={styles.background}>
             <Grid style={styles.grid}>
               <Row style={styles.row}>
                 <Col style={styles.col}>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View, Image, ImageBackground, Dimensions, TouchableOpacity } from 'react-native'
 import states from './states/BloodTestStates'
 import { Container, Content, Card, CardItem, Button } from 'native-base'
-import textBox from '../assets/images/caja-de-texto-1.png'
+import textBox from '../assets/images/box.png'
 import yesButton from '../assets/images/si.png'
 import noButton from '../assets/images/no.png'
 import nextButton from '../assets/images/siguiente.png'
@@ -166,7 +166,7 @@ export default class BloodTest extends Component {
     return (
       <Container>
         <Content>
-          <ImageBackground source={require('../assets/images/Fondo-aplicacion-1.jpg')} style={styles.background}>
+          <ImageBackground source={require('../assets/images/bg1.jpg')} style={styles.background}>
             <View style={{ height: height, marginBottom: 88 }}>
               <Card transparent style={styles.card}>
                 <CardItem style={styles.cardItem}>

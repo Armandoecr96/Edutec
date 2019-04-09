@@ -8,7 +8,7 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, Image, View } from 'react-native'
-import { Container, Header, Content, Card, CardItem, Body, Title, Text } from 'native-base'
+import { Container, Content, Card, CardItem, Text } from 'native-base'
 import PersonajesQuimicos from './assets/images/quimicos.jpg'
 import PersonajesRecepcion from './assets/images/recepcion.jpg'
 import logo from './assets/images/logo.png'
