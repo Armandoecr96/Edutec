@@ -313,7 +313,7 @@ export default this.state = {
       audio: 'audio2.m4a',
       options: [
         {
-          nextID: 49,
+          nextID: 51,
           title: 'Si'
         },
         {
@@ -374,23 +374,28 @@ export default this.state = {
       options: [
         {
           nextID: 25,
-          title: 'Café'
+          title: 'Café',
+          src: '../assets/images/cofi.png'
         },
         {
           nextID: 25,
-          title: 'Jugo'
+          title: 'Jugo',
+          src: '../assets/images/jugo.png'
         },
         {
           nextID: 25,
-          title: 'Agua'
+          title: 'Agua',
+          src: '../assets/images/agua.png'
         },
         {
           nextID: 25,
-          title: 'Chocolate'
+          title: 'Chocolate',
+          src: '../assets/images/chocolate.png'
         },
         {
           nextID: 25,
-          title: 'Refresco'
+          title: 'Refresco',
+          src: '../assets/images/refresco.png'
         }
       ]
     },
@@ -512,7 +517,7 @@ export default this.state = {
           title: 'Si'
         },
         {
-          nextID: 49,
+          nextID: 51,
           title: 'No'
         }
       ]
@@ -615,9 +620,7 @@ export default this.state = {
     },
     {
       id: 39,
-      spanishText: 'Apoye su brazo en la superficie',
-      mayanText: 'Pehkunt yóok’ol le mayeko',
-      audio: 'audio68.m4a',
+      source: '../assets/images/alargar.gif',
       options: [
         {
           nextID: 40,
@@ -627,9 +630,9 @@ export default this.state = {
     },
     {
       id: 40,
-      spanishText: 'Le voy a poner un torniquete (liga)',
-      mayanText: 'Bin in ka’ah in k’axeh',
-      audio: 'audio54.m4a',
+      spanishText: 'Apoye su brazo en la superficie',
+      mayanText: 'Pehkunt yóok’ol le mayeko',
+      audio: 'audio68.m4a',
       options: [
         {
           nextID: 41,
@@ -639,9 +642,9 @@ export default this.state = {
     },
     {
       id: 41,
-      spanishText: 'Cierre el puño y apriete.',
-      mayanText: 'Wol u yàal a k’ab chich',
-      audio: 'audio69.m4a',
+      spanishText: 'Le voy a poner un torniquete (liga)',
+      mayanText: 'Bin in ka’ah in k’axeh',
+      audio: 'audio54.m4a',
       options: [
         {
           nextID: 42,
@@ -651,9 +654,9 @@ export default this.state = {
     },
     {
       id: 42,
-      spanishText: 'Muy bien',
-      mayanText: 'Hach ma’alob',
-      audio: 'audio57.m4a',
+      spanishText: 'Cierre el puño y apriete.',
+      mayanText: 'Wol u yàal a k’ab chich',
+      audio: 'audio69.m4a',
       options: [
         {
           nextID: 43,
@@ -663,9 +666,7 @@ export default this.state = {
     },
     {
       id: 43,
-      spanishText: 'No se mueva en el momento que sienta el piquete',
-      mayanText: 'Ma’ péek le ken a wu’uy le lòom',
-      audio: 'audio36.m4a',
+      source: '../assets/images/cerrar.gif',
       options: [
         {
           nextID: 44,
@@ -675,9 +676,9 @@ export default this.state = {
     },
     {
       id: 44,
-      spanishText: 'Abra el puño',
-      mayanText: 'Tats’ u yàal a k’ab',
-      audio: 'audio53.m4a',
+      spanishText: 'Muy bien',
+      mayanText: 'Hach ma’alob',
+      audio: 'audio57.m4a',
       options: [
         {
           nextID: 45,
@@ -687,9 +688,9 @@ export default this.state = {
     },
     {
       id: 45,
-      spanishText: 'Flexione el brazo',
-      mayanText: 'Wut’s a k’ab',
-      audio: 'voz54.3gp',
+      spanishText: 'No se mueva en el momento que sienta el piquete',
+      mayanText: 'Ma’ péek le ken a wu’uy le lòom',
+      audio: 'audio36.m4a',
       options: [
         {
           nextID: 46,
@@ -699,9 +700,9 @@ export default this.state = {
     },
     {
       id: 46,
-      spanishText: 'Le voy a poner un parche',
-      mayanText: 'Bin in ka’ah in ts’áah pìits’i’',
-      audio: 'audio49.m4a',
+      spanishText: 'Abra el puño',
+      mayanText: 'Tats’ u yàal a k’ab',
+      audio: 'audio53.m4a',
       options: [
         {
           nextID: 47,
@@ -711,9 +712,9 @@ export default this.state = {
     },
     {
       id: 47,
-      spanishText: 'Mantenga doblado el brazo por 5 minutos',
-      mayanText: 'P’at wùuts’il a k’ab ichil ho’péel síitukil',
-      audio: 'audio50.m4a',
+      spanishText: 'Flexione el brazo',
+      mayanText: 'Wut’s a k’ab',
+      audio: 'voz54.3gp',
       options: [
         {
           nextID: 48,
@@ -723,6 +724,30 @@ export default this.state = {
     },
     {
       id: 48,
+      spanishText: 'Le voy a poner un parche',
+      mayanText: 'Bin in ka’ah in ts’áah pìits’i’',
+      audio: 'audio49.m4a',
+      options: [
+        {
+          nextID: 49,
+          title: 'Siguiente'
+        }
+      ]
+    },
+    {
+      id: 49,
+      spanishText: 'Mantenga doblado el brazo por 5 minutos',
+      mayanText: 'P’at wùuts’il a k’ab ichil ho’péel síitukil',
+      audio: 'audio50.m4a',
+      options: [
+        {
+          nextID: 50,
+          title: 'Siguiente'
+        }
+      ]
+    },
+    {
+      id: 50,
       spanishText: 'Hasta luego, que tenga un buen día',
       mayanText: 'Ma’alob tak tu láak k’ìin, ka yanaktech hunp’éel utsil k’íin',
       audio: 'voz55.3gp',
@@ -734,7 +759,7 @@ export default this.state = {
       ]
     },
     {
-      id: 49,
+      id: 51,
       spanishText: 'Regrese otro día por favor',
       mayanText: "Meent uts ta sùut tuláak’ k'íin",
       audio: 'audio52.m4a',
@@ -746,7 +771,7 @@ export default this.state = {
       ]
     },
     {
-      id: 50,
+      id: 52,
       spanishText: 'Puedo hacer el analisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
       mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
       audio: 'audio48.m4a',
@@ -762,7 +787,7 @@ export default this.state = {
       ]
     },
     {
-      id: 51,
+      id: 53,
       spanishText: 'Le voy a entregar una encuesta de satisfacción para que conteste y deposite en el buzón',
       mayanText: 'Bin in ka’ah in ts’áah tech hunpéel k’áat chi’o’ob utia’al a núukeh ts’o’okole’ ts’áahte´chàan kúuchil tu’ux ku ts’a’abalo’',
       audio: 'audio2.m4a',

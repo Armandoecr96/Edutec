@@ -250,8 +250,19 @@ export default class BloodTest extends Component {
                                 }}
                                 onDateChange={this.handlerPicker}
                               />
-                                : <Button key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
-                                  <Text style={{ color: '#FFFFFF' }}>{selection.title}</Text>
+                                : <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecisionDrink}>
+                                  {selection.title === 'Café' ? 
+                                    <Image source={require('../assets/images/cofi.png')} style={styles.imageButton} />
+                                    : selection.title === 'Jugo' ? 
+                                    <Image source={require('../assets/images/jugo.png')} style={styles.imageButton} /> 
+                                    : selection.title === 'Agua' ?
+                                    <Image source={require('../assets/images/agua.png')} style={styles.imageButton} /> 
+                                    : selection.title === 'Chocolate' ? 
+                                    <Image source={require('../assets/images/chocolate.png')} style={styles.imageButton} /> 
+                                    : selection.title === 'Refresco' ? 
+                                    <Image source={require('../assets/images/refresco.png')} style={styles.imageButton} /> 
+                                    : <Text>{selection.title}</Text>
+                                  }
                                 </Button>
                     )
                   })}
@@ -337,7 +348,11 @@ const styles = StyleSheet.create({
     marginRight: 8,
     marginBottom: 16,
     width: 80,
-    height: 70
+    height: 70,
+  },
+  buttonDecisionDrink: {
+    width: 70,
+    flexWrap: 'wrap'
   }
 
 
