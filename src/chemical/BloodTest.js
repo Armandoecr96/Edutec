@@ -8,12 +8,11 @@ import noButton from '../assets/images/no.png'
 import nextButton from '../assets/images/siguiente.png'
 import previewButtom from '../assets/images/atras.png'
 import moment from "moment";
-var SoundPlayer = require('react-native-sound')
+import SoundPlayer from 'react-native-sound'
 import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 import DatePicker from 'react-native-datepicker'
-var SoundPlayer = require('react-native-sound')
 
 var { height, width } = Dimensions.get('window');
 

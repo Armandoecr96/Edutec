@@ -81,7 +81,7 @@ export default this.state = {
     },
     {
       id: 6,
-      spanishText: '¿Presenta en ayuno de 10 a 12 horas?',
+      spanishText: '¿Viene en ayuno de 10 a 12 horas?',
       mayanText: 'Ma’ a hàantik mixba’al ichil 10 wa 12 tsíil k’ìini’',
       hora: false,
       audio: 'audio20.m4a',
@@ -407,8 +407,10 @@ export default this.state = {
       audio: 'audio.m4a',
       options: [
         {
-          nextID: 26,
-          title: 'Hora'
+          title: 'Hora',
+          nextYes: 30,
+          nextNo: 28,
+          nextProp: 27
         }
       ]
     },
@@ -610,10 +612,10 @@ export default this.state = {
       id: 38,
       spanishText: 'Vamos a proceder a tomar la muestra. Extienda el brazo que normalmente le toman muestra',
       mayanText: "Bineh ka’ah k ho’oseh a k’i’ik’elo’ tatsah le k'ab sùuk u ho'osa'al a k'i'ik'el",
-      audio: 'audio47.m4a',
+      audio: 'voz58.3gp',
       options: [
         {
-          nextID: 39,
+          nextID: 40,
           title: 'Siguiente'
         }
       ]
@@ -659,7 +661,7 @@ export default this.state = {
       audio: 'audio69.m4a',
       options: [
         {
-          nextID: 43,
+          nextID: 44,
           title: 'Siguiente'
         }
       ]
