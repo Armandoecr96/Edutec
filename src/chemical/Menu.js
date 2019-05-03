@@ -17,12 +17,27 @@ import imagePruebaToxico from '../assets/images/canavis.png'
 var { height } = Dimensions.get('window')
 
 export default class Menu extends Component {
-  render () {
+  render() {
     return (
       <Container>
         <Content>
           <ImageBackground source={require('../assets/images/bg1.jpg')} style={styles.background}>
             <Grid style={styles.grid}>
+              <Row style={styles.row}>
+                <Col style={styles.col}>
+                  <Card style={{ borderRadius: 8 }}>
+                    <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('PreviewQuestion')}>
+                      {/* <Left style={styles.left}>
+                        <Image source={imageMuestraSanguinea} style={[styles.image, { height: 48, marginBottom: 12, marginTop: 12 }]} />
+                      </Left> */}
+                      <Text style={{ fontSize: 16 }}>Preguntas Previas</Text>
+                      <Right>
+                        <Icon name='arrow-forward' style={styles.icon} />
+                      </Right>
+                    </CardItem>
+                  </Card>
+                </Col>
+              </Row>
               <Row style={styles.row}>
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>

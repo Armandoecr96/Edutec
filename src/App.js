@@ -15,6 +15,7 @@ import Ayuda from './Ayuda/Ayuda'
 // Quimicos
 import MainChemical from './chemical/Menu'
 import BloodTest from './chemical/BloodTest'
+import PreviewQuestion from './chemical/PreviewQuestion'
 
 // Recepción
 
@@ -29,6 +30,12 @@ const ChemicalStack = createStackNavigator({
     screen: BloodTest,
     navigationOptions: {
       title: 'Muestra Sanguinea'
+    }
+  },
+  PreviewQuestion: {
+    screen: PreviewQuestion,
+    navigationOptions: {
+      title: 'Pregutas Previas'
     }
   }
 })
