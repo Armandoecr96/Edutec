@@ -14,7 +14,7 @@ import imageMuestraSanguinea from '../assets/images/gota.png'
 import imageCultivoBiologico from '../assets/images/cultivo_biologico.png'
 import imagePruebaToxico from '../assets/images/canavis.png'
 
-var { height } = Dimensions.get('window')
+var { height, width } = Dimensions.get('window');
 
 export default class Menu extends Component {
   render() {
@@ -43,7 +43,7 @@ export default class Menu extends Component {
                   <Card style={{ borderRadius: 8 }}>
                     <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('BloodTest')}>
                       <Left style={styles.left}>
-                        <Image source={imageMuestraSanguinea} style={[styles.image, { height: 48, marginBottom: 12, marginTop: 12 }]} />
+                        <Image source={imageMuestraSanguinea} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
                       <Text style={{ fontSize: 16 }}>Muestra sanguinea</Text>
                       <Right>
@@ -59,7 +59,7 @@ export default class Menu extends Component {
                   <Card style={{ borderRadius: 8 }}>
                     <CardItem style={styles.cardItem} cardBody button onPress={() => alert('En Construcción')}>
                       <Left style={styles.left}>
-                        <Image source={imageCultivoBiologico} style={[styles.image, { marginBottom: 4, marginTop: 4 }]} />
+                        <Image source={imageCultivoBiologico} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
                       <Text style={{ fontSize: 16 }}>Cultivo microbiologico</Text>
                       <Right>
@@ -75,7 +75,7 @@ export default class Menu extends Component {
                   <Card style={{ borderRadius: 8 }}>
                     <CardItem style={styles.cardItem} cardBody button onPress={() => alert('En Construcción')}>
                       <Left style={styles.left}>
-                        <Image source={imagePruebaToxico} style={[styles.image, { marginBottom: 8 }]} />
+                        <Image source={imagePruebaToxico} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
                       <Text style={{ fontSize: 16 }}>Examen toxicologico</Text>
                       <Right>
@@ -95,17 +95,15 @@ export default class Menu extends Component {
 
 const styles = StyleSheet.create({
   row: {
-    // backgroundColor: '#000000',
-    height: 100,
+    height: height * .20,
     margin: 8,
     padding: 8
   },
   col: {
-    // backgroundColor: '#D59F0F',
     margin: 8
   },
   image: {
-    height: 60,
+    height: height * .10,
     width: null,
     marginRight: 8,
     borderRadius: 16,
@@ -114,7 +112,7 @@ const styles = StyleSheet.create({
   },
   cardItem: {
     borderRadius: 8,
-    height: 80,
+    height: height * .16,
     padding: 16,
     backgroundColor: '#D59F0F'
   },
@@ -130,7 +128,7 @@ const styles = StyleSheet.create({
   },
   left: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 60,
+    borderRadius: height * .01,
     marginRight: 8,
     paddingLeft: 8
   }

@@ -7,11 +7,13 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Image, View } from 'react-native'
+import { StyleSheet, Image, View, Dimensions } from 'react-native'
 import { Container, Content, Card, CardItem, Text } from 'native-base'
 import PersonajesQuimicos from './assets/images/quimicos.jpg'
 import PersonajesRecepcion from './assets/images/recepcion.jpg'
 import logo from './assets/images/logo.png'
+
+var { height, width } = Dimensions.get('window');
 
 export default class Menu extends Component {
   render () {
@@ -33,8 +35,8 @@ export default class Menu extends Component {
             </CardItem>
           </Card>
           <Card style={{ borderRadius: 16 }}>
-            <CardItem cardBody style={{ borderRadius: 16, backgroundColor: '#01447B' }} button onPress={() => this.props.navigation.navigate('Ayuda')}>
-              <Text style={{ color: '#FFFFFF', fontSize: 32, marginLeft: '28%', padding: 8 }}>Acerca de</Text>
+            <CardItem cardBody style={{ borderRadius: 16, backgroundColor: '#01447B', justifyContent: 'center' }} button onPress={() => this.props.navigation.navigate('Ayuda')}>
+              <Text style={{ color: '#FFFFFF', fontSize: 32, alignSelf: 'center', padding: 8 }}>Acerca de</Text>
             </CardItem>
           </Card>
         </Content>
@@ -45,11 +47,10 @@ export default class Menu extends Component {
 
 const styles = StyleSheet.create({
   content: {
-    display: 'flex',
     backgroundColor: '#E2E2E2'
   },
   images: {
-    height: 200,
+    height: height * .32,
     width: null,
     flex: 1,
     resizeMode: 'cover',

@@ -244,8 +244,12 @@ export default class BloodTest extends Component {
                                                                     },
                                                                     dateInput: {
                                                                         color: '#FFFFFF',
-                                                                        marginLeft: 36
+                                                                        marginRight: 16
+                                                                    },
+                                                                    dateText: {
+                                                                        color: '#FFFFFF',
                                                                     }
+                                                                    
                                                                 }}
                                                                 onDateChange={this.handlerPicker}
                                                             />
