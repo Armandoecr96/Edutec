@@ -10,6 +10,7 @@ import SoundPlayer from 'react-native-sound'
 import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
+import salirButtom from '../assets/images/salida.png'
 
 var { height, width } = Dimensions.get('window');
 
@@ -145,7 +146,9 @@ export default class BloodTest extends Component {
                                                             : selection.title === 'Atras' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                                 <Image source={previewButtom} style={{ height: 80, width: 124 }} />
                                                             </Button>
-                                                                : null
+                                                                : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                                    <Image source={salirButtom} style={{ height: 80, width: 124 }} />
+                                                                </Button> : null
                                                     )
                                                 })}
                                             </View>
@@ -155,16 +158,16 @@ export default class BloodTest extends Component {
                                 : <View style={{ height: height, alignItems: 'center', justifyContent: 'center', display: 'flex' }}>
                                     {
                                         this.state.index === 1
-                                        ? <Image style={styles.gif} source={require('../assets/images/alargar.gif')} />
-                                        : this.state.index === 5 
-                                        ? <Image style={styles.gif} source={require('../assets/images/cerrar.gif')} />
-                                        : this.state.index === 8 
-                                        ? <Image style={styles.gif} source={require('../assets/images/a1.gif')} />
-                                        : this.state.index === 10 ?
-                                         <Image style={styles.gif} source={require('../assets/images/abrir.gif')} />
-                                         : <Image style={styles.gif} source={require('../assets/images/encoger.gif')} />
+                                            ? <Image style={styles.gif} source={require('../assets/images/alargar.gif')} />
+                                            : this.state.index === 5
+                                                ? <Image style={styles.gif} source={require('../assets/images/cerrar.gif')} />
+                                                : this.state.index === 8
+                                                    ? <Image style={styles.gif} source={require('../assets/images/a1.gif')} />
+                                                    : this.state.index === 10 ?
+                                                        <Image style={styles.gif} source={require('../assets/images/abrir.gif')} />
+                                                        : <Image style={styles.gif} source={require('../assets/images/encoger.gif')} />
                                     }
-                                    
+
                                     <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                                         {states.questionary[this.state.index].options.map((selection, key) => {
                                             return (
@@ -174,7 +177,9 @@ export default class BloodTest extends Component {
                                                     : selection.title === 'Atras' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                         <Image source={previewButtom} style={{ height: 80, width: 124 }} />
                                                     </Button>
-                                                        : null
+                                                        : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                            <Image source={salirButtom} style={{ height: 80, width: 124 }} />
+                                                        </Button> : null
                                             )
                                         })}
                                     </View>

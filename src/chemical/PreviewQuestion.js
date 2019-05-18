@@ -13,6 +13,7 @@ import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 import DatePicker from 'react-native-datepicker'
+import salirButtom from '../assets/images/salida.png'
 
 var { height, width } = Dimensions.get('window');
 
@@ -171,7 +172,7 @@ export default class BloodTest extends Component {
                                 <CardItem style={styles.cardItem}>
                                     <Image source={textBox} style={styles.cardImage} />
                                     <Text style={styles.title}>Español</Text>
-                                    <Text style={[styles.cardText, styles.ajuste]}>{states.questionary[this.state.index].spanishText}</Text>
+                                    <Text style={[styles.cardText, styles.ajuste]}>{states.questionary[this.state.index].spanishText ? states.questionary[this.state.index].spanishText : ''}</Text>
                                 </CardItem>
                             </Card>
 
@@ -179,7 +180,7 @@ export default class BloodTest extends Component {
                                 <CardItem style={styles.cardItem}>
                                     <Image source={textBox} style={styles.cardImage} />
                                     <Text style={styles.title}>Maya</Text>
-                                    <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText}</Text>
+                                    <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText ? states.questionary[this.state.index].mayanText : ''}</Text>
                                 </CardItem>
                             </Card>
 
@@ -207,7 +208,7 @@ export default class BloodTest extends Component {
                                     >
                                         <Image source={stopButtom} style={styles.imageButton} /></Button>
                                 </View>
-                                <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                                <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                                     {states.questionary[this.state.index].options.map((selection, key) => {
                                         return (
                                             selection.title === 'Si' ?
@@ -224,49 +225,64 @@ export default class BloodTest extends Component {
                                                         : selection.title === 'Atrás' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                             <Image source={previewButtom} style={{ height: 80, width: 124 }} />
                                                         </Button>
-                                                            : selection.title === 'Hora' ? <DatePicker
-                                                                key={key}
-                                                                style={{ width: 200 }}
-                                                                date={this.state.date}
-                                                                mode="datetime"
-                                                                placeholder="select date"
-                                                                format="YYYY-MM-DD HH:mm"
-                                                                maxDate={new Date()}
-                                                                confirmBtnText="Confirm"
-                                                                cancelBtnText="Cancel"
-                                                                is24Hour={true}
-                                                                customStyles={{
-                                                                    dateIcon: {
-                                                                        position: 'absolute',
-                                                                        left: 0,
-                                                                        top: 4,
-                                                                        marginLeft: 0
-                                                                    },
-                                                                    dateInput: {
-                                                                        color: '#FFFFFF',
-                                                                        marginRight: 16
-                                                                    },
-                                                                    dateText: {
-                                                                        color: '#FFFFFF',
-                                                                    }
-                                                                    
-                                                                }}
-                                                                onDateChange={this.handlerPicker}
-                                                            />
-                                                                : <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecisionDrink}>
-                                                                    {selection.title === 'Café' ?
-                                                                        <Image source={require('../assets/images/cofi.png')} style={styles.imageButton} />
-                                                                        : selection.title === 'Jugo' ?
-                                                                            <Image source={require('../assets/images/jugo.png')} style={styles.imageButton} />
-                                                                            : selection.title === 'Agua' ?
-                                                                                <Image source={require('../assets/images/agua.png')} style={styles.imageButton} />
-                                                                                : selection.title === 'Chocolate' ?
-                                                                                    <Image source={require('../assets/images/chocolate.png')} style={styles.imageButton} />
-                                                                                    : selection.title === 'Refresco' ?
-                                                                                        <Image source={require('../assets/images/refresco.png')} style={styles.imageButton} />
-                                                                                        : <Text>{selection.title}</Text>
-                                                                    }
-                                                                </Button>
+                                                            : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                                <Image source={salirButtom} style={{ height: 80, width: 124 }} />
+                                                            </Button>
+                                                                : selection.title === 'Hora' ? <DatePicker
+                                                                    key={key}
+                                                                    style={{ width: 200 }}
+                                                                    date={this.state.date}
+                                                                    mode="datetime"
+                                                                    placeholder="select date"
+                                                                    format="YYYY-MM-DD HH:mm"
+                                                                    maxDate={new Date()}
+                                                                    confirmBtnText="Confirm"
+                                                                    cancelBtnText="Cancel"
+                                                                    is24Hour={true}
+                                                                    customStyles={{
+                                                                        dateIcon: {
+                                                                            position: 'absolute',
+                                                                            left: 0,
+                                                                            top: 4,
+                                                                            marginLeft: 0
+                                                                        },
+                                                                        dateInput: {
+                                                                            color: '#FFFFFF',
+                                                                            marginRight: 16
+                                                                        },
+                                                                        dateText: {
+                                                                            color: '#FFFFFF',
+                                                                        }
+
+                                                                    }}
+                                                                    onDateChange={this.handlerPicker}
+                                                                />
+                                                                    : <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecisionDrink}>
+                                                                        <View style={{ display: 'flex', flexWrap: 'wrap', width: 100 }}>
+                                                                            {selection.title === 'Café' ?
+                                                                                <View><Image source={require('../assets/images/cofi.png')} style={styles.imageButtonDecision} /></View>
+                                                                                : selection.title === 'Jugo' ?
+                                                                                    <View><Image source={require('../assets/images/jugo.png')} style={styles.imageButtonDecision} /></View>
+                                                                                    : selection.title === 'Agua' ?
+                                                                                        <View><Image source={require('../assets/images/agua.png')} style={styles.imageButtonDecision} /></View>
+                                                                                        : selection.title === 'Chocolate' ?
+                                                                                            <View><Image source={require('../assets/images/chocolate.png')} style={styles.imageButtonDecision} /></View>
+                                                                                            : selection.title === 'Refresco' ?
+                                                                                                <Image source={require('../assets/images/refresco.png')} style={styles.imageButtonDecision} />
+                                                                                                : selection.title === 'esporadico'
+                                                                                                    ? <Image source={require('../assets/images/esporadico.png')} style={styles.imageButtonDecision} />
+                                                                                                    : selection.title === 'habitual'
+                                                                                                        ? <View><Image source={require('../assets/images/habitual.png')} style={styles.imageButtonDecision} /></View>
+                                                                                                        : selection.title === 'correr'
+                                                                                                            ? <View><Image source={require('../assets/images/correr.png')} style={styles.imageButtonDecision} /></View>
+                                                                                                            : selection.title === 'caminar'
+                                                                                                                ? <View><Image source={require('../assets/images/caminar.png')} style={styles.imageButtonDecision} /></View>
+                                                                                                                : selection.title === 'estiramiento'
+                                                                                                                    ? <View><Image source={require('../assets/images/estiramiento.png')} style={styles.imageButtonDecision} /></View>
+                                                                                                                    : <Text>{selection.title}</Text>
+                                                                            }
+                                                                        </View>
+                                                                    </Button>
                                         )
                                     })}
                                 </View>
@@ -290,10 +306,6 @@ const styles = StyleSheet.create({
     welcome: {
         fontSize: 20,
         margin: 10
-    },
-    imageButton: {
-        width: 80,
-        height: 80
     },
     playerButtom: {
         width: 80,
@@ -345,7 +357,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         maxWidth: '80%',
         padding: 8,
-        alignItems: 'center'
     },
     buttonDecision: {
         marginRight: 8,
@@ -354,7 +365,19 @@ const styles = StyleSheet.create({
         height: 70,
     },
     buttonDecisionDrink: {
-        width: 70,
-        flexWrap: 'wrap'
+        display: 'flex',
+        marginRight: 8,
+        marginBottom: 16,
+        marginTop: 8
+    },
+    imageButton: {
+        width: 80,
+        height: 80
+    },
+    imageButtonDecision: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        width: 100,
+        height: 70
     }
 })

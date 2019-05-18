@@ -13,6 +13,7 @@ import { Col, Row, Grid } from 'react-native-easy-grid'
 import imageMuestraSanguinea from '../assets/images/gota.png'
 import imageCultivoBiologico from '../assets/images/cultivo_biologico.png'
 import imagePruebaToxico from '../assets/images/canavis.png'
+import imagePreguntasPrevias from '../assets/images/question.png'
 
 var { height, width } = Dimensions.get('window');
 
@@ -27,10 +28,10 @@ export default class Menu extends Component {
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>
                     <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('PreviewQuestion')}>
-                      {/* <Left style={styles.left}>
-                        <Image source={imageMuestraSanguinea} style={[styles.image, { height: 48, marginBottom: 12, marginTop: 12 }]} />
-                      </Left> */}
-                      <Text style={{ fontSize: 16 }}>Preguntas Previas</Text>
+                    <Left style={styles.left}>
+                        <Image source={imagePreguntasPrevias} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
+                      </Left>
+                      <Text style={styles.text}>Preguntas Previas</Text>
                       <Right>
                         <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
@@ -45,7 +46,7 @@ export default class Menu extends Component {
                       <Left style={styles.left}>
                         <Image source={imageMuestraSanguinea} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
-                      <Text style={{ fontSize: 16 }}>Muestra sanguinea</Text>
+                      <Text style={styles.text}>Muestra sanguinea</Text>
                       <Right>
                         <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
@@ -61,7 +62,7 @@ export default class Menu extends Component {
                       <Left style={styles.left}>
                         <Image source={imageCultivoBiologico} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
-                      <Text style={{ fontSize: 16 }}>Cultivo microbiologico</Text>
+                      <Text style={styles.text}>Cultivo microbiologico</Text>
                       <Right>
                         <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
@@ -77,7 +78,7 @@ export default class Menu extends Component {
                       <Left style={styles.left}>
                         <Image source={imagePruebaToxico} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
-                      <Text style={{ fontSize: 16 }}>Examen toxicologico</Text>
+                      <Text style={styles.text}>Examen toxicologico</Text>
                       <Right>
                         <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
@@ -101,6 +102,10 @@ const styles = StyleSheet.create({
   },
   col: {
     margin: 8
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: '900',
   },
   image: {
     height: height * .10,

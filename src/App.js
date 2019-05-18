@@ -42,7 +42,7 @@ const ChemicalStack = createStackNavigator({
 
 const RootStack = createStackNavigator({
   Home: {
-    screen: Main,
+    screen: ChemicalStack,//Main,
     navigationOptions: {
       header: null
     }
