@@ -146,7 +146,7 @@ export default class BloodTest extends Component {
                                                             : selection.title === 'Atras' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                                 <Image source={previewButtom} style={{ height: 80, width: 124 }} />
                                                             </Button>
-                                                                : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                                : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                                     <Image source={salirButtom} style={{ height: 80, width: 124 }} />
                                                                 </Button> : null
                                                     )
