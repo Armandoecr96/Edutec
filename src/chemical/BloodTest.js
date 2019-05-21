@@ -162,7 +162,7 @@ export default class BloodTest extends Component {
                                             : this.state.index === 5
                                                 ? <Image style={styles.gif} source={require('../assets/images/cerrar.gif')} />
                                                 : this.state.index === 8
-                                                    ? <Image style={styles.gif} source={require('../assets/images/a1.gif')} />
+                                                    ? <Image style={styles.gif} source={require('../assets/images/a21.gif')} />
                                                     : this.state.index === 10 ?
                                                         <Image style={styles.gif} source={require('../assets/images/abrir.gif')} />
                                                         : <Image style={styles.gif} source={require('../assets/images/encoger.gif')} />
