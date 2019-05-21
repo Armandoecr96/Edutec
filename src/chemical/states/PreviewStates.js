@@ -384,7 +384,7 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 38,
+          nextID: 36,
           title: 'Si'
         },
         {
@@ -645,7 +645,7 @@ export default this.state = {
           title: 'Si'
         },
         {
-          nextID: 38,
+          nextID: 36,
           title: 'No'
         }
       ]
@@ -700,67 +700,13 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 36,
-          title: 'Si'
-        },
-        {
-          nextID: 36,
-          title: 'No'
+          nextID: 0,
+          title: 'Salir'
         }
       ]
     },
     {
-      id: 36,
-      spanishText: 'Seleccione en la pantalla cual es el motivo del análisis.',
-      mayanText: 'Yeey ba’axten ku k’áatal tech le xíixo’',
-      hora: false,
-      audio: 'audio37.m4a',
-      options: [
-        {
-          backID: 35,
-          title: 'Atrás'
-        },
-        {
-          nextID: 37,
-          title: 'Control'
-        },
-        {
-          nextID: 37,
-          title: 'Preoperatorios'
-        }
-      ]
-    },
-    {
-      id: 37,
-      spanishText: 'Seleccione en la pantalla cual es el motivo del análisis.',
-      mayanText: 'Yeey ba’axten ku k’áatal tech le xíixo’',
-      hora: false,
-      audio: 'audio37.m4a',
-      options: [
-        {
-          backID: 36,
-          title: 'Atrás'
-        },
-        {
-          nextID: 0,
-          title: 'Embarazo'
-        },
-        {
-          nextID: 0,
-          title: 'Diabetes'
-        },
-        {
-          nextID: 0,
-          title: 'Colesterol'
-        },
-        {
-          nextID: 0,
-          title: 'Hipertensión'
-        }
-      ]
-    },
-    {
-        id: 38,
+        id: 36,
         spanishText: 'Regrese otro día por favor',
         mayanText: "Meent uts ta sùut tuláak’ k'íin",
         audio: 'audio52.m4a',

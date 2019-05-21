@@ -5,7 +5,6 @@ import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/box.png'
 import nextButton from '../assets/images/siguiente.png'
 import previewButtom from '../assets/images/atras.png'
-import moment from "moment";
 import SoundPlayer from 'react-native-sound'
 import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
@@ -146,7 +145,7 @@ export default class BloodTest extends Component {
                                                             : selection.title === 'Atras' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                                 <Image source={previewButtom} style={{ height: 80, width: 124 }} />
                                                             </Button>
-                                                                : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                                : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.props.navigation.navigate('HomeChemical')} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                                     <Image source={salirButtom} style={{ height: 80, width: 124 }} />
                                                                 </Button> : null
                                                     )

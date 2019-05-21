@@ -24,18 +24,34 @@ export default class BloodTest extends Component {
             index: 0,
             pause: false,
             song: null,
+            yesAudio: null,
+            noAudio: null,
             isVisible: false,
             dateChoose: "",
             time: "",
             date: new Date(),
             verificacion: false,
             playVisibility: 'flex',
-            pauseVisibbility: 'none'
+            pauseVisibbility: 'none',
+            playVisibilityYes: 'flex',
+            playVisibilityNo: 'flex',
+            pauseVisibbilityYes: 'none',
+            pauseVisibbilityNo: 'none'
         }
     }
 
     componentWillMount() {
         this.state.song = new SoundPlayer(states.questionary[0].audio, SoundPlayer.MAIN_BUNDLE, (error) => {
+            if (error) {
+                console.log('failed to load the sound', error)
+            }
+        })
+        this.state.yesAudio = new SoundPlayer('audio23.m4a', SoundPlayer.MAIN_BUNDLE, (error) => {
+            if (error) {
+                console.log('failed to load the sound', error)
+            }
+        })
+        this.state.noAudio = new SoundPlayer('audio24.m4a', SoundPlayer.MAIN_BUNDLE, (error) => {
             if (error) {
                 console.log('failed to load the sound', error)
             }
@@ -116,29 +132,83 @@ export default class BloodTest extends Component {
         })
     }
 
-    play() {
-        if (this.state.song !== null) {
-            this.state.song.play((succes) => {
-                if (succes) {
-                    this.pauseToPlay()
-                }
+    play(option) {
+        if (option === undefined) {
+            if (this.state.song !== null) {
+                this.state.song.play((succes) => {
+                    if (succes) {
+                        this.pauseToPlay()
+                    }
+                })
+            }
+            this.setState({
+                playVisibility: 'none',
+                pauseVisibbility: 'flex'
             })
+        } else {
+            if (option) {
+                this.state.yesAudio.play((succes) => {
+                    if (succes) {
+                        this.setState({
+                            playVisibilityYes: 'flex',
+                            pauseVisibbilityYes: 'none'
+                        })
+                    }
+                })
+                this.setState({
+                    playVisibilityYes: 'none',
+                    pauseVisibbilityYes: 'flex'
+                })
+            } else {
+                this.state.noAudio.play((succes) => {
+                    if (succes) {
+                        this.setState({
+                            playVisibilityNo: 'flex',
+                            pauseVisibbilityNo: 'none'
+                        })
+                    }
+                })
+                this.setState({
+                    playVisibilityNo: 'none',
+                    pauseVisibbilityNo: 'flex'
+                })
+            }
         }
-        this.setState({
-            playVisibility: 'none',
-            pauseVisibbility: 'flex'
-        })
     }
 
-    pause() {
-        if (this.state.song !== null) {
-            this.state.song.pause((succes) => {
-                if (!succes) {
-                    console.log('Error en reproducción')
-                }
-            })
+    pause(option) {
+        if (option === undefined) {
+            if (this.state.song !== null) {
+                this.state.song.pause((succes) => {
+                    if (!succes) {
+                        console.log('Error en reproducción')
+                    }
+                })
+            }
+            this.pauseToPlay()
+        } else {
+            if (option) {
+                this.state.yesAudio.pause((succes) => {
+                    if (!succes) {
+                        console.log('Error en reproducción')
+                    }
+                })
+                this.setState({
+                    playVisibilityYes: 'flex',
+                    pauseVisibbilityYes: 'none'
+                })
+            } else {
+                this.state.noAudio.pause((succes) => {
+                    if (!succes) {
+                        console.log('Error en reproducción')
+                    }
+                })
+                this.setState({
+                    playVisibilityNo: 'flex',
+                    pauseVisibbilityNo: 'none'
+                })
+            }
         }
-        this.pauseToPlay()
     }
 
     stop() {
@@ -160,6 +230,25 @@ export default class BloodTest extends Component {
                 console.log('failed to load the sound', error)
             }
         })
+    }
+
+    playMedia = (option) => {
+        return (
+            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                <Button
+                    transparent
+                    onPress={() => this.play(option ? true : false)}
+                    style={{ width: 40, height: 40, display: option ? this.state.playVisibilityYes : this.state.playVisibilityNo }}
+                >
+                    <Image source={playButtom} style={{ width: 30, height: 30 }} /></Button>
+                <Button
+                    transparent
+                    onPress={() => this.pause(option ? true : false)}
+                    style={{ width: 40, height: 40, display: option ? this.state.pauseVisibbilityYes : this.state.pauseVisibbilityNo }}
+                >
+                    <Image source={pauseButtom} style={{ width: 30, height: 30 }} /></Button>
+            </View>
+        )
     }
 
     render() {
@@ -212,20 +301,25 @@ export default class BloodTest extends Component {
                                     {states.questionary[this.state.index].options.map((selection, key) => {
                                         return (
                                             selection.title === 'Si' ?
-                                                <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
-                                                    <Image source={yesButton} style={styles.imageButton} />
-                                                </Button>
+                                                <View>
+                                                    <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
+                                                        <Image source={yesButton} style={styles.imageButton} />
+                                                    </Button>
+                                                    {this.playMedia(true)}
+                                                </View>
                                                 : selection.title === 'No'
-                                                    ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
+                                                    ? <View><Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
                                                         <Image source={noButton} style={styles.imageButton} />
                                                     </Button>
+                                                        {this.playMedia(false)}
+                                                    </View>
                                                     : selection.title === 'Siguiente' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }} >
                                                         <Image source={nextButton} style={{ height: 80, width: 124 }} />
                                                     </Button>
                                                         : selection.title === 'Atrás' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                             <Image source={previewButtom} style={{ height: 80, width: 124 }} />
                                                         </Button>
-                                                            : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                            : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.props.navigation.navigate('HomeChemical')} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                                 <Image source={salirButtom} style={{ height: 80, width: 124 }} />
                                                             </Button>
                                                                 : selection.title === 'Hora' ? <DatePicker
