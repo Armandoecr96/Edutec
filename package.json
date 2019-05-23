@@ -6,6 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "generate-apk": "cd android && ./gradlew assembleRelease",
     "android:release": "react-native run-android --variant=release"
   },

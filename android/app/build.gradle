@@ -178,6 +178,7 @@ dependencies {
 
     // For animated GIF support
     compile 'com.facebook.fresco:animated-gif:1.+'
+    compile 'com.facebook.fresco:animated-base-support:1.+'
 
     // For WebP support, including animated WebP
     compile 'com.facebook.fresco:animated-webp:1.+'
