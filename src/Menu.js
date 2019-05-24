@@ -10,6 +10,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Image, View, Dimensions } from 'react-native'
 import { Container, Content, Card, CardItem, Text } from 'native-base'
 import PersonajesQuimicos from './assets/images/quimicos.jpg'
+import { Overlay } from 'react-native-elements'
 import PersonajesRecepcion from './assets/images/recepcion.jpg'
 import logo from './assets/images/logo.png'
 
@@ -30,7 +31,7 @@ export default class Menu extends Component {
             </CardItem>
           </Card>
           <Card style={{ borderRadius: 16 }}>
-            <CardItem cardBody style={{ borderRadius: 16 }} button onPress={() => alert('En Construcción')}>
+            <CardItem cardBody style={{ borderRadius: 16 }} button onPress={() => alert('En')}>
               <Image source={PersonajesRecepcion} style={styles.images} />
             </CardItem>
           </Card>
