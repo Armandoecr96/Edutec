@@ -7,9 +7,11 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, Image, ImageBackground, Dimensions } from 'react-native'
+import { StyleSheet, Image, ImageBackground, Dimensions, View } from 'react-native'
 import { Container, Content, Text, Card, CardItem, Icon, Left, Right } from 'native-base'
 import { Col, Row, Grid } from 'react-native-easy-grid'
+import { Overlay, Button } from 'react-native-elements'
+import EnConstruccion from '../assets/images/enconstruccion.jpg'
 import imageMuestraSanguinea from '../assets/images/gota.png'
 import imageCultivoBiologico from '../assets/images/cultivo_biologico.png'
 import imagePruebaToxico from '../assets/images/canavis.png'
@@ -18,6 +20,12 @@ import imagePreguntasPrevias from '../assets/images/question.png'
 var { height, width } = Dimensions.get('window');
 
 export default class Menu extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isVisible: false
+    }
+  }
   render() {
     return (
       <Container>
@@ -28,7 +36,7 @@ export default class Menu extends Component {
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>
                     <CardItem style={styles.cardItem} cardBody button onPress={() => this.props.navigation.navigate('PreviewQuestion')}>
-                    <Left style={styles.left}>
+                      <Left style={styles.left}>
                         <Image source={imagePreguntasPrevias} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
                       <Text style={styles.text}>Preguntas Previas</Text>
@@ -58,7 +66,7 @@ export default class Menu extends Component {
               <Row style={styles.row}>
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>
-                    <CardItem style={styles.cardItem} cardBody button onPress={() => alert('En Construcción')}>
+                    <CardItem style={styles.cardItem} cardBody button onPress={() => this.setState({ isVisible: true })}>
                       <Left style={styles.left}>
                         <Image source={imageCultivoBiologico} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
@@ -74,7 +82,7 @@ export default class Menu extends Component {
               <Row style={styles.row}>
                 <Col style={styles.col}>
                   <Card style={{ borderRadius: 8 }}>
-                    <CardItem style={styles.cardItem} cardBody button onPress={() => alert('En Construcción')}>
+                    <CardItem style={styles.cardItem} cardBody button onPress={() => this.setState({ isVisible: true })}>
                       <Left style={styles.left}>
                         <Image source={imagePruebaToxico} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
@@ -89,6 +97,16 @@ export default class Menu extends Component {
             </Grid>
           </ImageBackground>
         </Content>
+        <Overlay isVisible={this.state.isVisible} width={350} height={375}>
+          <View style={{ flex: 1 }}>
+            <View style={{ alignItems: 'flex-end' }}>
+              <Button title='x' type='clear' titleStyle={{ color: 'gray' }} onPress={() => this.setState({ isVisible: false })} />
+            </View>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+              <Image source={EnConstruccion} style={{ height: 200, width: 300, borderRadius: 8 }} />
+            </View>
+          </View>
+        </Overlay>
       </Container>
     )
   }

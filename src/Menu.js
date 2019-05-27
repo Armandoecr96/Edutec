@@ -10,14 +10,21 @@ import React, { Component } from 'react'
 import { StyleSheet, Image, View, Dimensions } from 'react-native'
 import { Container, Content, Card, CardItem, Text } from 'native-base'
 import PersonajesQuimicos from './assets/images/quimicos.jpg'
-import { Overlay } from 'react-native-elements'
+import { Overlay, Button } from 'react-native-elements'
 import PersonajesRecepcion from './assets/images/recepcion.jpg'
 import logo from './assets/images/logo.png'
+import EnConstruccion from './assets/images/enconstruccion.jpg'
 
 var { height, width } = Dimensions.get('window');
 
 export default class Menu extends Component {
-  render () {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isVisible: false
+    }
+  }
+  render() {
     return (
       <Container>
         <Content style={styles.content}>
@@ -31,7 +38,7 @@ export default class Menu extends Component {
             </CardItem>
           </Card>
           <Card style={{ borderRadius: 16 }}>
-            <CardItem cardBody style={{ borderRadius: 16 }} button onPress={() => alert('En')}>
+            <CardItem cardBody style={{ borderRadius: 16 }} button onPress={() => this.setState({ isVisible: true })}>
               <Image source={PersonajesRecepcion} style={styles.images} />
             </CardItem>
           </Card>
@@ -41,6 +48,17 @@ export default class Menu extends Component {
             </CardItem>
           </Card>
         </Content>
+        <Overlay isVisible={this.state.isVisible} width={350} height={375}>
+          <View style={{ flex: 1 }}>
+            <View style={{ alignItems: 'flex-end' }}>
+              <Text>Alert</Text>
+              <Button title='x' type='clear' titleStyle={{ color: 'gray' }} onPress={() => this.setState({ isVisible: false })}/>
+            </View>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+              <Image source={EnConstruccion} style={{ height: 200, width: 300, borderRadius: 8 }}/>
+            </View>
+          </View>
+        </Overlay>
       </Container>
     )
   }
