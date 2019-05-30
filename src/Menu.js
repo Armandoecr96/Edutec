@@ -51,7 +51,6 @@ export default class Menu extends Component {
         <Overlay isVisible={this.state.isVisible} width={350} height={375}>
           <View style={{ flex: 1 }}>
             <View style={{ alignItems: 'flex-end' }}>
-              <Text>Alert</Text>
               <Button title='x' type='clear' titleStyle={{ color: 'gray' }} onPress={() => this.setState({ isVisible: false })}/>
             </View>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
