@@ -13,7 +13,7 @@ import salirButtom from '../assets/images/salida.png'
 
 var { height, width } = Dimensions.get('window');
 
-export default class BloodTest extends Component {
+export default class PreveiwQuestion extends Component {
     constructor(props) {
         super(props)
         this.state = {

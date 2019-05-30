@@ -42,19 +42,26 @@ export default class Menu extends Component {
               <Image source={PersonajesRecepcion} style={styles.images} />
             </CardItem>
           </Card>
-          <Card style={{ borderRadius: 16 }}>
-            <CardItem cardBody style={{ borderRadius: 16, backgroundColor: '#01447B', justifyContent: 'center' }} button onPress={() => this.props.navigation.navigate('Ayuda')}>
-              <Text style={{ color: '#FFFFFF', fontSize: 32, alignSelf: 'center', padding: 8 }}>Acerca de</Text>
-            </CardItem>
-          </Card>
+          <View style={{ flexDirection: 'row', alignContent: 'center', justifyContent: 'center' }}>
+            <Card style={{ borderRadius: 16, width: '45%' }}>
+              <CardItem cardBody style={{ borderRadius: 16, backgroundColor: '#01447B', justifyContent: 'center' }} button onPress={() => this.props.navigation.navigate('About')}>
+                <Text style={{ color: '#FFFFFF', fontSize: 32, alignSelf: 'center', padding: 8 }}>Acerca de</Text>
+              </CardItem>
+            </Card>
+            <Card style={{ borderRadius: 16, width: '45%' }}>
+              <CardItem cardBody style={{ borderRadius: 16, backgroundColor: '#01447B', justifyContent: 'center' }} button onPress={() => this.props.navigation.navigate('Ayuda')}>
+                <Text style={{ color: '#FFFFFF', fontSize: 32, alignSelf: 'center', padding: 8 }}>Ayuda</Text>
+              </CardItem>
+            </Card>
+          </View>
         </Content>
         <Overlay isVisible={this.state.isVisible} width={350} height={375}>
           <View style={{ flex: 1 }}>
             <View style={{ alignItems: 'flex-end' }}>
-              <Button title='x' type='clear' titleStyle={{ color: 'gray' }} onPress={() => this.setState({ isVisible: false })}/>
+              <Button title='x' type='clear' titleStyle={{ color: 'gray' }} onPress={() => this.setState({ isVisible: false })} />
             </View>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-              <Image source={EnConstruccion} style={{ height: 200, width: 300, borderRadius: 8 }}/>
+              <Image source={EnConstruccion} style={{ height: 200, width: 300, borderRadius: 8 }} />
             </View>
           </View>
         </Overlay>

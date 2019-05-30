@@ -96,6 +96,10 @@ def enableProguardInReleaseBuilds = false
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
     aaptOptions {
 cruncherEnabled = false
 }
@@ -169,6 +173,7 @@ cruncherEnabled = false
 }
 
 dependencies {
+    compile project(':react-native-video')
     implementation project(':react-native-sound')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')

@@ -193,6 +193,7 @@
 		DD33A4F022136AFA00AC0E42 /* audio32.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46B22136AFA00AC0E42 /* audio32.m4a */; };
 		DD33A4F122136AFA00AC0E42 /* audio32.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DD33A46B22136AFA00AC0E42 /* audio32.m4a */; };
 		FAB94394D1824C3FB8D75B5C /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 701294EFCA5F4652A303658C /* AntDesign.ttf */; };
+		C96F5DD1E5BF481291D907B8 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CBEAAE4D064061877D8EEB /* libRCTVideo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -590,6 +591,8 @@
 		DD33A46B22136AFA00AC0E42 /* audio32.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio32.m4a; path = ../android/app/src/main/res/raw/audio32.m4a; sourceTree = "<group>"; };
 		EC8FF96059B04740BC50D61B /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		F6D1E4EA7CB84257BEA74686 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		2AEB5CAB83DE45739AF096EE /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; name = "RCTVideo.xcodeproj"; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		38CBEAAE4D064061877D8EEB /* libRCTVideo.a */ = {isa = PBXFileReference; name = "libRCTVideo.a"; path = "libRCTVideo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -620,6 +623,7 @@
 				A6717618FE584AAEA9390194 /* libRNGestureHandler.a in Frameworks */,
 				9C3953A1B52C42DA9CA989AD /* libRNVectorIcons.a in Frameworks */,
 				2B72CA2583EC4F74817D76EE /* libRNSound.a in Frameworks */,
+				C96F5DD1E5BF481291D907B8 /* libRCTVideo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +814,7 @@
 				6FC7228CEA114BBEB0B99580 /* RNGestureHandler.xcodeproj */,
 				A82D6A799ED3480B975C56DD /* RNVectorIcons.xcodeproj */,
 				AC68FAE0AAA0486F804D5380 /* RNSound.xcodeproj */,
+				2AEB5CAB83DE45739AF096EE /* RCTVideo.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1687,12 +1692,14 @@
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 				);
 				INFOPLIST_FILE = edutecTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1715,12 +1722,14 @@
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 				);
 				INFOPLIST_FILE = edutecTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1744,6 +1753,7 @@
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 				);
 				INFOPLIST_FILE = edutec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1768,6 +1778,7 @@
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 				);
 				INFOPLIST_FILE = edutec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1799,11 +1810,13 @@
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 				);
 				INFOPLIST_FILE = "edutec-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1835,11 +1848,13 @@
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 				);
 				INFOPLIST_FILE = "edutec-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1870,11 +1885,13 @@
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 				);
 				INFOPLIST_FILE = "edutec-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1905,11 +1922,13 @@
 					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)..\node_modules\neact-native-soundRNSound",
+					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 				);
 				INFOPLIST_FILE = "edutec-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (

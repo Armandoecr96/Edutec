@@ -10,7 +10,8 @@ import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 // Principal
 import Main from './Menu'
-import Ayuda from './Ayuda/Ayuda'
+import About from './Ayuda/About'
+import Ayuda from './Ayuda/Help'
 
 // Quimicos
 import MainChemical from './chemical/Menu'
@@ -47,8 +48,8 @@ const RootStack = createStackNavigator({
       header: null
     }
   },
-  Ayuda: {
-    screen: Ayuda,
+  About: {
+    screen: About,
     navigationOptions: {
       title: 'Acerca de'
     }
@@ -57,6 +58,12 @@ const RootStack = createStackNavigator({
     screen: ChemicalStack,
     navigationOptions: {
       header: null
+    }
+  },
+  Ayuda: {
+    screen: Ayuda,
+    navigationOptions: {
+      title: 'Ayuda'
     }
   }
 })
