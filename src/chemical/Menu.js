@@ -39,7 +39,7 @@ export default class Menu extends Component {
                       <Left style={styles.left}>
                         <Image source={imagePreguntasPrevias} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
-                      <Text style={styles.text}>Preguntas Previas</Text>
+                      <Text style={styles.text}>Preguntas previas</Text>
                       <Right>
                         <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
