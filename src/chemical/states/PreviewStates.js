@@ -244,11 +244,13 @@ export default this.state = {
         },
         {
           nextID: 14,
-          title: 'esporadico'
+          title: 'esporadico',
+          src: require('../../assets/images/esporadico.png')
         },
         {
           nextID: 14,
-          title: 'habitual'
+          title: 'habitual',
+          src: require('../../assets/images/habitual.png')
         }
       ]
     },
@@ -322,15 +324,18 @@ export default this.state = {
         },
         {
           nextID: 19,
-          title: 'correr'
+          title: 'correr',
+          src: require('../../assets/images/correr.png')
         },
         {
           nextID: 18,
-          title: 'caminar'
+          title: 'caminar',
+          src: require('../../assets/images/caminar.png')
         },
         {
           nextID: 20,
-          title: 'estiramiento'
+          title: 'estiramiento',
+          src: require('../../assets/images/estiramiento.png')
         }
       ]
     },
@@ -466,27 +471,27 @@ export default this.state = {
         {
           nextID: 25,
           title: 'Café',
-          src: '../assets/images/cofi.png'
+          src: require('../../assets/images/cofi.png')
         },
         {
           nextID: 25,
           title: 'Jugo',
-          src: '../assets/images/jugo.png'
+          src: require('../../assets/images/jugo.png')
         },
         {
           nextID: 25,
           title: 'Agua',
-          src: '../assets/images/agua.png'
+          src: require('../../assets/images/agua.png')
         },
         {
           nextID: 25,
           title: 'Chocolate',
-          src: '../assets/images/chocolate.png'
+          src: require('../../assets/images/chocolate.png')
         },
         {
           nextID: 25,
           title: 'Refresco',
-          src: '../assets/images/refresco.png'
+          src: require('../../assets/images/refresco.png')
         }
       ]
     },

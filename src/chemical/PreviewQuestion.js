@@ -14,6 +14,7 @@ import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 import DatePicker from 'react-native-datepicker'
 import salirButtom from '../assets/images/salida.png'
+import get from 'lodash/get'
 
 var { height, width } = Dimensions.get('window');
 
@@ -353,28 +354,7 @@ export default class BloodTest extends Component {
                                                                 />
                                                                     : <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecisionDrink}>
                                                                         <View style={{ display: 'flex', flexWrap: 'wrap', width: 100 }}>
-                                                                            {selection.title === 'Café' ?
-                                                                                <View><Image source={require('../assets/images/cofi.png')} style={styles.imageButtonDecision} /></View>
-                                                                                : selection.title === 'Jugo' ?
-                                                                                    <View><Image source={require('../assets/images/jugo.png')} style={styles.imageButtonDecision} /></View>
-                                                                                    : selection.title === 'Agua' ?
-                                                                                        <View><Image source={require('../assets/images/agua.png')} style={styles.imageButtonDecision} /></View>
-                                                                                        : selection.title === 'Chocolate' ?
-                                                                                            <View><Image source={require('../assets/images/chocolate.png')} style={styles.imageButtonDecision} /></View>
-                                                                                            : selection.title === 'Refresco' ?
-                                                                                                <Image source={require('../assets/images/refresco.png')} style={styles.imageButtonDecision} />
-                                                                                                : selection.title === 'esporadico'
-                                                                                                    ? <Image source={require('../assets/images/esporadico.png')} style={styles.imageButtonDecision} />
-                                                                                                    : selection.title === 'habitual'
-                                                                                                        ? <View><Image source={require('../assets/images/habitual.png')} style={styles.imageButtonDecision} /></View>
-                                                                                                        : selection.title === 'correr'
-                                                                                                            ? <View><Image source={require('../assets/images/correr.png')} style={styles.imageButtonDecision} /></View>
-                                                                                                            : selection.title === 'caminar'
-                                                                                                                ? <View><Image source={require('../assets/images/caminar.png')} style={styles.imageButtonDecision} /></View>
-                                                                                                                : selection.title === 'estiramiento'
-                                                                                                                    ? <View><Image source={require('../assets/images/estiramiento.png')} style={styles.imageButtonDecision} /></View>
-                                                                                                                    : <Text>{selection.title}</Text>
-                                                                            }
+                                                                            <View><Image source={selection.src} style={styles.imageButtonDecision} /></View>
                                                                         </View>
                                                                     </Button>
                                         )
