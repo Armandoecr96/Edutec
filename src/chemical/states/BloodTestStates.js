@@ -63,7 +63,7 @@ export default this.state = {
         },
         {
             id: 4,
-            spanishText: 'Cierre el puño y apriete.',
+            spanishText: 'Cierre el puño y apriete',
             mayanText: 'Wol u yàal a k’ab chich',
             audio: 'audio69.m4a',
             options: [
@@ -267,7 +267,7 @@ export default this.state = {
         },
         {
             id: 17,
-            spanishText: 'Puedo hacer el analisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
+            spanishText: 'Puedo hacer el análisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
             mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
             audio: 'audio48.m4a',
             options: [

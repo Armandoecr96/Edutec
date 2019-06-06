@@ -83,7 +83,7 @@ export default this.state = {
     },
     {
       id: 5,
-      spanishText: 'A continuación le hare una serie de preguntas de rutina.',
+      spanishText: 'A continuación le haré una serie de preguntas de rutina',
       mayanText: 'Bin in ka’ah in bèet tech wa hayp’e’el k’at chí sùuk u bèeta’al.',
       audio: 'audio21.m4a',
       hora: false,
@@ -273,7 +273,7 @@ export default this.state = {
     },
     {
       id: 15,
-      spanishText: 'Puedo hacer el analisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
+      spanishText: 'Puedo hacer el análisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
       mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
       hora: false,
       audio: 'audio48.m4a',

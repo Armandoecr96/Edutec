@@ -54,7 +54,7 @@ export default class Menu extends Component {
                       <Left style={styles.left}>
                         <Image source={imageMuestraSanguinea} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
-                      <Text style={styles.text}>Muestra sanguinea</Text>
+                      <Text style={styles.text}>Muestra sanguínea</Text>
                       <Right>
                         <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
@@ -70,7 +70,7 @@ export default class Menu extends Component {
                       <Left style={styles.left}>
                         <Image source={imageCultivoBiologico} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
-                      <Text style={styles.text}>Cultivo microbiologico</Text>
+                      <Text style={styles.text}>Cultivo microbiológico</Text>
                       <Right>
                         <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
@@ -86,7 +86,7 @@ export default class Menu extends Component {
                       <Left style={styles.left}>
                         <Image source={imagePruebaToxico} style={[styles.image, { marginBottom: 12, marginTop: 12 }]} />
                       </Left>
-                      <Text style={styles.text}>Examen toxicologico</Text>
+                      <Text style={styles.text}>Examen toxicológico</Text>
                       <Right>
                         <Icon name='arrow-forward' style={styles.icon} />
                       </Right>
