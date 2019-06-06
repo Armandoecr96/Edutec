@@ -151,7 +151,6 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-controlled-gif')
     implementation project(':react-native-video')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-sound')
