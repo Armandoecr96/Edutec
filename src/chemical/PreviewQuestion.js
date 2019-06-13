@@ -266,19 +266,19 @@ export default class BloodTest extends Component {
                                 </CardItem>
                             </Card>
 
-                            <Card transparent style={styles.card}>
+                            {states.questionary[this.state.index].mayan !== false && <Card transparent style={styles.card}>
                                 <CardItem style={styles.cardItem}>
                                     <Image source={textBox} style={styles.cardImage} />
                                     <Text style={styles.title}>Maya</Text>
                                     <Text style={styles.cardText}>{states.questionary[this.state.index].mayanText ? states.questionary[this.state.index].mayanText : ''}</Text>
                                 </CardItem>
-                            </Card>
+                            </Card>}
 
                             <Text style={{ textAlign: "center", color: "#FFFFFF", fontSize: 17, fontWeight: 'bold' }}>{this.state.time}</Text>
 
                             <View style={{ display: 'flex', flexDirection: 'column' }}>
 
-                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                                {states.questionary[this.state.index].mayan !== false && <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
                                     <Button
                                         transparent
                                         onPress={() => this.play()}
@@ -297,8 +297,8 @@ export default class BloodTest extends Component {
                                         style={{ width: 80, height: 80 }}
                                     >
                                         <Image source={stopButtom} style={styles.imageButton} /></Button>
-                                </View>
-                                <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                                </View>}
+                                <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>
                                     {states.questionary[this.state.index].options.map((selection, key) => {
                                         return (
                                             selection.title === 'Si' ?
@@ -352,9 +352,12 @@ export default class BloodTest extends Component {
                                                                     }}
                                                                     onDateChange={this.handlerPicker}
                                                                 />
-                                                                    : <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecisionDrink}>
-                                                                        <View style={{ display: 'flex', flexWrap: 'wrap', width: 100 }}>
-                                                                            <View><Image source={selection.src} style={styles.imageButtonDecision} /></View>
+                                                                    : <Button
+                                                                        transparent key={key}
+                                                                        onPress={() => this.changeQuestion(selection.nextID)}
+                                                                    >
+                                                                        <View>
+                                                                            <Image source={selection.src} style={styles.imageButtonDecision} />
                                                                         </View>
                                                                     </Button>
                                         )
@@ -449,8 +452,6 @@ const styles = StyleSheet.create({
         height: 80
     },
     imageButtonDecision: {
-        display: 'flex',
-        flexWrap: 'wrap',
         width: 100,
         height: 70
     }

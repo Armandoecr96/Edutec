@@ -103,7 +103,10 @@ export default class Menu extends Component {
               <Button title='x' type='clear' titleStyle={{ color: 'gray' }} onPress={() => this.setState({ isVisible: false })} />
             </View>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-              <Image source={EnConstruccion} style={{ height: 200, width: 300, borderRadius: 8 }} />
+            <Image
+                resizeMode={'cover'}
+                source={EnConstruccion}
+                style={{ height: 170, width: 300, borderRadius: 8 }} />
             </View>
           </View>
         </Overlay>

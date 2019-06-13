@@ -229,7 +229,7 @@ export default this.state = {
             id: 14,
             spanishText: 'Mantenga doblado el brazo por 5 minutos',
             mayanText: 'P’at wùuts’il a k’ab ichil ho’péel síitukil',
-            audio: 'audio50.m4a',
+            audio: 'instruccion50.wav',
             options: [
                 {
                     backID: 13,
@@ -269,7 +269,7 @@ export default this.state = {
             id: 17,
             spanishText: 'Puedo hacer el análisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
             mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
-            audio: 'audio48.m4a',
+            audio: 'instruccion48.wav',
             options: [
                 {
                     nextID: 0,

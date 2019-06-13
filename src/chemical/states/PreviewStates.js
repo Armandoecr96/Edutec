@@ -34,7 +34,7 @@ export default this.state = {
       id: 2,
       spanishText: '¿Cuál es su nombre completo?',
       mayanText: 'Bix a k’àaba’, a’alten tu láakal',
-      audio: 'audio25.m4a',
+      audio: 'audiopreguntas003.wav',
       hora: false,
       options: [
         {
@@ -50,7 +50,7 @@ export default this.state = {
     {
       id: 3,
       spanishText: '¿Cuántos años tiene?',
-      mayanText: 'Hay p’éel ya’ab yantech.',
+      mayanText: 'Hay p’éel ha’ab yantech',
       hora: false,
       audio: 'audio26.m4a',
       options: [
@@ -101,9 +101,9 @@ export default this.state = {
     {
       id: 6,
       spanishText: '¿Viene en ayuno de 10 a 12 horas?',
-      mayanText: 'Ma’ a hàantik mixba’al ichil 10 wa 12 tsíil k’ìini’',
+      mayanText: "Taalech ma' haanti mixba'ali' tu sáastalk'íino' te 10 wa 12 tsíil k’ìini’",
       hora: false,
-      audio: 'audio20.m4a',
+      audio: 'audiopreguntas007.wav',
       options: [
         {
           backID: 5,
@@ -215,7 +215,7 @@ export default this.state = {
       spanishText: '¿Ha tomado algún tipo de medicamento antes de venir?',
       mayanText: 'Ta wuk’ah wa ts’àak ma’ili’ talakechi’',
       hora: false,
-      audio: 'audio14.m4a',
+      audio: 'pregunta014.wav',
       options: [
         {
           backID: 6,
@@ -236,7 +236,7 @@ export default this.state = {
       spanishText: '¿Qué tipo de medicamento?',
       mayanText: 'Ba’ax ts’àakil',
       hora: false,
-      audio: 'audio16.m4a',
+      audio: 'pregunta016.wav',
       options: [
         {
           backID: 12,
@@ -314,7 +314,7 @@ export default this.state = {
     {
       id: 17,
       spanishText: 'Seleccione en la pantalla que tipo de ejercicio realizo',
-      mayanText: 'yeey Ba’ax peksah wíinklal ta bèetah',
+      mayanText: 'Yeey ba’ax peksah wíinklal ta bèetah',
       hora: false,
       audio: 'audio15.m4a',
       options: [
@@ -352,11 +352,13 @@ export default this.state = {
         },
         {
           nextID: 20,
-          title: 'Menos de 45'
+          title: 'Menos de 45',
+          src: require('../../assets/images/jugo.png')
         },
         {
           nextID: 19,
-          title: 'Mas de 45'
+          title: 'Mas de 45',
+          src: require('../../assets/images/jugo.png')
         }
       ]
     },
@@ -380,7 +382,7 @@ export default this.state = {
     {
       id: 20,
       spanishText: '¿Ha fumado en las últimas 24 horas?',
-      mayanText: 'ta  tsu’uts’a’  chamal  ma’  u  ts’áah hunp’éel k’iini’',
+      mayanText: 'Ta  tsu’uts’a’  chamal  ma’  u  ts’áah hunp’éel k’iini’',
       hora: false,
       audio: 'audio2.m4a',
       options: [
@@ -441,7 +443,7 @@ export default this.state = {
       spanishText: '¿Tomo algún otro tipo de bebida?',
       mayanText: "Ta wuk'ah uláak’ uk'ul",
       hora: false,
-      audio: 'audio17.m4a',
+      audio: 'audiopreguntas012.wav',
       options: [
         {
           backID: 21,
@@ -479,7 +481,7 @@ export default this.state = {
           src: require('../../assets/images/jugo.png')
         },
         {
-          nextID: 25,
+          nextID: 30,
           title: 'Agua',
           src: require('../../assets/images/agua.png')
         },
@@ -540,7 +542,7 @@ export default this.state = {
     {
       id: 27,
       spanishText: '¿Puede esperar a que se cumpla el tiempo requerido?',
-      mayanText: 'Ba’ax ta hàantah',
+      mayanText: "He' a páatik u ts’o’okol a su'uk'ine’",
       audio: 'voz45.3gp',
       hora: false,
       options: [
@@ -594,9 +596,10 @@ export default this.state = {
     },
     {
       id: 30,
-      spanishText: '¿Solicitó PSA?',
-      mayanText: "ta k'áatah PSA",
+      spanishText: '¿Es hombre o mujer?',
+      mayanText: '',
       hora: false,
+      mayan: false,
       audio: 'audio63.m4a',
       options: [
         {
@@ -605,20 +608,22 @@ export default this.state = {
         },
         {
           nextID: 31,
-          title: 'Si'
+          title: 'Hombre',
+          src: require('../../assets/images/jugo.png')
         },
         {
-          nextID: 34,
-          title: 'No'
+          nextID: 35,
+          title: 'Mujer',
+          src: require('../../assets/images/jugo.png')
         }
       ]
     },
     {
       id: 31,
-      spanishText: '¿Ha tenido relaciones sexuales o se masturbo antes de venir a la prueba?',
-      mayanText: 'Yanchahech yeetel a wiichan wa yéetel a watan wa ta kokolah a kèep ichil óoxp’éel k’íin ma’ili’ talakech ti’ le xíixo’',
+      spanishText: '¿Solicitó PSA?',
+      mayanText: "ta k'áatah PSA",
       hora: false,
-      audio: 'audio45.m4a',
+      audio: 'audio63.m4a',
       options: [
         {
           backID: 30,
@@ -636,27 +641,48 @@ export default this.state = {
     },
     {
       id: 32,
-      spanishText: '¿Se le realizarán otros análisis además del PSA?',
-      mayanText: 'Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak PSA',
+      spanishText: '¿Ha tenido relaciones sexuales o se masturbo antes de venir a la prueba?',
+      mayanText: 'Yanchahech yeetel a wiichan wa yéetel a watan wa ta kokolah a kèep ichil óoxp’éel k’íin ma’ili’ talakech ti’ le xíixo’',
       hora: false,
-      audio: 'audio67.m4a',
+      audio: 'audio45.m4a',
       options: [
         {
           backID: 31,
           title: 'Atrás'
         },
         {
-          nextID: 34,
+          nextID: 33,
           title: 'Si'
         },
         {
-          nextID: 36,
+          nextID: 35,
           title: 'No'
         }
       ]
     },
     {
       id: 33,
+      spanishText: '¿Se le realizarán otros análisis además del PSA?',
+      mayanText: 'Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak PSA',
+      hora: false,
+      audio: 'audio67.m4a',
+      options: [
+        {
+          backID: 32,
+          title: 'Atrás'
+        },
+        {
+          nextID: 35,
+          title: 'Si'
+        },
+        {
+          nextID: 37,
+          title: 'No'
+        }
+      ]
+    },
+    {
+      id: 34,
       spanishText: 'Debe regresar otro día sin haber tenido relaciones sexuales o haberse masturbado',
       mayanText: 'Unah u suut tu láak’ k’íin ma’ wantal yéetel xíib ko’olel mix a ko’okolik a kèep',
       hora: false,
@@ -673,7 +699,7 @@ export default this.state = {
       ]
     },
     {
-      id: 34,
+      id: 35,
       spanishText: '¿Está programado para alguna operación?',
       mayanText: 'Ts’a’an wa u k’íinil a xo’otol',
       hora: false,
@@ -684,24 +710,24 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 35,
+          nextID: 36,
           title: 'Si'
         },
         {
-          nextID: 35,
+          nextID: 36,
           title: 'No'
         }
       ]
     },
     {
-      id: 35,
+      id: 36,
       spanishText: '¿Está tomando algún tratamiento anticoagulante?',
       mayanText: "Ta'an wa u ts’a’abaltech ts’àak yo’o’lal u ha’ach’tal k’i’ik’el",
       hora: false,
       audio: 'audio35.m4a',
       options: [
         {
-          backID: 34,
+          backID: 35,
           title: 'Atrás'
         },
         {
@@ -711,7 +737,7 @@ export default this.state = {
       ]
     },
     {
-        id: 36,
+        id: 37,
         spanishText: 'Regrese otro día por favor',
         mayanText: "Meent uts ta sùut tuláak’ k'íin",
         audio: 'audio52.m4a',
