@@ -353,12 +353,12 @@ export default this.state = {
         {
           nextID: 20,
           title: 'Menos de 45',
-          src: require('../../assets/images/jugo.png')
+          src: require('../../assets/images/menos45.png')
         },
         {
           nextID: 19,
           title: 'Mas de 45',
-          src: require('../../assets/images/jugo.png')
+          src: require('../../assets/images/mas45.png')
         }
       ]
     },
@@ -609,12 +609,12 @@ export default this.state = {
         {
           nextID: 31,
           title: 'Hombre',
-          src: require('../../assets/images/jugo.png')
+          src: require('../../assets/images/hombre.png')
         },
         {
           nextID: 35,
           title: 'Mujer',
-          src: require('../../assets/images/jugo.png')
+          src: require('../../assets/images/mujer.png')
         }
       ]
     },
