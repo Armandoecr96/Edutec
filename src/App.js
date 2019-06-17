@@ -63,7 +63,7 @@ const RootStack = createStackNavigator({
   Ayuda: {
     screen: Ayuda,
     navigationOptions: {
-      title: 'Ayuda'
+      header: null
     }
   }
 })

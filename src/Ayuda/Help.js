@@ -12,7 +12,9 @@ class Help extends Component {
                     ref={(ref) => {
                         this.player = ref
                     }}
+                    fullscreen={true}
                     controls={true}
+                    onEnd={() => this.props.navigation.navigate('Home')}
                     style={styles.backgroundVideo}
                 />
         )
