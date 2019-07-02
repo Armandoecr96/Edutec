@@ -16,7 +16,7 @@ export default this.state = {
             id: 1,
             spanishText: null,
             mayanText: null,
-            source: '../assets/images/alargar.gif',
+            source: '../assets/images/alargarN.gif',
             audio: 'voz58.3gp',
             options: [
                 {
