@@ -34,7 +34,7 @@ export default this.state = {
       id: 2,
       spanishText: '¿Cuál es su nombre completo?',
       mayanText: 'Bix a k’àaba’, a’alten tu láakal',
-      audio: 'audiopreguntas003.wav',
+      audio: 'audiopreguntas003.m4a',
       hora: false,
       options: [
         {
@@ -103,7 +103,7 @@ export default this.state = {
       spanishText: '¿Viene en ayuno de 10 a 12 horas?',
       mayanText: "Taalech ma' haanti mixba'ali' tu sáastalk'íino' te 10 wa 12 tsíil k’ìini’",
       hora: false,
-      audio: 'audiopreguntas007.wav',
+      audio: 'audiopreguntas007.m4a',
       options: [
         {
           backID: 5,
@@ -215,7 +215,7 @@ export default this.state = {
       spanishText: '¿Ha tomado algún tipo de medicamento antes de venir?',
       mayanText: 'Ta wuk’ah wa ts’àak ma’ili’ talakechi’',
       hora: false,
-      audio: 'pregunta014.wav',
+      audio: 'pregunta014.m4a',
       options: [
         {
           backID: 6,
@@ -236,7 +236,7 @@ export default this.state = {
       spanishText: '¿Qué tipo de medicamento?',
       mayanText: 'Ba’ax ts’àakil',
       hora: false,
-      audio: 'pregunta016.wav',
+      audio: 'pregunta016.m4a',
       options: [
         {
           backID: 12,
@@ -443,7 +443,7 @@ export default this.state = {
       spanishText: '¿Tomo algún otro tipo de bebida?',
       mayanText: "Ta wuk'ah uláak’ uk'ul",
       hora: false,
-      audio: 'audiopreguntas012.wav',
+      audio: 'audiopreguntas012.m4a',
       options: [
         {
           backID: 21,
