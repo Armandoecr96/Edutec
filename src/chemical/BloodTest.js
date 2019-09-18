@@ -147,7 +147,13 @@ export default class PreveiwQuestion extends Component {
                                                             </Button>
                                                                 : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.props.navigation.navigate('HomeChemical')} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                                     <Image source={salirButtom} style={{ height: 80, width: 124 }} />
-                                                                </Button> : null
+                                                                </Button> 
+                                                                    : selection.title === 'Izquierda' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16, backgroundColor: "#82E4FD" }}>
+                                                                        <Text style={{color: "white", fontWeight: "600"}}>Izquierda</Text>
+                                                                    </Button>
+                                                                        : selection.title === 'Derecha' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16, backgroundColor: "#82E4FD" }}>
+                                                                            <Text style={{color: "white", fontWeight: "600"}}>Derecha</Text>
+                                                                        </Button> : null
                                                     )
                                                 })}
                                             </View>
@@ -178,7 +184,13 @@ export default class PreveiwQuestion extends Component {
                                                     </Button>
                                                         : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.backID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                             <Image source={salirButtom} style={{ height: 80, width: 124 }} />
-                                                        </Button> : null
+                                                        </Button> 
+                                                            : selection.title === 'Izquierda' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                                <Text>Izquierda</Text>
+                                                            </Button>
+                                                                : selection.title === 'Derecha' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                                    <Text>Derecha</Text>
+                                                                </Button> : null
                                             )
                                         })}
                                     </View>

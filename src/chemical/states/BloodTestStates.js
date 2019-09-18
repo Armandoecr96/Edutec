@@ -2,59 +2,59 @@ export default this.state = {
     questionary: [
         {
             id: 0,
-            spanishText: 'Vamos a proceder a tomar la muestra. Extienda el brazo que normalmente le toman muestra',
-            mayanText: "Bineh ka’ah k ho’oseh a k’i’ik’elo’ tatsah le k'ab sùuk u ho'osa'al a k'i'ik'el",
-            audio: 'voz58.3gp',
+            spanishText: 'Vamos a proceder a tomar la muestra ¿De cual brazo normalmente le toman muestra?',
+            mayanText: "Bineh ka’ah k ho’oseh a k’i’ik’elo’ máakalmáak ti’ a k’ab sùuk u ho’osa’al a lk’i’ik’el, ta ts’íik wa ta no’oh/ he’ máakalmaké.",
+            audio: 'audio47.m4a',
             options: [
                 {
                     nextID: 1,
-                    title: 'Siguiente'
+                    title: 'Izquierda'
+                },
+                {
+                    nextID: 2,
+                    title: 'Derecha'
                 }
             ]
         },
         {
             id: 1,
-            spanishText: null,
-            mayanText: null,
-            source: '../assets/images/alargarN.gif',
-            audio: 'voz58.3gp',
+            spanishText: 'Extienda el brazo izquierdo', 
+            mayanText: "Tats’ah ts’íik k’ab.",
+            audio: 'audio64.m4a',
             options: [
+                {
+                    nextID: 3,
+                    title: 'Siguiente'
+                },
                 {
                     backID: 0,
                     title: 'Atras'
-                },
-                {
-                    nextID: 2,
-                    title: 'Siguiente'
                 }
             ]
         },
         {
             id: 2,
-            spanishText: 'Apoye su brazo en la superficie',
-            mayanText: 'Pehkunt yóok’ol le mayeko',
-            audio: 'audio68.m4a',
+            spanishText: 'Extienda el brazo derecha',
+            mayanText: "Tatsah no’oh k’ab.",
+            audio: 'audio33.m4a',
             options: [
-                {
-                    backID: 1,
-                    title: 'Atras'
-                },
                 {
                     nextID: 3,
                     title: 'Siguiente'
+                },
+                {
+                    backID: 0,
+                    title: 'Atras'
                 }
             ]
         },
         {
             id: 3,
-            spanishText: 'Le voy a poner un torniquete (liga)',
-            mayanText: 'Bin in ka’ah in k’axeh',
-            audio: 'audio54.m4a',
+            spanishText: null,
+            mayanText: null,
+            source: '../assets/images/alargarN.gif',
+            audio: 'voz58.3gp',
             options: [
-                {
-                    backID: 2,
-                    title: 'Atras'
-                },
                 {
                     nextID: 4,
                     title: 'Siguiente'
@@ -63,9 +63,9 @@ export default this.state = {
         },
         {
             id: 4,
-            spanishText: 'Cierre el puño y apriete',
-            mayanText: 'Wol u yàal a k’ab chich',
-            audio: 'audio69.m4a',
+            spanishText: 'Apoye su brazo en la superficie',
+            mayanText: 'Pehkunt yóok’ol le mayeko',
+            audio: 'audio68.m4a',
             options: [
                 {
                     backID: 3,
@@ -79,10 +79,9 @@ export default this.state = {
         },
         {
             id: 5,
-            spanishText: null,
-            mayanText: null,
-            source: '../assets/images/cerrar.gif',
-            audio: 'voz58.3gp',
+            spanishText: 'Le voy a poner un torniquete (liga)',
+            mayanText: 'Bin in ka’ah in k’axeh',
+            audio: 'audio54.m4a',
             options: [
                 {
                     backID: 4,
@@ -96,9 +95,9 @@ export default this.state = {
         },
         {
             id: 6,
-            spanishText: 'Muy bien',
-            mayanText: 'Hach ma’alob',
-            audio: 'audio57.m4a',
+            spanishText: 'Cierre el puño y apriete',
+            mayanText: 'Wol u yàal a k’ab chich',
+            audio: 'audio69.m4a',
             options: [
                 {
                     backID: 5,
@@ -112,9 +111,10 @@ export default this.state = {
         },
         {
             id: 7,
-            spanishText: 'No se mueva en el momento que sienta el piquete',
-            mayanText: 'Ma’ péek le ken a wu’uy le lòom',
-            audio: 'audio36.m4a',
+            spanishText: null,
+            mayanText: null,
+            source: '../assets/images/cerrar.gif',
+            audio: 'voz58.3gp',
             options: [
                 {
                     backID: 6,
@@ -128,10 +128,9 @@ export default this.state = {
         },
         {
             id: 8,
-            spanishText: null,
-            mayanText: null,
-            source: '../assets/images/a1.gif',
-            audio: 'voz58.3gp',
+            spanishText: 'Muy bien',
+            mayanText: 'Hach ma’alob',
+            audio: 'audio57.m4a',
             options: [
                 {
                     backID: 7,
@@ -145,9 +144,9 @@ export default this.state = {
         },
         {
             id: 9,
-            spanishText: 'Abra el puño',
-            mayanText: 'Tats’ u yàal a k’ab',
-            audio: 'audio53.m4a',
+            spanishText: 'No se mueva en el momento que sienta el piquete',
+            mayanText: 'Ma’ péek le ken a wu’uy le lòom',
+            audio: 'audio36.m4a',
             options: [
                 {
                     backID: 8,
@@ -178,9 +177,9 @@ export default this.state = {
         },
         {
             id: 11,
-            spanishText: 'Flexione el brazo',
-            mayanText: 'Wut’s a k’ab',
-            audio: 'voz54.3gp',
+            spanishText: 'Abra el puño',
+            mayanText: 'Tats’ u yàal a k’ab',
+            audio: 'audio53.m4a',
             options: [
                 {
                     backID: 10,
@@ -211,9 +210,9 @@ export default this.state = {
         },
         {
             id: 13,
-            spanishText: 'Le voy a poner un parche',
-            mayanText: 'Bin in ka’ah in ts’áah pìits’i’',
-            audio: 'audio49.m4a',
+            spanishText: 'Flexione el brazo',
+            mayanText: 'Wut’s a k’ab',
+            audio: 'voz54.3gp',
             options: [
                 {
                     backID: 12,
@@ -227,9 +226,10 @@ export default this.state = {
         },
         {
             id: 14,
-            spanishText: 'Mantenga doblado el brazo por 5 minutos',
-            mayanText: 'P’at wùuts’il a k’ab ichil ho’péel síitukil',
-            audio: 'instruccion50.wav',
+            spanishText: null,
+            mayanText: null,
+            source: '../assets/images/a1.gif',
+            audio: 'voz58.3gp',
             options: [
                 {
                     backID: 13,
@@ -243,6 +243,38 @@ export default this.state = {
         },
         {
             id: 15,
+            spanishText: 'Le voy a poner un parche',
+            mayanText: 'Bin in ka’ah in ts’áah pìits’i’',
+            audio: 'audio49.m4a',
+            options: [
+                {
+                    backID: 14,
+                    title: 'Atras'
+                },
+                {
+                    nextID: 16,
+                    title: 'Siguiente'
+                }
+            ]
+        },
+        {
+            id: 16,
+            spanishText: 'Mantenga doblado el brazo por 5 minutos',
+            mayanText: 'P’at wùuts’il a k’ab ichil ho’péel síitukil',
+            audio: 'instruccion50.wav',
+            options: [
+                {
+                    backID: 15,
+                    title: 'Atras'
+                },
+                {
+                    nextID: 17,
+                    title: 'Siguiente'
+                }
+            ]
+        },
+        {
+            id: 17,
             spanishText: 'Hasta luego, que tenga un buen día',
             mayanText: 'Ma’alob tak tu láak k’ìin, ka yanaktech hunp’éel utsil k’íin',
             audio: 'voz55.3gp',
@@ -254,7 +286,7 @@ export default this.state = {
             ]
         },
         {
-            id: 16,
+            id: 18,
             spanishText: 'Regrese otro día por favor',
             mayanText: "Meent uts ta sùut tuláak’ k'íin",
             audio: 'audio52.m4a',
@@ -266,7 +298,7 @@ export default this.state = {
             ]
         },
         {
-            id: 17,
+            id: 19,
             spanishText: 'Puedo hacer el análisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
             mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
             audio: 'instruccion48.wav',

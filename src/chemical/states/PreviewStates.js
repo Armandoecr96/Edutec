@@ -3,7 +3,7 @@ export default this.state = {
     {
       id: 0,
       spanishText: 'Tome asiento, por favor',
-      mayanText: 'Mèent uts a kutàal',
+      mayanText: 'Kuleen',
       hora: false,
       audio: 'audio30.m4a',
       options: [
@@ -111,12 +111,12 @@ export default this.state = {
         },
         {
           nextID: 12,
-          audio: 'audio23.m4a',
+          audio: 'voz56.3gp',
           title: 'Si'
         },
         {
           nextID: 7,
-          audio: 'audio24.m4a',
+          audio: 'voz57.3gp',
           title: 'No'
         }
       ]
@@ -244,20 +244,20 @@ export default this.state = {
         },
         {
           nextID: 14,
-          title: 'esporadico',
-          src: require('../../assets/images/esporadico.png')
+          title: 'Siguiente',
+          // src: require('../../assets/images/esporadico.png')
         },
-        {
-          nextID: 14,
-          title: 'habitual',
-          src: require('../../assets/images/habitual.png')
-        }
+        // {
+        //   nextID: 14,
+        //   title: 'habitual',
+        //   src: require('../../assets/images/habitual.png')
+        // }
       ]
     },
     {
       id: 14,
       spanishText: '¿A que hora lo tomó?',
-      mayanText: "Ba’ax tsíil k’ìinil ka ta wuk’ah le ts'àako'",
+      mayanText: "Ba’ax tsíil k’ìinil ka ta wuk’ah.",
       hora: true,
       audio: 'audio6.m4a',
       options: [
@@ -278,7 +278,7 @@ export default this.state = {
       spanishText: 'Puedo hacer el análisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
       mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
       hora: false,
-      audio: 'audio48.m4a',
+      audio: 'audio11.m4a',
       options: [
         {
           backID: 14,
@@ -325,16 +325,19 @@ export default this.state = {
         {
           nextID: 19,
           title: 'correr',
+          audio: 'audio18.m4a',
           src: require('../../assets/images/correr.png')
         },
         {
           nextID: 18,
           title: 'caminar',
+          audio: 'audio8.m4a',
           src: require('../../assets/images/caminar.png')
         },
         {
           nextID: 20,
           title: 'estiramiento',
+          audio: 'audio19.m4a',
           src: require('../../assets/images/estiramiento.png')
         }
       ]
@@ -391,7 +394,7 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 36,
+          nextID: 37,
           title: 'Si'
         },
         {
@@ -620,10 +623,10 @@ export default this.state = {
     },
     {
       id: 31,
-      spanishText: '¿Solicitó PSA?',
-      mayanText: "ta k'áatah PSA",
+      spanishText: '¿Solicitó examen de próstata?',
+      mayanText: "ta k'áatah xíixo' prostata?",
       hora: false,
-      audio: 'audio63.m4a',
+      audio: 'voz00059.3gp',
       options: [
         {
           backID: 30,
@@ -634,7 +637,7 @@ export default this.state = {
           title: 'Si'
         },
         {
-          nextID: 34,
+          nextID: 35,
           title: 'No'
         }
       ]
@@ -662,10 +665,10 @@ export default this.state = {
     },
     {
       id: 33,
-      spanishText: '¿Se le realizarán otros análisis además del PSA?',
-      mayanText: 'Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak PSA',
+      spanishText: '¿Se le realizarán otros análisis además del examen de próstata?',
+      mayanText: 'Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak prostata',
       hora: false,
-      audio: 'audio67.m4a',
+      audio: 'voz00060.3gp',
       options: [
         {
           backID: 32,
@@ -724,7 +727,7 @@ export default this.state = {
       spanishText: '¿Está tomando algún tratamiento anticoagulante?',
       mayanText: "Ta'an wa u ts’a’abaltech ts’àak yo’o’lal u ha’ach’tal k’i’ik’el",
       hora: false,
-      audio: 'audio35.m4a',
+      audio: 'voz00061.3gp',
       options: [
         {
           backID: 35,
