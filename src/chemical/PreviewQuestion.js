@@ -14,7 +14,6 @@ import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 import DatePicker from 'react-native-datepicker'
 import salirButtom from '../assets/images/salida.png'
-import get from 'lodash/get'
 
 var { height, width } = Dimensions.get('window');
 
