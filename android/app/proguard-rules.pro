@@ -6,7 +6,7 @@
 #
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
-def enableProguardInReleaseBuilds = true
+
 # Add any project specific keep options here:
 
 # If your project uses WebView with JS, uncomment the following
@@ -15,6 +15,3 @@ def enableProguardInReleaseBuilds = true
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
--keep class com.facebook.imagepipeline.animated.factory.AnimatedFactoryImpl {
-  public AnimatedFactoryImpl(com.facebook.imagepipeline.bitmaps.PlatformBitmapFactory, com.facebook.imagepipeline.core.ExecutorSupplier);
-}
