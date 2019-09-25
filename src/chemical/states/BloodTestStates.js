@@ -58,6 +58,10 @@ export default this.state = {
                 {
                     nextID: 4,
                     title: 'Siguiente'
+                },
+                {
+                    backID: 0,
+                    title: 'Atras'
                 }
             ]
         },

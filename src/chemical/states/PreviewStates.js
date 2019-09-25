@@ -5,7 +5,7 @@ export default this.state = {
       spanishText: 'Tome asiento, por favor',
       mayanText: 'Kuleen',
       hora: false,
-      audio: 'audio30.m4a',
+      audio: 'voz00070.wav',
       options: [
         {
           nextID: 1,
@@ -34,7 +34,7 @@ export default this.state = {
       id: 2,
       spanishText: '¿Cuál es su nombre completo?',
       mayanText: 'Bix a k’àaba’, a’alten tu láakal',
-      audio: 'audiopreguntas003.m4a',
+      audio: 'audiopreguntas003.wav',
       hora: false,
       options: [
         {
@@ -100,10 +100,10 @@ export default this.state = {
     },
     {
       id: 6,
-      spanishText: '¿Viene en ayuno de 10 a 12 horas?',
-      mayanText: "Taalech ma' haanti mixba'ali' tu sáastalk'íino' te 10 wa 12 tsíil k’ìini’",
+      spanishText: '¿Comió algo desde hace 10 o 12 horas?',
+      mayanText: "Ma’ a hàantik mixba’al ichil 10 wa 12 tsíil k’ìini’ ",
       hora: false,
-      audio: 'audiopreguntas007.m4a',
+      audio: 'audiopreguntas007.wav',
       options: [
         {
           backID: 5,
@@ -111,12 +111,12 @@ export default this.state = {
         },
         {
           nextID: 12,
-          audio: 'voz56.3gp',
+          audio: 'audio23.m4a',
           title: 'Si'
         },
         {
           nextID: 7,
-          audio: 'voz57.3gp',
+          audio: 'audio24.m4a',
           title: 'No'
         }
       ]
@@ -215,7 +215,7 @@ export default this.state = {
       spanishText: '¿Ha tomado algún tipo de medicamento antes de venir?',
       mayanText: 'Ta wuk’ah wa ts’àak ma’ili’ talakechi’',
       hora: false,
-      audio: 'pregunta014.m4a',
+      audio: 'pregunta014.wav',
       options: [
         {
           backID: 6,
@@ -236,7 +236,7 @@ export default this.state = {
       spanishText: '¿Qué tipo de medicamento?',
       mayanText: 'Ba’ax ts’àakil',
       hora: false,
-      audio: 'pregunta016.m4a',
+      audio: 'pregunta016.wav',
       options: [
         {
           backID: 12,
@@ -275,8 +275,8 @@ export default this.state = {
     },
     {
       id: 15,
-      spanishText: 'Puedo hacer el análisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
-      mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
+      spanishText: 'El tomar un medicamento antes de un análisis podría afectar los resultado',
+      mayanText: "A wuk’ik ts’aak ma’ili beeta’ak le x’ii he’ u k’exik u xuul le xíixo’",
       hora: false,
       audio: 'audio11.m4a',
       options: [
@@ -446,7 +446,7 @@ export default this.state = {
       spanishText: '¿Tomo algún otro tipo de bebida?',
       mayanText: "Ta wuk'ah uláak’ uk'ul",
       hora: false,
-      audio: 'audiopreguntas012.m4a',
+      audio: 'audiopreguntas012.wav',
       options: [
         {
           backID: 21,
@@ -626,7 +626,7 @@ export default this.state = {
       spanishText: '¿Solicitó examen de próstata?',
       mayanText: "ta k'áatah xíixo' prostata?",
       hora: false,
-      audio: 'voz00059.3gp',
+      audio: 'voz00059.wav',
       options: [
         {
           backID: 30,
@@ -668,7 +668,7 @@ export default this.state = {
       spanishText: '¿Se le realizarán otros análisis además del examen de próstata?',
       mayanText: 'Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak prostata',
       hora: false,
-      audio: 'voz00060.3gp',
+      audio: 'voz00060.wav',
       options: [
         {
           backID: 32,
@@ -727,7 +727,7 @@ export default this.state = {
       spanishText: '¿Está tomando algún tratamiento anticoagulante?',
       mayanText: "Ta'an wa u ts’a’abaltech ts’àak yo’o’lal u ha’ach’tal k’i’ik’el",
       hora: false,
-      audio: 'voz00061.3gp',
+      audio: 'voz00061.wav',
       options: [
         {
           backID: 35,
