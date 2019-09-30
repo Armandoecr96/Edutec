@@ -271,8 +271,6 @@ export default class BloodTest extends Component {
                 pauseVisibbility: 'flex'
             })
         } else {
-            console.log(this.state.index)
-            console.log(isAyuno)
             var yesAudio;
             var noAudio;
 

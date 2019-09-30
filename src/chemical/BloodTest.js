@@ -10,6 +10,8 @@ import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 import salirButtom from '../assets/images/salida.png'
+import leftButtom from '../assets/images/izquierda.png'
+import rightButtom from '../assets/images/derecha.png'
 
 var { height, width } = Dimensions.get('window');
 
@@ -148,11 +150,13 @@ export default class PreveiwQuestion extends Component {
                                                                 : selection.title === 'Salir' ? <Button transparent key={key} onPress={() => this.props.navigation.navigate('HomeChemical')} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
                                                                     <Image source={salirButtom} style={{ height: 80, width: 124 }} />
                                                                 </Button> 
-                                                                    : selection.title === 'Izquierda' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16, backgroundColor: "#82E4FD" }}>
-                                                                        <Text style={{color: "white", fontWeight: "600"}}>Izquierda</Text>
+                                                                    : selection.title === 'Izquierda' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
+                                                                        <Image source={leftButtom} style={{ height: 80, width: 124 }} />
+                                                                        {/* <Text style={{color: "white", fontWeight: "600"}}>Izquierda</Text> */}
                                                                     </Button>
-                                                                        : selection.title === 'Derecha' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16, backgroundColor: "#82E4FD" }}>
-                                                                            <Text style={{color: "white", fontWeight: "600"}}>Derecha</Text>
+                                                                        : selection.title === 'Derecha' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16}}>
+                                                                            <Image source={rightButtom} style={{ height: 80, width: 124 }} />
+                                                                            {/* <Text style={{color: "white", fontWeight: "600"}}>Derecha</Text> */}
                                                                         </Button> : null
                                                     )
                                                 })}
@@ -186,11 +190,12 @@ export default class PreveiwQuestion extends Component {
                                                             <Image source={salirButtom} style={{ height: 80, width: 124 }} />
                                                         </Button> 
                                                             : selection.title === 'Izquierda' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
-                                                                <Text>Izquierda</Text>
+                                                                <Image source={leftButtom} style={{ height: 80, width: 124 }} />
                                                             </Button>
-                                                                : selection.title === 'Derecha' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16 }}>
-                                                                    <Text>Derecha</Text>
-                                                                </Button> : null
+                                                                : selection.title === 'Derecha' ? <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={{ margin: 8, padding: 8, marginBottom: 16}}>
+                                                                    <Image source={rightButtom} style={{ height: 80, width: 124 }} />
+                                                                </Button> 
+                                                                : null
                                             )
                                         })}
                                     </View>
