@@ -168,13 +168,16 @@ export default class PreveiwQuestion extends Component {
                                     {
                                         this.state.index === 1
                                             ? <Image style={styles.gif} source={require('../assets/images/alargarN.gif')} />
-                                            : this.state.index === 5
+                                            : this.state.index === 7
                                                 ? <Image style={styles.gif} source={require('../assets/images/cerrar.gif')} />
-                                                : this.state.index === 8
+                                                : this.state.index === 10
                                                     ? <Image style={styles.gif} source={require('../assets/images/a21.gif')} />
-                                                    : this.state.index === 10 ?
+                                                    : this.state.index === 12 ?
                                                         <Image style={styles.gif} source={require('../assets/images/abrir.gif')} />
-                                                        : <Image style={styles.gif} source={require('../assets/images/encogerN.gif')} />
+                                                        :
+                                                        this.state.index === 14 ?
+                                                        <Image style={styles.gif} source={require('../assets/images/encoger.gif')} /> 
+                                                        : <Image style={styles.gif} source={require('../assets/images/encogerN.gif')} /> 
                                     }
 
                                     <View style={{ marginTop: 24, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>

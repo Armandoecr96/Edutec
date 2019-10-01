@@ -138,15 +138,20 @@ export default class BloodTest extends Component {
             verificacionDate = 'no'
         }
         if (verificacionDate === 'yes') {
-            setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextYes }), 5000)
+            // setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextYes }), 5000)
+            setTimeout(()=> this.changeQuestion(states.questionary[this.state.index].options[1].nextYes), 5000)
+            
         }
 
         if (verificacionDate === 'wait') {
-            setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextProp }), 5000)
+            // setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextProp }), 5000)
+            setTimeout(()=>this.changeQuestion(states.questionary[this.state.index].options[1].nextProp), 5000)
         }
 
         if (verificacionDate === 'no') {
-            setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextNo }), 5000)
+            // setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextNo }), 5000)
+            setTimeout(()=>this.changeQuestion(states.questionary[this.state.index].options[1].nextNo),5000)
+            
         }
     }
 

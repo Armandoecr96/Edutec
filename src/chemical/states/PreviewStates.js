@@ -103,7 +103,7 @@ export default this.state = {
       spanishText: '¿Comió algo desde hace 10 o 12 horas?',
       mayanText: "Ma’ a hàantik mixba’al ichil 10 wa 12 tsíil k’ìini’ ",
       hora: false,
-      audio: 'audiopreguntas007.wav',
+      audio: 'audio20.m4a',
       options: [
         {
           backID: 5,
@@ -111,14 +111,15 @@ export default this.state = {
         },
         {
           nextID: 12,
-          audio: 'audio23.m4a',
-          title: 'Si'
+          audio: 'audio24.m4a',
+          title: 'No'
         },
         {
           nextID: 7,
-          audio: 'audio24.m4a',
-          title: 'No'
+          audio: 'audio23.m4a',
+          title: 'Si'
         }
+        
       ]
     },
     {
@@ -152,14 +153,14 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 9,
-          audio: 'audio23.m4a',
-          title: 'Si'
-        },
-        {
           nextID: 10,
           audio: 'audio24.m4a',
           title: 'No'
+        },
+        {
+          nextID: 9,
+          audio: 'audio23.m4a',
+          title: 'Si'
         }
       ]
     },
@@ -175,21 +176,21 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 11,
-          title: 'Si'
-        },
-        {
           nextID: 10,
           title: 'No'
-        }
+        },
+        {
+          nextID: 11,
+          title: 'Si'
+        }        
       ]
     },
     {
       id: 10,
-      spanishText: 'Regrese otro día en ayuno de 10 a 12 horas',
-      mayanText: 'Ba’ax ta hàantah',
+      spanishText: 'Regrese otro día',
+      mayanText: "Meent uts ta sùut tuláak’ k'íin",
       hora: false,
-      audio: 'audio9.m4a',
+      audio: 'audio52.m4a',
       options: [
         {
           nextID: 0,
@@ -222,13 +223,13 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 13,
-          title: 'Si'
-        },
-        {
           nextID: 16,
           title: 'No'
-        }
+        },
+        {
+          nextID: 13,
+          title: 'Si'
+        }        
       ]
     },
     {
@@ -565,10 +566,10 @@ export default this.state = {
     },
     {
       id: 28,
-      spanishText: 'Regrese otro día en ayuno de 10 a 12 horas',
-      mayanText: 'Le k’oha’ano’ unah u tàal tu su’uk’in ichil 10 tak 12 tsíil k’ìin.',
+      spanishText: 'Regrese otro día',
+      mayanText: "Meent uts ta sùut tuláak’ k'íin",
       hora: false,
-      audio: 'audio9.m4a',
+      audio: 'audio52.m4a',
       options: [
         {
           backID: 23,

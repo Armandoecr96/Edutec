@@ -23,12 +23,12 @@ export default this.state = {
             audio: 'audio64.m4a',
             options: [
                 {
-                    nextID: 3,
-                    title: 'Siguiente'
-                },
-                {
                     backID: 0,
                     title: 'Atras'
+                },
+                {
+                    nextID: 3,
+                    title: 'Siguiente'
                 }
             ]
         },
@@ -39,12 +39,12 @@ export default this.state = {
             audio: 'audio33.m4a',
             options: [
                 {
-                    nextID: 3,
-                    title: 'Siguiente'
-                },
-                {
                     backID: 0,
                     title: 'Atras'
+                },
+                {
+                    nextID: 3,
+                    title: 'Siguiente'
                 }
             ]
         },
@@ -56,12 +56,12 @@ export default this.state = {
             audio: 'voz58.3gp',
             options: [
                 {
-                    nextID: 4,
-                    title: 'Siguiente'
-                },
-                {
                     backID: 0,
                     title: 'Atras'
+                },
+                {
+                    nextID: 4,
+                    title: 'Siguiente'
                 }
             ]
         },
