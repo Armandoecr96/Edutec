@@ -5,7 +5,7 @@ export default this.state = {
       spanishText: 'Tome asiento, por favor',
       mayanText: 'Kuleen',
       hora: false,
-      audio: 'voz00070.wav',
+      audio: 'voz00070.ogg',
       options: [
         {
           nextID: 1,
@@ -34,7 +34,7 @@ export default this.state = {
       id: 2,
       spanishText: '¿Cuál es su nombre completo?',
       mayanText: 'Bix a k’àaba’, a’alten tu láakal',
-      audio: 'audiopreguntas003.wav',
+      audio: 'audiopreguntas003.ogg',
       hora: false,
       options: [
         {
@@ -216,7 +216,7 @@ export default this.state = {
       spanishText: '¿Ha tomado algún tipo de medicamento antes de venir?',
       mayanText: 'Ta wuk’ah wa ts’àak ma’ili’ talakechi’',
       hora: false,
-      audio: 'pregunta014.wav',
+      audio: 'pregunta014.ogg',
       options: [
         {
           backID: 6,
@@ -237,7 +237,7 @@ export default this.state = {
       spanishText: '¿Qué tipo de medicamento?',
       mayanText: 'Ba’ax ts’àakil',
       hora: false,
-      audio: 'pregunta016.wav',
+      audio: 'pregunta016.ogg',
       options: [
         {
           backID: 12,
@@ -447,7 +447,7 @@ export default this.state = {
       spanishText: '¿Tomo algún otro tipo de bebida?',
       mayanText: "Ta wuk'ah uláak’ uk'ul",
       hora: false,
-      audio: 'audiopreguntas012.wav',
+      audio: 'audiopreguntas012.ogg',
       options: [
         {
           backID: 21,
@@ -627,7 +627,7 @@ export default this.state = {
       spanishText: '¿Solicitó examen de próstata?',
       mayanText: "ta k'áatah xíixo' prostata?",
       hora: false,
-      audio: 'voz00059.wav',
+      audio: 'voz00059.ogg',
       options: [
         {
           backID: 30,
@@ -669,7 +669,7 @@ export default this.state = {
       spanishText: '¿Se le realizarán otros análisis además del examen de próstata?',
       mayanText: 'Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak prostata',
       hora: false,
-      audio: 'voz00060.wav',
+      audio: 'voz00060.ogg',
       options: [
         {
           backID: 32,
@@ -728,7 +728,7 @@ export default this.state = {
       spanishText: '¿Está tomando algún tratamiento anticoagulante?',
       mayanText: "Ta'an wa u ts’a’abaltech ts’àak yo’o’lal u ha’ach’tal k’i’ik’el",
       hora: false,
-      audio: 'voz00061.wav',
+      audio: 'voz00061.ogg',
       options: [
         {
           backID: 35,

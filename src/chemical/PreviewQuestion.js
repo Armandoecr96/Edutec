@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Image, ImageBackground, Dimensions, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native'
 import states from './states/PreviewStates'
 import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/box.png'
@@ -14,9 +14,8 @@ import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 import DatePicker from 'react-native-datepicker'
 import salirButtom from '../assets/images/salida.png'
-import get from 'lodash/get'
 
-var { height, width } = Dimensions.get('window');
+var { height } = Dimensions.get('window');
 
 export default class BloodTest extends Component {
     constructor(props) {
@@ -268,6 +267,8 @@ export default class BloodTest extends Component {
                 this.state.song.play((succes) => {
                     if (succes) {
                         this.pauseToPlay()
+                    } else {
+                        console.log('Error')
                     }
                 })
             }
