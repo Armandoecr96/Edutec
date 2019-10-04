@@ -110,14 +110,14 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 12,
+          nextID: 7,
           audio: 'audio24.m4a',
-          title: 'No'
+          title: 'Si'
         },
         {
-          nextID: 7,
+          nextID: 12,
           audio: 'audio23.m4a',
-          title: 'Si'
+          title: 'No'
         }
         
       ]
@@ -223,13 +223,13 @@ export default this.state = {
           title: 'Atrás'
         },
         {
-          nextID: 16,
-          title: 'No'
-        },
-        {
           nextID: 13,
           title: 'Si'
-        }        
+        },
+        {
+          nextID: 16,
+          title: 'No'
+        }
       ]
     },
     {

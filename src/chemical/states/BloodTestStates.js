@@ -20,7 +20,7 @@ export default this.state = {
       id: 1,
       spanishText: 'Extienda el brazo izquierdo',
       mayanText: 'Tats’ah ts’íik k’ab.',
-      audio: 'audio64.m4a',
+      audio: 'voz00067.ogg',
       options: [
         {
           backID: 0,
@@ -36,7 +36,7 @@ export default this.state = {
       id: 2,
       spanishText: 'Extienda el brazo derecha',
       mayanText: 'Tatsah no’oh k’ab.',
-      audio: 'audio33.m4a',
+      audio: 'voz00065.ogg',
       options: [
         {
           backID: 0,

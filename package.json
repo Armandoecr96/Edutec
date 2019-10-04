@@ -7,7 +7,8 @@
     "test": "jest",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "generate-apk": "cd android && gradlew assembleRelease",
+    "generate:apk": "cd android && gradlew assembleRelease",
+    "generate:bundle": "cd android && gradlew bundleRelease",
     "android:release": "react-native run-android --variant=release"
   },
   "dependencies": {
