@@ -5,15 +5,12 @@ import { Container, Content, Card, CardItem, Button } from 'native-base'
 import textBox from '../assets/images/box.png'
 import yesButton from '../assets/images/si.png'
 import noButton from '../assets/images/no.png'
-import nextButton from '../assets/images/siguiente.png'
-import previewButtom from '../assets/images/atras.png'
 import moment from "moment";
 import SoundPlayer from 'react-native-sound'
 import playButtom from '../assets/images/play.png'
 import pauseButtom from '../assets/images/pausa.png'
 import stopButtom from '../assets/images/stop.png'
 import DatePicker from 'react-native-datepicker'
-import salirButtom from '../assets/images/salida.png'
 import RenderButtonsPQ from './utils/RenderButtons'
 
 var { height } = Dimensions.get('window');
@@ -472,7 +469,7 @@ export default class BloodTest extends Component {
         return (
             <Container>
                 <Content>
-                    <ImageBackground source={require('../assets/images/bg1.jpg')} style={styles.background}>
+                    <ImageBackground resizeMode={'stretch'} source={require('../assets/images/bg1.jpg')} style={styles.background}>
                         <View style={{ height: height, marginBottom: 88 }}>
                             <Card transparent style={styles.card}>
                                 <CardItem style={styles.cardItem}>
@@ -522,13 +519,13 @@ export default class BloodTest extends Component {
                                                     <Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
                                                         <Image source={yesButton} style={styles.imageButton} />
                                                     </Button>
-                                                    {this.state.index !== 6 ? this.playMedia(true, false) : this.playMedia(true, true)}
+                                                    {this.state.index !== 6 ? this.playMedia(true, false) : this.playMedia(false, true)}
                                                 </View>
                                                 : selection.title === 'No'
                                                     ? <View><Button transparent key={key} onPress={() => this.changeQuestion(selection.nextID)} style={styles.buttonDecision} >
                                                         <Image source={noButton} style={styles.imageButton} />
                                                     </Button>
-                                                        {this.state.index !== 6 ? this.playMedia(false, false) : this.playMedia(false, true)}
+                                                        {this.state.index !== 6 ? this.playMedia(false, false) : this.playMedia(true, true)}
                                                     </View>
                                                     : selection.title === 'Siguiente' || selection.title === 'Atrás' || selection.title === 'Salir' ?
                                                         <RenderButtonsPQ
@@ -631,7 +628,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF'
     },
     background: {
-        flex: 1
+        flex: 1,
+        paddingBottom: height*.08
     },
     welcome: {
         fontSize: 20,

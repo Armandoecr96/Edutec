@@ -16,7 +16,7 @@ export default this.state = {
     {
       id: 1,
       spanishText: 'Voy a corroborar sus datos',
-      mayanText: 'Bin in ka’ah in ch’a’a a k’aaba’',
+      mayanText: 'Bin in ka’aj in ch’a’a a k’aaba’',
       hora: false,
       audio: 'audio22.m4a',
       options: [
@@ -50,7 +50,7 @@ export default this.state = {
     {
       id: 3,
       spanishText: '¿Cuántos años tiene?',
-      mayanText: 'Hay p’éel ha’ab yantech',
+      mayanText: 'Jay p’éel ha’ab yantech',
       hora: false,
       audio: 'audio26.m4a',
       options: [
@@ -84,7 +84,7 @@ export default this.state = {
     {
       id: 5,
       spanishText: 'A continuación le haré una serie de preguntas de rutina',
-      mayanText: 'Bin in ka’ah in bèet tech wa hayp’e’el k’at chí sùuk u bèeta’al.',
+      mayanText: 'Bin in ka’aj in bèet tech wa jayp’e’el k’at chí sùuk u bèeta’al.',
       audio: 'audio21.m4a',
       hora: false,
       options: [
@@ -101,7 +101,7 @@ export default this.state = {
     {
       id: 6,
       spanishText: '¿Comió algo desde hace 10 o 12 horas?',
-      mayanText: "Ma’ a hàantik mixba’al ichil 10 wa 12 tsíil k’ìini’ ",
+      mayanText: 'Ma’ a jàantik mixba’al ichil 10 wa 12 tsíil k’ìini’ ',
       hora: false,
       audio: 'audio20.m4a',
       options: [
@@ -119,13 +119,13 @@ export default this.state = {
           audio: 'audio23.m4a',
           title: 'No'
         }
-        
+
       ]
     },
     {
       id: 7,
       spanishText: '¿A qué hora comió por última vez?',
-      mayanText: 'Ba’ax tsíil k’ìinil ka hàanech',
+      mayanText: 'Ba’ax tsíil k’ìinil ka jàanech',
       hora: false,
       audio: 'audio29.m4a',
       options: [
@@ -167,7 +167,7 @@ export default this.state = {
     {
       id: 9,
       spanishText: '¿Puede esperar a que se cumpla el tiempo requerido?',
-      mayanText: "He' a páatik u ts’o’okol a su'uk'ine’",
+      mayanText: "Je' a páatik u ts’o’okol a su'uk'ine’",
       audio: 'voz45.3gp',
       hora: false,
       options: [
@@ -182,7 +182,7 @@ export default this.state = {
         {
           nextID: 11,
           title: 'Si'
-        }        
+        }
       ]
     },
     {
@@ -201,7 +201,7 @@ export default this.state = {
     {
       id: 11,
       spanishText: 'Espere el tiempo que falta para cumplir con el ayuno',
-      mayanText: "Páa'teh u k’uchul le tsíil k’íinil ku binehtik ti’ a su’uk’ino’",
+      mayanText: "Páa'tej u k’uchul le tsíil k’íinil ku binehtik ti’ a su’uk’ino’",
       hora: false,
       audio: 'audio12.m4a',
       options: [
@@ -245,9 +245,9 @@ export default this.state = {
         },
         {
           nextID: 14,
-          title: 'Siguiente',
+          title: 'Siguiente'
           // src: require('../../assets/images/esporadico.png')
-        },
+        }
         // {
         //   nextID: 14,
         //   title: 'habitual',
@@ -258,7 +258,7 @@ export default this.state = {
     {
       id: 14,
       spanishText: '¿A que hora lo tomó?',
-      mayanText: "Ba’ax tsíil k’ìinil ka ta wuk’ah.",
+      mayanText: 'Ba’ax tsíil k’ìinil ka ta wuk’aj.',
       hora: true,
       audio: 'audio6.m4a',
       options: [
@@ -277,7 +277,7 @@ export default this.state = {
     {
       id: 15,
       spanishText: 'El tomar un medicamento antes de un análisis podría afectar los resultado',
-      mayanText: "A wuk’ik ts’aak ma’ili beeta’ak le x’ii he’ u k’exik u xuul le xíixo’",
+      mayanText: 'A wuk’ik ts’aak ma’ili beeta’ak le x’ii je’ u k’exik u xuul le xíixo’',
       hora: false,
       audio: 'audio11.m4a',
       options: [
@@ -294,7 +294,7 @@ export default this.state = {
     {
       id: 16,
       spanishText: '¿Ha realizado ejercicio antes de venir?',
-      mayanText: 'Ta bèetah peksah wíinklal ma’ili’ talakechi’.',
+      mayanText: 'Ta bèetaj peksah wíinklal ma’ili’ talakechi’.',
       hora: false,
       audio: 'audio13.m4a',
       options: [
@@ -315,7 +315,7 @@ export default this.state = {
     {
       id: 17,
       spanishText: 'Seleccione en la pantalla que tipo de ejercicio realizo',
-      mayanText: 'Yeey ba’ax peksah wíinklal ta bèetah',
+      mayanText: 'Yeey ba’ax peksaj wíinklal ta bèetaj',
       hora: false,
       audio: 'audio15.m4a',
       options: [
@@ -346,7 +346,7 @@ export default this.state = {
     {
       id: 18,
       spanishText: '¿Por cuánto tiempo realizo el ejercicio?',
-      mayanText: "Hay p’éel tsíil k'ìinil ta bèetah peksah wíinklalo’",
+      mayanText: "Jay p’éel tsíil k'ìinil ta bèetaj peksaj wíinklalo’",
       hora: true,
       audio: 'audio46.m4a',
       options: [
@@ -369,7 +369,7 @@ export default this.state = {
     {
       id: 19,
       spanishText: 'Debe regresar otro día sin haber realizado ejercicio antes del análisis',
-      mayanText: 'Unah u suut tu láak’ k’íin ma’ u bèet péeksah u wíinklal ma’ili’ bèeta’ak le xíixo’',
+      mayanText: 'Unaj u suut tu láak’ k’íin ma’ u bèet péeksaj u wíinklal ma’ili’ bèeta’ak le xíixo’',
       hora: false,
       audio: 'audio43.m4a',
       options: [
@@ -386,7 +386,7 @@ export default this.state = {
     {
       id: 20,
       spanishText: '¿Ha fumado en las últimas 24 horas?',
-      mayanText: 'Ta  tsu’uts’a’  chamal  ma’  u  ts’áah hunp’éel k’iini’',
+      mayanText: 'Ta tsu’uts’a’ chamal ma’ u ts’áaj junp’éel k’iini’',
       hora: false,
       audio: 'audio2.m4a',
       options: [
@@ -407,7 +407,7 @@ export default this.state = {
     {
       id: 21,
       spanishText: '¿Ha tomado algún tipo de bebida alcohólica en las últimas 24 horas? ',
-      mayanText: 'Ta wuk’ah wa k’ah ha’ wa ula’ak anis ma’  u  ts’áah hunp’éel k’iini’',
+      mayanText: 'Ta wuk’aj wa k’aj ja’ wa ula’ak anis ma’ u ts’áaj hunp’éel k’iini’',
       hora: false,
       audio: 'audio4.m4a',
       options: [
@@ -428,7 +428,7 @@ export default this.state = {
     {
       id: 22,
       spanishText: 'Debe regresar otro día sin haber ingerido bebidas alcohólicas',
-      mayanText: 'Unah u suut tu láak’ k’íin ma’ a wuk’mah anísi’',
+      mayanText: 'Unaj u suut tu láak’ k’íin ma’ a wuk’maj anísi’',
       hora: false,
       audio: 'audio10.m4a',
       options: [
@@ -445,7 +445,7 @@ export default this.state = {
     {
       id: 23,
       spanishText: '¿Tomo algún otro tipo de bebida?',
-      mayanText: "Ta wuk'ah uláak’ uk'ul",
+      mayanText: "Ta wuk'aj uláak’ uk'ul",
       hora: false,
       audio: 'audiopreguntas012.ogg',
       options: [
@@ -466,7 +466,7 @@ export default this.state = {
     {
       id: 24,
       spanishText: 'Seleccione en la pantalla cual fue la bebida que tomó',
-      mayanText: 'Yeey ba’ax uk’ulil ta wuk’ah',
+      mayanText: 'Yeey ba’ax uk’ulil ta wuk’aj',
       hora: false,
       audio: 'audio58.m4a',
       options: [
@@ -546,7 +546,7 @@ export default this.state = {
     {
       id: 27,
       spanishText: '¿Puede esperar a que se cumpla el tiempo requerido?',
-      mayanText: "He' a páatik u ts’o’okol a su'uk'ine’",
+      mayanText: "Je' a páatik u ts’o’okol a su'uk'ine’",
       audio: 'voz45.3gp',
       hora: false,
       options: [
@@ -584,7 +584,7 @@ export default this.state = {
     {
       id: 29,
       spanishText: 'Espere el tiempo que falta para cumplir con el ayuno',
-      mayanText: "Páa'teh u k’uchul le tsíil k’íinil ku binehtik ti’ a su’uk’ino’",
+      mayanText: "Páa'tej u k’uchul le tsíil k’íinil ku binejtik ti’ a su’uk’ino’",
       hora: false,
       audio: 'audio12.m4a',
       options: [
@@ -625,7 +625,7 @@ export default this.state = {
     {
       id: 31,
       spanishText: '¿Solicitó examen de próstata?',
-      mayanText: "ta k'áatah xíixo' prostata?",
+      mayanText: "ta k'áataj xíixo' prostata?",
       hora: false,
       audio: 'voz00059.ogg',
       options: [
@@ -646,7 +646,7 @@ export default this.state = {
     {
       id: 32,
       spanishText: '¿Ha tenido relaciones sexuales o se masturbo antes de venir a la prueba?',
-      mayanText: 'Yanchahech yeetel a wiichan wa yéetel a watan wa ta kokolah a kèep ichil óoxp’éel k’íin ma’ili’ talakech ti’ le xíixo’',
+      mayanText: 'Yanchajech yeetel a wiichan wa yéetel a watan wa ta kokolaj a kèep ichil óoxp’éel k’íin ma’ili’ talakech ti’ le xíixo’',
       hora: false,
       audio: 'audio45.m4a',
       options: [
@@ -688,7 +688,7 @@ export default this.state = {
     {
       id: 34,
       spanishText: 'Debe regresar otro día sin haber tenido relaciones sexuales o haberse masturbado',
-      mayanText: 'Unah u suut tu láak’ k’íin ma’ wantal yéetel xíib ko’olel mix a ko’okolik a kèep',
+      mayanText: 'Unaj u suut tu láak’ k’íin ma’ wantal yéetel xíib ko’olel mix a ko’okolik a kèep',
       hora: false,
       audio: 'audio44.m4a',
       options: [
@@ -741,16 +741,16 @@ export default this.state = {
       ]
     },
     {
-        id: 37,
-        spanishText: 'Regrese otro día por favor',
-        mayanText: "Meent uts ta sùut tuláak’ k'íin",
-        audio: 'audio52.m4a',
-        options: [
-            {
-                nextID: 0,
-                title: 'Salir'
-            }
-        ]
+      id: 37,
+      spanishText: 'Regrese otro día por favor',
+      mayanText: "Meent uts ta sùut tuláak’ k'íin",
+      audio: 'audio52.m4a',
+      options: [
+        {
+          nextID: 0,
+          title: 'Salir'
+        }
+      ]
     }
   ]
 }

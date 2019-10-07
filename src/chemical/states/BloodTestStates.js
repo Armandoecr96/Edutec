@@ -3,7 +3,7 @@ export default this.state = {
     {
       id: 0,
       spanishText: 'Vamos a proceder a tomar la muestra ¿De cual brazo normalmente le toman muestra?',
-      mayanText: 'Bineh ka’ah k ho’oseh a k’i’ik’elo’ máakalmáak ti’ a k’ab sùuk u ho’osa’al a lk’i’ik’el, ta ts’íik wa ta no’oh/ he’ máakalmaké.',
+      mayanText: 'Binej ka’aj k jo’osej a k’i’ik’elo’ máakalmáak ti’ a k’ab sùuk u jo’osa’al a lk’i’ik’el, ta ts’íik wa ta no’oj/ je’ máakalmaké.',
       audio: 'audio47.m4a',
       options: [
         {
@@ -35,7 +35,7 @@ export default this.state = {
     {
       id: 2,
       spanishText: 'Extienda el brazo derecha',
-      mayanText: 'Tatsah no’oh k’ab.',
+      mayanText: 'Tatsaj no’oh k’ab.',
       audio: 'voz00065.ogg',
       options: [
         {
@@ -68,7 +68,7 @@ export default this.state = {
     {
       id: 4,
       spanishText: 'Apoye su brazo en la superficie',
-      mayanText: 'Pehkunt yóok’ol le mayeko',
+      mayanText: 'Pejkunt yóok’ol le mayeko',
       audio: 'audio68.m4a',
       options: [
         {
@@ -84,7 +84,7 @@ export default this.state = {
     {
       id: 5,
       spanishText: 'Le voy a poner un torniquete (liga)',
-      mayanText: 'Bin in ka’ah in k’axeh',
+      mayanText: 'Bin in ka’ah in k’axej',
       audio: 'audio54.m4a',
       options: [
         {
@@ -133,7 +133,7 @@ export default this.state = {
     {
       id: 8,
       spanishText: 'Muy bien',
-      mayanText: 'Hach ma’alob',
+      mayanText: 'Jach ma’alob',
       audio: 'audio57.m4a',
       options: [
         {
@@ -248,7 +248,7 @@ export default this.state = {
     {
       id: 15,
       spanishText: 'Le voy a poner un parche',
-      mayanText: 'Bin in ka’ah in ts’áah pìits’i’',
+      mayanText: 'Bin in ka’aj in ts’áaj pìits’i’',
       audio: 'audio49.m4a',
       options: [
         {
@@ -264,7 +264,7 @@ export default this.state = {
     {
       id: 16,
       spanishText: 'Mantenga doblado el brazo por 5 minutos',
-      mayanText: 'P’at wùuts’il a k’ab ichil ho’péel síitukil',
+      mayanText: 'P’at wùuts’il a k’ab ichil jo’péel síitukil',
       audio: 'instruccion50.ogg',
       options: [
         {
@@ -304,7 +304,7 @@ export default this.state = {
     {
       id: 19,
       spanishText: 'Puedo hacer el análisis pero sus resultados pueden no ser confiables porque usted no viene en las condiciones adecuadas',
-      mayanText: "He' u p’aahtal u bèetik le xíixo’ ba’ale’ ma’ hach hàah kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
+      mayanText: "Je' u p’aajtal u bèetik le xíixo’ ba’ale’ ma’ jach jàaj kun hóok’oli’ tumen ma’ tàalech he’ bix a’ala’ab techo’",
       audio: 'instruccion48.ogg',
       options: [
         {
@@ -320,7 +320,7 @@ export default this.state = {
     {
       id: 18,
       spanishText: 'Le voy a entregar una encuesta de satisfacción para que conteste y deposite en el buzón',
-      mayanText: 'Bin in ka’ah in ts’áah tech hunpéel k’áat chi’o’ob utia’al a núukeh ts’o’okole’ ts’áahte´chàan kúuchil tu’ux ku ts’a’abalo’',
+      mayanText: 'Bin in ka’aj in ts’áaj tech hunpéel k’áat chi’o’ob utia’al a núukej ts’o’okole’ ts’áajte´chàan kúuchil tu’ux ku ts’a’abalo’',
       audio: 'audio2.m4a',
       options: [
         {
