@@ -19,7 +19,7 @@ export default this.state = {
     {
       id: 1,
       spanishText: 'Extienda el brazo izquierdo',
-      mayanText: 'Tats’ah ts’íik k’ab.',
+      mayanText: 'Tats’aj ts’íik k’ab.',
       audio: 'voz00067.ogg',
       options: [
         {
@@ -35,7 +35,7 @@ export default this.state = {
     {
       id: 2,
       spanishText: 'Extienda el brazo derecha',
-      mayanText: 'Tatsaj no’oh k’ab.',
+      mayanText: 'Tatsaj no’oj k’ab.',
       audio: 'voz00065.ogg',
       options: [
         {
@@ -84,7 +84,7 @@ export default this.state = {
     {
       id: 5,
       spanishText: 'Le voy a poner un torniquete (liga)',
-      mayanText: 'Bin in ka’ah in k’axej',
+      mayanText: 'Bin in ka’aj in k’axej',
       audio: 'audio54.m4a',
       options: [
         {
@@ -280,7 +280,7 @@ export default this.state = {
     {
       id: 17,
       spanishText: 'Hasta luego, que tenga un buen día',
-      mayanText: 'Ma’alob tak tu láak k’ìin, ka yanaktech hunp’éel utsil k’íin',
+      mayanText: 'Ma’alob tak tu láak k’ìin, ka yanaktech junp’éel utsil k’íin',
       audio: 'voz55.3gp',
       options: [
         {
@@ -320,7 +320,7 @@ export default this.state = {
     {
       id: 18,
       spanishText: 'Le voy a entregar una encuesta de satisfacción para que conteste y deposite en el buzón',
-      mayanText: 'Bin in ka’aj in ts’áaj tech hunpéel k’áat chi’o’ob utia’al a núukej ts’o’okole’ ts’áajte´chàan kúuchil tu’ux ku ts’a’abalo’',
+      mayanText: 'Bin in ka’aj in ts’áaj tech junpéel k’áat chi’o’ob utia’al a núukej ts’o’okole’ ts’áajte´chàan kúuchil tu’ux ku ts’a’abalo’',
       audio: 'audio2.m4a',
       options: [
         {

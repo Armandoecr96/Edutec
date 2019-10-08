@@ -3,7 +3,7 @@ export default this.state = {
     {
       id: 0,
       spanishText: 'Tome asiento, por favor',
-      mayanText: 'Kuleen',
+      mayanText: 'Meent uts kuleen',
       hora: false,
       audio: 'voz00070.ogg',
       options: [
@@ -50,7 +50,7 @@ export default this.state = {
     {
       id: 3,
       spanishText: '¿Cuántos años tiene?',
-      mayanText: 'Jay p’éel ha’ab yantech',
+      mayanText: 'Jay p’éel ja’ab yantech',
       hora: false,
       audio: 'audio26.m4a',
       options: [
@@ -201,7 +201,7 @@ export default this.state = {
     {
       id: 11,
       spanishText: 'Espere el tiempo que falta para cumplir con el ayuno',
-      mayanText: "Páa'tej u k’uchul le tsíil k’íinil ku binehtik ti’ a su’uk’ino’",
+      mayanText: "Páa'tej u k’uchul le tsíil k’íinil ku binejtik ti’ a su’uk’ino’",
       hora: false,
       audio: 'audio12.m4a',
       options: [
@@ -214,7 +214,7 @@ export default this.state = {
     {
       id: 12,
       spanishText: '¿Ha tomado algún tipo de medicamento antes de venir?',
-      mayanText: 'Ta wuk’ah wa ts’àak ma’ili’ talakechi’',
+      mayanText: 'Ta wuk’aj wa ts’àak ma’ili’ talakechi’',
       hora: false,
       audio: 'pregunta014.ogg',
       options: [
@@ -277,7 +277,7 @@ export default this.state = {
     {
       id: 15,
       spanishText: 'El tomar un medicamento antes de un análisis podría afectar los resultado',
-      mayanText: 'A wuk’ik ts’aak ma’ili beeta’ak le x’ii je’ u k’exik u xuul le xíixo’',
+      mayanText: 'A wuk’ik ts’aak ma’ili beeta’ak le x’iix je’ u k’exik u xuul le xíixo’',
       hora: false,
       audio: 'audio11.m4a',
       options: [
@@ -294,7 +294,7 @@ export default this.state = {
     {
       id: 16,
       spanishText: '¿Ha realizado ejercicio antes de venir?',
-      mayanText: 'Ta bèetaj peksah wíinklal ma’ili’ talakechi’.',
+      mayanText: 'Ta bèetaj peksaj wíinklal ma’ili’ talakechi’.',
       hora: false,
       audio: 'audio13.m4a',
       options: [
@@ -407,7 +407,7 @@ export default this.state = {
     {
       id: 21,
       spanishText: '¿Ha tomado algún tipo de bebida alcohólica en las últimas 24 horas? ',
-      mayanText: 'Ta wuk’aj wa k’aj ja’ wa ula’ak anis ma’ u ts’áaj hunp’éel k’iini’',
+      mayanText: 'Ta wuk’aj wa k’aj ja’ wa ula’ak anis ma’ u ts’áaj junp’éel k’iini’',
       hora: false,
       audio: 'audio4.m4a',
       options: [
@@ -504,7 +504,7 @@ export default this.state = {
     {
       id: 25,
       spanishText: '¿A qué hora bebió?',
-      mayanText: 'Ba’ax tsíil k’ìinil ka ta wuk’ah',
+      mayanText: 'Ba’ax tsíil k’ìinil ka ta wuk’aj',
       hora: true,
       audio: 'audio.m4a',
       options: [
@@ -625,7 +625,7 @@ export default this.state = {
     {
       id: 31,
       spanishText: '¿Solicitó examen de próstata?',
-      mayanText: "ta k'áataj xíixo' prostata?",
+      mayanText: "ta k'áataj xíixo' próstata?",
       hora: false,
       audio: 'voz00059.ogg',
       options: [
@@ -667,7 +667,7 @@ export default this.state = {
     {
       id: 33,
       spanishText: '¿Se le realizarán otros análisis además del examen de próstata?',
-      mayanText: 'Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak prostata',
+      mayanText: 'Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak próstata',
       hora: false,
       audio: 'voz00060.ogg',
       options: [
@@ -726,7 +726,7 @@ export default this.state = {
     {
       id: 36,
       spanishText: '¿Está tomando algún tratamiento anticoagulante?',
-      mayanText: "Ta'an wa u ts’a’abaltech ts’àak yo’o’lal u ha’ach’tal k’i’ik’el",
+      mayanText: "Ta'an wa u ts’a’abaltech ts’àak yo’o’lal u ja’ach’tal k’i’ik’el",
       hora: false,
       audio: 'voz00061.ogg',
       options: [
