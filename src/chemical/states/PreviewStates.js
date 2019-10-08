@@ -5,7 +5,7 @@ export default this.state = {
       spanishText: 'Tome asiento, por favor',
       mayanText: 'Meent uts kuleen',
       hora: false,
-      audio: 'voz00070.ogg',
+      audio: 'voz00081.3gp',
       options: [
         {
           nextID: 1,
@@ -348,7 +348,7 @@ export default this.state = {
       spanishText: '¿Por cuánto tiempo realizo el ejercicio?',
       mayanText: "Jay p’éel tsíil k'ìinil ta bèetaj peksaj wíinklalo’",
       hora: true,
-      audio: 'audio46.m4a',
+      audio: 'Voz00079.3gp',
       options: [
         {
           backID: 17,

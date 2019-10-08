@@ -85,7 +85,7 @@ export default this.state = {
       id: 5,
       spanishText: 'Le voy a poner un torniquete (liga)',
       mayanText: 'Bin in ka’aj in k’axej',
-      audio: 'audio54.m4a',
+      audio: 'Voz00084.3gp',
       options: [
         {
           backID: 4,

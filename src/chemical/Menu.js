@@ -17,7 +17,7 @@ import imageCultivoBiologico from '../assets/images/cultivo_biologico.png'
 import imagePruebaToxico from '../assets/images/canavis.png'
 import imagePreguntasPrevias from '../assets/images/question.png'
 
-var { height, width } = Dimensions.get('window');
+var { height, width } = Dimensions.get('window')
 
 export default class Menu extends Component {
   constructor(props) {
