@@ -237,7 +237,7 @@ export default this.state = {
       spanishText: '¿Qué tipo de medicamento?',
       mayanText: 'Ba’ax ts’àakil',
       hora: false,
-      audio: 'pregunta016.ogg',
+      audio: 'Voz00090.3gp',
       options: [
         {
           backID: 12,
@@ -348,7 +348,7 @@ export default this.state = {
       spanishText: '¿Por cuánto tiempo realizo el ejercicio?',
       mayanText: "Jay p’éel tsíil k'ìinil ta bèetaj peksaj wíinklalo’",
       hora: true,
-      audio: 'Voz00079.3gp',
+      audio: 'voz00079.3gp',
       options: [
         {
           backID: 17,
