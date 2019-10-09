@@ -2,7 +2,7 @@ export default this.state = {
   questionary: [
     {
       id: 0,
-      spanishText: 'Vamos a proceder a tomar la muestra ¿De cual brazo normalmente le toman muestra?',
+      spanishText: 'Vamos a proceder a tomar la muestra ¿De cuál brazo normalmente le toman la muestra?',
       mayanText: 'Binej ka’aj k jo’osej a k’i’ik’elo’ máakalmáak ti’ a k’ab sùuk u jo’osa’al a lk’i’ik’el, ta ts’íik wa ta no’oj/ je’ máakalmaké.',
       audio: 'audio47.m4a',
       options: [
@@ -34,7 +34,7 @@ export default this.state = {
     },
     {
       id: 2,
-      spanishText: 'Extienda el brazo derecha',
+      spanishText: 'Extienda el brazo derecho',
       mayanText: 'Tatsaj no’oj k’ab.',
       audio: 'voz00065.ogg',
       options: [

@@ -237,7 +237,7 @@ export default this.state = {
       spanishText: '¿Qué tipo de medicamento?',
       mayanText: 'Ba’ax ts’àakil',
       hora: false,
-      audio: 'Voz00090.3gp',
+      audio: 'voz00090.3gp',
       options: [
         {
           backID: 12,
@@ -246,18 +246,12 @@ export default this.state = {
         {
           nextID: 14,
           title: 'Siguiente'
-          // src: require('../../assets/images/esporadico.png')
         }
-        // {
-        //   nextID: 14,
-        //   title: 'habitual',
-        //   src: require('../../assets/images/habitual.png')
-        // }
       ]
     },
     {
       id: 14,
-      spanishText: '¿A que hora lo tomó?',
+      spanishText: '¿A qué hora lo tomó?',
       mayanText: 'Ba’ax tsíil k’ìinil ka ta wuk’aj.',
       hora: true,
       audio: 'audio6.m4a',
@@ -276,7 +270,7 @@ export default this.state = {
     },
     {
       id: 15,
-      spanishText: 'El tomar un medicamento antes de un análisis podría afectar los resultado',
+      spanishText: 'El tomar un medicamento antes de un análisis podría afectar los resultados',
       mayanText: 'A wuk’ik ts’aak ma’ili beeta’ak le x’iix je’ u k’exik u xuul le xíixo’',
       hora: false,
       audio: 'audio11.m4a',
@@ -314,7 +308,7 @@ export default this.state = {
     },
     {
       id: 17,
-      spanishText: 'Seleccione en la pantalla que tipo de ejercicio realizo',
+      spanishText: 'Seleccione en la pantalla que tipo de ejercicio realizó',
       mayanText: 'Yeey ba’ax peksaj wíinklal ta bèetaj',
       hora: false,
       audio: 'audio15.m4a',
@@ -345,7 +339,7 @@ export default this.state = {
     },
     {
       id: 18,
-      spanishText: '¿Por cuánto tiempo realizo el ejercicio?',
+      spanishText: '¿Por cuánto tiempo realizó el ejercicio?',
       mayanText: "Jay p’éel tsíil k'ìinil ta bèetaj peksaj wíinklalo’",
       hora: true,
       audio: 'voz00079.3gp',
@@ -444,7 +438,7 @@ export default this.state = {
     },
     {
       id: 23,
-      spanishText: '¿Tomo algún otro tipo de bebida?',
+      spanishText: '¿Tomó algún otro tipo de bebida?',
       mayanText: "Ta wuk'aj uláak’ uk'ul",
       hora: false,
       audio: 'audiopreguntas012.ogg',
@@ -645,7 +639,7 @@ export default this.state = {
     },
     {
       id: 32,
-      spanishText: '¿Ha tenido relaciones sexuales o se masturbo antes de venir a la prueba?',
+      spanishText: '¿Ha tenido relaciones sexuales o se masturbó tres días antes de venir a la prueba?',
       mayanText: 'Yanchajech yeetel a wiichan wa yéetel a watan wa ta kokolaj a kèep ichil óoxp’éel k’íin ma’ili’ talakech ti’ le xíixo’',
       hora: false,
       audio: 'audio45.m4a',
