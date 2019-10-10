@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src\chemical\states\PreviewStates.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/About.html">About</a></li>
+                                <li><a href="../classes/App.html">App</a></li>
+                                <li><a href="../classes/BloodTest.html">BloodTest</a></li>
+                                <li><a href="../classes/Help.html">Help</a></li>
+                                <li><a href="../classes/Menu.html">Menu</a></li>
+                                <li><a href="../classes/PreveiwQuestion.html">PreveiwQuestion</a></li>
+                                <li><a href="../classes/RenderButtonsPQ.html">RenderButtonsPQ</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/BloodTestStates.html">BloodTestStates</a></li>
+                                <li><a href="../modules/PreviewStates.html">PreviewStates</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src\chemical\states\PreviewStates.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module PreviewStates
+ * @memberof PreviewQuestions
+ * @description Arreglo de todos los dialogos, audios e instrucciones que se muestran en la clase PreviewQuestions
+ * @constant {json[]} this.state.questionary
+*/
+export default this.state = {
+  questionary: [
+    {
+      id: 0,
+      spanishText: &#x27;Tome asiento, por favor&#x27;,
+      mayanText: &#x27;Meent uts kuleen&#x27;,
+      hora: false,
+      audio: &#x27;voz00081.3gp&#x27;,
+      options: [
+        {
+          nextID: 1,
+          title: &#x27;Siguiente&#x27;
+        }
+      ]
+    },
+    {
+      id: 1,
+      spanishText: &#x27;Voy a corroborar sus datos&#x27;,
+      mayanText: &#x27;Bin in ka’aj in ch’a’a a k’aaba’&#x27;,
+      hora: false,
+      audio: &#x27;audio22.m4a&#x27;,
+      options: [
+        {
+          backID: 0,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 2,
+          title: &#x27;Siguiente&#x27;
+        }
+      ]
+    },
+    {
+      id: 2,
+      spanishText: &#x27;¿Cuál es su nombre completo?&#x27;,
+      mayanText: &#x27;Bix a k’àaba’, a’alten tu láakal&#x27;,
+      audio: &#x27;audiopreguntas003.ogg&#x27;,
+      hora: false,
+      options: [
+        {
+          backID: 1,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 3,
+          title: &#x27;Siguiente&#x27;
+        }
+      ]
+    },
+    {
+      id: 3,
+      spanishText: &#x27;¿Cuántos años tiene?&#x27;,
+      mayanText: &#x27;Jay p’éel ja’ab yantech&#x27;,
+      hora: false,
+      audio: &#x27;audio26.m4a&#x27;,
+      options: [
+        {
+          backID: 2,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 4,
+          title: &#x27;Siguiente&#x27;
+        }
+      ]
+    },
+    {
+      id: 4,
+      spanishText: &#x27;¿Cuál es su número telefónico?&#x27;,
+      mayanText: &#x27;Máakal máak u xòokil u nu’ukul a t’àan&#x27;,
+      hora: false,
+      audio: &#x27;audio27.m4a&#x27;,
+      options: [
+        {
+          backID: 3,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 5,
+          title: &#x27;Siguiente&#x27;
+        }
+      ]
+    },
+    {
+      id: 5,
+      spanishText: &#x27;A continuación le haré una serie de preguntas de rutina&#x27;,
+      mayanText: &#x27;Bin in ka’aj in bèet tech wa jayp’e’el k’at chí sùuk u bèeta’al.&#x27;,
+      audio: &#x27;audio21.m4a&#x27;,
+      hora: false,
+      options: [
+        {
+          backID: 4,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 6,
+          title: &#x27;Siguiente&#x27;
+        }
+      ]
+    },
+    {
+      id: 6,
+      spanishText: &#x27;¿Comió algo desde hace 10 o 12 horas?&#x27;,
+      mayanText: &#x27;Ma’ a jàantik mixba’al ichil 10 wa 12 tsíil k’ìini’ &#x27;,
+      hora: false,
+      audio: &#x27;audio20.m4a&#x27;,
+      options: [
+        {
+          backID: 5,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 7,
+          audio: &#x27;audio24.m4a&#x27;,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 12,
+          audio: &#x27;audio23.m4a&#x27;,
+          title: &#x27;No&#x27;
+        }
+
+      ]
+    },
+    {
+      id: 7,
+      spanishText: &#x27;¿A qué hora comió por última vez?&#x27;,
+      mayanText: &#x27;Ba’ax tsíil k’ìinil ka jàanech&#x27;,
+      hora: false,
+      audio: &#x27;audio29.m4a&#x27;,
+      options: [
+        {
+          backID: 6,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          title: &#x27;Hora&#x27;,
+          nextYes: 12,
+          nextNo: 10,
+          nextProp: 9
+        }
+      ]
+    },
+    {
+      id: 8,
+      spanishText: &#x27;¿Faltan menos de dos horas para cumplir con el ayuno?&#x27;,
+      mayanText: &quot;Ka&#x27;ap’éel tsíil k’ìin u bin a su’uk’in&quot;,
+      hora: true,
+      audio: &#x27;audio28.m4a&#x27;,
+      options: [
+        {
+          backID: 7,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 10,
+          audio: &#x27;audio24.m4a&#x27;,
+          title: &#x27;No&#x27;
+        },
+        {
+          nextID: 9,
+          audio: &#x27;audio23.m4a&#x27;,
+          title: &#x27;Si&#x27;
+        }
+      ]
+    },
+    {
+      id: 9,
+      spanishText: &#x27;¿Puede esperar a que se cumpla el tiempo requerido?&#x27;,
+      mayanText: &quot;Je&#x27; a páatik u ts’o’okol a su&#x27;uk&#x27;ine’&quot;,
+      audio: &#x27;voz45.3gp&#x27;,
+      hora: false,
+      options: [
+        {
+          backID: 8,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 10,
+          title: &#x27;No&#x27;
+        },
+        {
+          nextID: 11,
+          title: &#x27;Si&#x27;
+        }
+      ]
+    },
+    {
+      id: 10,
+      spanishText: &#x27;Regrese otro día&#x27;,
+      mayanText: &quot;Meent uts ta sùut tuláak’ k&#x27;íin&quot;,
+      hora: false,
+      audio: &#x27;audio52.m4a&#x27;,
+      options: [
+        {
+          nextID: 0,
+          title: &#x27;Salir&#x27;
+        }
+      ]
+    },
+    {
+      id: 11,
+      spanishText: &#x27;Espere el tiempo que falta para cumplir con el ayuno&#x27;,
+      mayanText: &quot;Páa&#x27;tej u k’uchul le tsíil k’íinil ku binejtik ti’ a su’uk’ino’&quot;,
+      hora: false,
+      audio: &#x27;audio12.m4a&#x27;,
+      options: [
+        {
+          nextID: 0,
+          title: &#x27;Salir&#x27;
+        }
+      ]
+    },
+    {
+      id: 12,
+      spanishText: &#x27;¿Ha tomado algún tipo de medicamento antes de venir?&#x27;,
+      mayanText: &#x27;Ta wuk’aj wa ts’àak ma’ili’ talakechi’&#x27;,
+      hora: false,
+      audio: &#x27;pregunta014.ogg&#x27;,
+      options: [
+        {
+          backID: 6,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 13,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 16,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 13,
+      spanishText: &#x27;¿Qué tipo de medicamento?&#x27;,
+      mayanText: &#x27;Ba’ax ts’àakil&#x27;,
+      hora: false,
+      audio: &#x27;voz00090.3gp&#x27;,
+      options: [
+        {
+          backID: 12,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 14,
+          title: &#x27;Siguiente&#x27;
+        }
+      ]
+    },
+    {
+      id: 14,
+      spanishText: &#x27;¿A qué hora lo tomó?&#x27;,
+      mayanText: &#x27;Ba’ax tsíil k’ìinil ka ta wuk’aj.&#x27;,
+      hora: true,
+      audio: &#x27;audio6.m4a&#x27;,
+      options: [
+        {
+          backID: 13,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          title: &#x27;Hora&#x27;,
+          nextYes: 15,
+          nextNo: 15,
+          nextProp: 15
+        }
+      ]
+    },
+    {
+      id: 15,
+      spanishText: &#x27;El tomar un medicamento antes de un análisis podría afectar los resultados&#x27;,
+      mayanText: &#x27;A wuk’ik ts’aak ma’ili beeta’ak le x’iix je’ u k’exik u xuul le xíixo’&#x27;,
+      hora: false,
+      audio: &#x27;audio11.m4a&#x27;,
+      options: [
+        {
+          backID: 14,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 16,
+          title: &#x27;Siguiente&#x27;
+        }
+      ]
+    },
+    {
+      id: 16,
+      spanishText: &#x27;¿Ha realizado ejercicio antes de venir?&#x27;,
+      mayanText: &#x27;Ta bèetaj peksaj wíinklal ma’ili’ talakechi’.&#x27;,
+      hora: false,
+      audio: &#x27;audio13.m4a&#x27;,
+      options: [
+        {
+          backID: 12,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 17,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 20,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 17,
+      spanishText: &#x27;Seleccione en la pantalla que tipo de ejercicio realizó&#x27;,
+      mayanText: &#x27;Yeey ba’ax peksaj wíinklal ta bèetaj&#x27;,
+      hora: false,
+      audio: &#x27;audio15.m4a&#x27;,
+      options: [
+        {
+          backID: 16,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 19,
+          title: &#x27;correr&#x27;,
+          audio: &#x27;audio18.m4a&#x27;,
+          src: require(&#x27;../../assets/images/correr.png&#x27;)
+        },
+        {
+          nextID: 18,
+          title: &#x27;caminar&#x27;,
+          audio: &#x27;audio8.m4a&#x27;,
+          src: require(&#x27;../../assets/images/caminar.png&#x27;)
+        },
+        {
+          nextID: 20,
+          title: &#x27;estiramiento&#x27;,
+          audio: &#x27;audio19.m4a&#x27;,
+          src: require(&#x27;../../assets/images/estiramiento.png&#x27;)
+        }
+      ]
+    },
+    {
+      id: 18,
+      spanishText: &#x27;¿Por cuánto tiempo realizó el ejercicio?&#x27;,
+      mayanText: &quot;Jay p’éel tsíil k&#x27;ìinil ta bèetaj peksaj wíinklalo’&quot;,
+      hora: true,
+      audio: &#x27;voz00079.3gp&#x27;,
+      options: [
+        {
+          backID: 17,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 20,
+          title: &#x27;Menos de 45&#x27;,
+          src: require(&#x27;../../assets/images/menos45.png&#x27;)
+        },
+        {
+          nextID: 19,
+          title: &#x27;Mas de 45&#x27;,
+          src: require(&#x27;../../assets/images/mas45.png&#x27;)
+        }
+      ]
+    },
+    {
+      id: 19,
+      spanishText: &#x27;Debe regresar otro día sin haber realizado ejercicio antes del análisis&#x27;,
+      mayanText: &#x27;Unaj u suut tu láak’ k’íin ma’ u bèet péeksaj u wíinklal ma’ili’ bèeta’ak le xíixo’&#x27;,
+      hora: false,
+      audio: &#x27;audio43.m4a&#x27;,
+      options: [
+        {
+          backID: 16,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 0,
+          title: &#x27;Salir&#x27;
+        }
+      ]
+    },
+    {
+      id: 20,
+      spanishText: &#x27;¿Ha fumado en las últimas 24 horas?&#x27;,
+      mayanText: &#x27;Ta tsu’uts’a’ chamal ma’ u ts’áaj junp’éel k’iini’&#x27;,
+      hora: false,
+      audio: &#x27;audio2.m4a&#x27;,
+      options: [
+        {
+          backID: 16,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 37,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 21,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 21,
+      spanishText: &#x27;¿Ha tomado algún tipo de bebida alcohólica en las últimas 24 horas? &#x27;,
+      mayanText: &#x27;Ta wuk’aj wa k’aj ja’ wa ula’ak anis ma’ u ts’áaj junp’éel k’iini’&#x27;,
+      hora: false,
+      audio: &#x27;audio4.m4a&#x27;,
+      options: [
+        {
+          backID: 20,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 22,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 23,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 22,
+      spanishText: &#x27;Debe regresar otro día sin haber ingerido bebidas alcohólicas&#x27;,
+      mayanText: &#x27;Unaj u suut tu láak’ k’íin ma’ a wuk’maj anísi’&#x27;,
+      hora: false,
+      audio: &#x27;audio10.m4a&#x27;,
+      options: [
+        {
+          backID: 21,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 0,
+          title: &#x27;Salir&#x27;
+        }
+      ]
+    },
+    {
+      id: 23,
+      spanishText: &#x27;¿Tomó algún otro tipo de bebida?&#x27;,
+      mayanText: &quot;Ta wuk&#x27;aj uláak’ uk&#x27;ul&quot;,
+      hora: false,
+      audio: &#x27;audiopreguntas012.ogg&#x27;,
+      options: [
+        {
+          backID: 21,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 24,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 30,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 24,
+      spanishText: &#x27;Seleccione en la pantalla cual fue la bebida que tomó&#x27;,
+      mayanText: &#x27;Yeey ba’ax uk’ulil ta wuk’aj&#x27;,
+      hora: false,
+      audio: &#x27;audio58.m4a&#x27;,
+      options: [
+        {
+          backID: 23,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 25,
+          title: &#x27;Café&#x27;,
+          src: require(&#x27;../../assets/images/cofi.png&#x27;)
+        },
+        {
+          nextID: 25,
+          title: &#x27;Jugo&#x27;,
+          src: require(&#x27;../../assets/images/jugo.png&#x27;)
+        },
+        {
+          nextID: 30,
+          title: &#x27;Agua&#x27;,
+          src: require(&#x27;../../assets/images/agua.png&#x27;)
+        },
+        {
+          nextID: 25,
+          title: &#x27;Chocolate&#x27;,
+          src: require(&#x27;../../assets/images/chocolate.png&#x27;)
+        },
+        {
+          nextID: 25,
+          title: &#x27;Refresco&#x27;,
+          src: require(&#x27;../../assets/images/refresco.png&#x27;)
+        }
+      ]
+    },
+    {
+      id: 25,
+      spanishText: &#x27;¿A qué hora bebió?&#x27;,
+      mayanText: &#x27;Ba’ax tsíil k’ìinil ka ta wuk’aj&#x27;,
+      hora: true,
+      audio: &#x27;audio.m4a&#x27;,
+      options: [
+        {
+          backID: 24,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          title: &#x27;Hora&#x27;,
+          nextYes: 30,
+          nextNo: 28,
+          nextProp: 27
+        }
+      ]
+    },
+    {
+      id: 26,
+      spanishText: &#x27;¿Faltan menos de dos horas para cumplir con el ayuno?&#x27;,
+      mayanText: &quot;Ka&#x27;ap’éel tsíil k’ìin u bin a su’uk’in&quot;,
+      hora: false,
+      audio: &#x27;audio29.m4a&#x27;,
+      options: [
+        {
+          backID: 25,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 27,
+          audio: &#x27;audio23.m4a&#x27;,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 28,
+          audio: &#x27;audio24.m4a&#x27;,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 27,
+      spanishText: &#x27;¿Puede esperar a que se cumpla el tiempo requerido?&#x27;,
+      mayanText: &quot;Je&#x27; a páatik u ts’o’okol a su&#x27;uk&#x27;ine’&quot;,
+      audio: &#x27;voz45.3gp&#x27;,
+      hora: false,
+      options: [
+        {
+          backID: 25,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 29,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 28,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 28,
+      spanishText: &#x27;Regrese otro día&#x27;,
+      mayanText: &quot;Meent uts ta sùut tuláak’ k&#x27;íin&quot;,
+      hora: false,
+      audio: &#x27;audio52.m4a&#x27;,
+      options: [
+        {
+          backID: 23,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 0,
+          title: &#x27;Salir&#x27;
+        }
+      ]
+    },
+    {
+      id: 29,
+      spanishText: &#x27;Espere el tiempo que falta para cumplir con el ayuno&#x27;,
+      mayanText: &quot;Páa&#x27;tej u k’uchul le tsíil k’íinil ku binejtik ti’ a su’uk’ino’&quot;,
+      hora: false,
+      audio: &#x27;audio12.m4a&#x27;,
+      options: [
+        {
+          backID: 23,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 0,
+          title: &#x27;Salir&#x27;
+        }
+      ]
+    },
+    {
+      id: 30,
+      spanishText: &#x27;¿Es hombre o mujer?&#x27;,
+      mayanText: &#x27;&#x27;,
+      hora: false,
+      mayan: false,
+      audio: &#x27;audio63.m4a&#x27;,
+      options: [
+        {
+          backID: 23,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 31,
+          title: &#x27;Hombre&#x27;,
+          src: require(&#x27;../../assets/images/hombre.png&#x27;)
+        },
+        {
+          nextID: 35,
+          title: &#x27;Mujer&#x27;,
+          src: require(&#x27;../../assets/images/mujer.png&#x27;)
+        }
+      ]
+    },
+    {
+      id: 31,
+      spanishText: &#x27;¿Solicitó examen de próstata?&#x27;,
+      mayanText: &quot;ta k&#x27;áataj xíixo&#x27; próstata?&quot;,
+      hora: false,
+      audio: &#x27;voz00059.ogg&#x27;,
+      options: [
+        {
+          backID: 30,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 32,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 35,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 32,
+      spanishText: &#x27;¿Ha tenido relaciones sexuales o se masturbó tres días antes de venir a la prueba?&#x27;,
+      mayanText: &#x27;Yanchajech yeetel a wiichan wa yéetel a watan wa ta kokolaj a kèep ichil óoxp’éel k’íin ma’ili’ talakech ti’ le xíixo’&#x27;,
+      hora: false,
+      audio: &#x27;audio45.m4a&#x27;,
+      options: [
+        {
+          backID: 31,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 33,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 35,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 33,
+      spanishText: &#x27;¿Se le realizarán otros análisis además del examen de próstata?&#x27;,
+      mayanText: &#x27;Yàan wa u bèeta’al u láak’ xíixe’ kex ka bèeta’ak próstata&#x27;,
+      hora: false,
+      audio: &#x27;voz00060.ogg&#x27;,
+      options: [
+        {
+          backID: 32,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 35,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 37,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 34,
+      spanishText: &#x27;Debe regresar otro día sin haber tenido relaciones sexuales o haberse masturbado&#x27;,
+      mayanText: &#x27;Unaj u suut tu láak’ k’íin ma’ wantal yéetel xíib ko’olel mix a ko’okolik a kèep&#x27;,
+      hora: false,
+      audio: &#x27;audio44.m4a&#x27;,
+      options: [
+        {
+          backID: 30,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 0,
+          title: &#x27;Sair&#x27;
+        }
+      ]
+    },
+    {
+      id: 35,
+      spanishText: &#x27;¿Está programado para alguna operación?&#x27;,
+      mayanText: &#x27;Ts’a’an wa u k’íinil a xo’otol&#x27;,
+      hora: false,
+      audio: &#x27;audio38.m4a&#x27;,
+      options: [
+        {
+          backID: 30,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 36,
+          title: &#x27;Si&#x27;
+        },
+        {
+          nextID: 36,
+          title: &#x27;No&#x27;
+        }
+      ]
+    },
+    {
+      id: 36,
+      spanishText: &#x27;¿Está tomando algún tratamiento anticoagulante?&#x27;,
+      mayanText: &quot;Ta&#x27;an wa u ts’a’abaltech ts’àak yo’o’lal u ja’ach’tal k’i’ik’el&quot;,
+      hora: false,
+      audio: &#x27;voz00061.ogg&#x27;,
+      options: [
+        {
+          backID: 35,
+          title: &#x27;Atrás&#x27;
+        },
+        {
+          nextID: 0,
+          title: &#x27;Salir&#x27;
+        }
+      ]
+    },
+    {
+      id: 37,
+      spanishText: &#x27;Regrese otro día por favor&#x27;,
+      mayanText: &quot;Meent uts ta sùut tuláak’ k&#x27;íin&quot;,
+      audio: &#x27;audio52.m4a&#x27;,
+      options: [
+        {
+          nextID: 0,
+          title: &#x27;Salir&#x27;
+        }
+      ]
+    }
+  ]
+}
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

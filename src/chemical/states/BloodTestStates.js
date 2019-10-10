@@ -1,3 +1,10 @@
+
+/**
+ * @module BloodTestStates
+ * @memberof BloodTest
+ * @description Arreglo de todos los dialogos, audios e instrucciones que se muestran en la clase BloodTest
+ * @constant {json[]} this.state.questionary
+*/
 export default this.state = {
   questionary: [
     {

@@ -1,3 +1,9 @@
+/**
+ * @module PreviewStates
+ * @memberof PreviewQuestions
+ * @description Arreglo de todos los dialogos, audios e instrucciones que se muestran en la clase PreviewQuestions
+ * @constant {json[]} this.state.questionary
+*/
 export default this.state = {
   questionary: [
     {

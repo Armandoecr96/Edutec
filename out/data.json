@@ -1,0 +1,902 @@
+{
+    "project": {},
+    "files": {
+        "src\\Ayuda\\About.js": {
+            "name": "src\\Ayuda\\About.js",
+            "modules": {},
+            "classes": {
+                "About": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\Ayuda\\Help.js": {
+            "name": "src\\Ayuda\\Help.js",
+            "modules": {},
+            "classes": {
+                "Help": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\chemical\\states\\BloodTestStates.js": {
+            "name": "src\\chemical\\states\\BloodTestStates.js",
+            "modules": {
+                "BloodTestStates": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\chemical\\states\\PreviewStates.js": {
+            "name": "src\\chemical\\states\\PreviewStates.js",
+            "modules": {
+                "PreviewStates": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\chemical\\utils\\RenderButtons.js": {
+            "name": "src\\chemical\\utils\\RenderButtons.js",
+            "modules": {},
+            "classes": {
+                "RenderButtonsPQ": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\chemical\\BloodTest.js": {
+            "name": "src\\chemical\\BloodTest.js",
+            "modules": {},
+            "classes": {
+                "BloodTest": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\chemical\\Menu.js": {
+            "name": "src\\chemical\\Menu.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\chemical\\PreviewQuestion.js": {
+            "name": "src\\chemical\\PreviewQuestion.js",
+            "modules": {},
+            "classes": {
+                "PreveiwQuestion": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\App.js": {
+            "name": "src\\App.js",
+            "modules": {},
+            "classes": {
+                "App": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\Menu.js": {
+            "name": "src\\Menu.js",
+            "modules": {},
+            "classes": {
+                "Menu": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "index.js": {
+            "name": "index.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "BloodTestStates": {
+            "name": "BloodTestStates",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "About": 1,
+                "Help": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src\\Ayuda\\Help.js",
+            "line": 14,
+            "memberof": "BloodTest",
+            "constant": "{json[]} this.state.questionary"
+        },
+        "PreviewStates": {
+            "name": "PreviewStates",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "RenderButtonsPQ": 1,
+                "BloodTest": 1,
+                "PreveiwQuestion": 1,
+                "App": 1,
+                "Menu": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src\\Menu.js",
+            "line": 20,
+            "memberof": "PreviewQuestions",
+            "constant": "{json[]} this.state.questionary"
+        }
+    },
+    "classes": {
+        "About": {
+            "name": "About",
+            "shortname": "About",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "BloodTestStates",
+            "file": "src\\Ayuda\\About.js",
+            "line": 14,
+            "description": "Créditos de la aplicación"
+        },
+        "Help": {
+            "name": "Help",
+            "shortname": "Help",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "BloodTestStates",
+            "file": "src\\Ayuda\\Help.js",
+            "line": 14,
+            "description": "Vídeo introductorio a la aplicación"
+        },
+        "RenderButtonsPQ": {
+            "name": "RenderButtonsPQ",
+            "shortname": "RenderButtonsPQ",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "PreviewStates",
+            "namespace": "",
+            "file": "src\\chemical\\utils\\RenderButtons.js",
+            "line": 8,
+            "description": "Botones para Siguiente, Salir y Anterior"
+        },
+        "BloodTest": {
+            "name": "BloodTest",
+            "shortname": "BloodTest",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "PreviewStates",
+            "namespace": "",
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 23,
+            "description": "Interacción de la toma de muestra de sangre"
+        },
+        "PreveiwQuestion": {
+            "name": "PreveiwQuestion",
+            "shortname": "PreveiwQuestion",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "PreviewStates",
+            "namespace": "",
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 23,
+            "description": "Interacción de las preguntas previas a la toma de sangre",
+            "todo": [
+                "Optimizar el cambio de pistas de audio de la aplicación"
+            ]
+        },
+        "App": {
+            "name": "App",
+            "shortname": "App",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "PreviewStates",
+            "namespace": "",
+            "file": "src\\App.js",
+            "line": 23,
+            "description": "Inicio de la aplicación, clase principal"
+        },
+        "Menu": {
+            "name": "Menu",
+            "shortname": "Menu",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "PreviewStates",
+            "namespace": "",
+            "file": "src\\Menu.js",
+            "line": 20,
+            "description": "Menú principal de la aplicación"
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "src\\Ayuda\\About.js",
+            "line": 4,
+            "constant": "{array} dataArray",
+            "description": "Textos contenidos en el acordeon",
+            "memberof": "About",
+            "class": "About"
+        },
+        {
+            "file": "src\\Ayuda\\Help.js",
+            "line": 6,
+            "constant": "{int} width",
+            "memberof": "Help",
+            "description": "Dimensiones de la pantalla",
+            "class": "Help"
+        },
+        {
+            "file": "src\\chemical\\utils\\RenderButtons.js",
+            "line": 14,
+            "itemtype": "method",
+            "name": "selectImage",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "- Titulo de la opción",
+                    "type": "String"
+                }
+            ],
+            "memberof": "RenderButtonsPQ",
+            "description": "Seleccion de la imagen que se va a tomar para el boton ya sea Atrás o Siguiente",
+            "class": "RenderButtonsPQ",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\utils\\RenderButtons.js",
+            "line": 26,
+            "itemtype": "method",
+            "name": "changeQuestion",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "- Titulo de la opción",
+                    "type": "String"
+                },
+                {
+                    "name": "nextID",
+                    "description": "- ID o posición en el arreglo que sigue en el ciclo",
+                    "type": "Int"
+                },
+                {
+                    "name": "backID",
+                    "description": "- ID o posición en el arreglo anterior en el ciclo",
+                    "type": "Int"
+                }
+            ],
+            "memberof": "RenderButtonsPQ",
+            "description": "Detecta cual es el elemento que sigue en el ciclo del arreglo",
+            "class": "RenderButtonsPQ",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 16,
+            "constant": "{int} height",
+            "memberof": "BloodTest",
+            "description": "Dimensiones de la pantalla",
+            "class": "BloodTest",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 40,
+            "itemtype": "method",
+            "name": "componentWillMount",
+            "memberof": "BloodTest",
+            "description": "Se hace la validación iniciar poniendo el primer elemento del arreglo en la pantalla",
+            "class": "BloodTest",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 53,
+            "itemtype": "method",
+            "name": "pauseToPlay",
+            "memberof": "BloodTest",
+            "description": "Cambio de vista de los botones de pausa a reproducción",
+            "class": "BloodTest",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 65,
+            "itemtype": "method",
+            "name": "play",
+            "memberof": "BloodTest",
+            "description": "Activación del archivo de audio actual",
+            "class": "BloodTest",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 84,
+            "itemtype": "method",
+            "name": "pause",
+            "memberof": "BloodTest",
+            "description": "Pausa del archivo actual de repoducción",
+            "class": "BloodTest",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 100,
+            "itemtype": "method",
+            "name": "stop",
+            "memberof": "BloodTest",
+            "description": "Alto del archivo actual de repoducción",
+            "class": "BloodTest",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 117,
+            "itemtype": "method",
+            "name": "changeQuestion",
+            "memberof": "BloodTest",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "- ID o identificador en el arreglo",
+                    "type": "Int"
+                }
+            ],
+            "description": "Función que ejecuta el ciclo del arreglo en la aplicación",
+            "class": "BloodTest",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\BloodTest.js",
+            "line": 133,
+            "memberof": "BloodTest",
+            "itemtype": "method",
+            "name": "render",
+            "description": "Renderizado de los elementos en la apicación",
+            "todo": [
+                "Optimizar o remover las validaciones if"
+            ],
+            "class": "BloodTest",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\Menu.js",
+            "line": 1,
+            "description": "Sample React Native App\nhttps://github.com/facebook/react-native",
+            "format": "",
+            "flow": "",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 16,
+            "constant": "{int} height",
+            "memberof": "PreveiwQuestion",
+            "description": "Dimensiones de la pantalla",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 62,
+            "itemtype": "method",
+            "name": "componentWillMount",
+            "memberof": "PreveiwQuestion",
+            "description": "Se hace la validación iniciar poniendo el primer elemento del arreglo en la pantalla y de todos los sonidos de está sección",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 110,
+            "itemtype": "method",
+            "name": "handlerPicker",
+            "params": [
+                {
+                    "name": "datetime",
+                    "description": "- Fecha seleccionada",
+                    "type": "Date"
+                }
+            ],
+            "memberof": "PreveiwQuestion",
+            "description": "Actualización de la hora en los estados del componente",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 125,
+            "itemtype": "method",
+            "name": "verificacionDate",
+            "params": [
+                {
+                    "name": "time",
+                    "description": "- Fecha seleccionada",
+                    "type": "Date"
+                }
+            ],
+            "memberof": "PreveiwQuestion",
+            "description": "Validación de si el usuario cumplió con los requisitos de tiempo",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 177,
+            "itemtype": "method",
+            "name": "hidePicker",
+            "memberof": "PreveiwQuestion",
+            "description": "Oculta el modal para seleccionar la fecha y hora",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 188,
+            "itemtype": "method",
+            "name": "showPicker",
+            "memberof": "PreveiwQuestion",
+            "description": "Muestra el modal para seleccionar la fecha y hora",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 199,
+            "itemtype": "method",
+            "name": "pauseToPlay",
+            "memberof": "PreveiwQuestion",
+            "description": "Cambio de vista de los botones de pausa a reproducción",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 211,
+            "itemtype": "method",
+            "name": "pauseOption",
+            "memberof": "PreveiwQuestion",
+            "params": [
+                {
+                    "name": "selection",
+                    "description": "- Titulo de la selección que se hizo dentro del componente",
+                    "type": "String"
+                }
+            ],
+            "description": "Pausa del archivo actual de repoducción dependiendo de que elemento este activo en el momento",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 256,
+            "itemtype": "method",
+            "name": "playOption",
+            "memberof": "PreveiwQuestion",
+            "params": [
+                {
+                    "name": "selection",
+                    "description": "- Titulo de la selección que se hizo dentro del componente",
+                    "type": "String"
+                }
+            ],
+            "description": "Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios secundarios",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 310,
+            "itemtype": "method",
+            "name": "play",
+            "memberof": "PreveiwQuestion",
+            "params": [
+                {
+                    "name": "option",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "isAyuno",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "description": "Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 375,
+            "itemtype": "method",
+            "name": "pause",
+            "memberof": "PreveiwQuestion",
+            "params": [
+                {
+                    "name": "option",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "isAyuno",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "description": "Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 429,
+            "itemtype": "method",
+            "name": "stop",
+            "memberof": "PreveiwQuestion",
+            "description": "Alto total al elemento actual",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 446,
+            "itemtype": "method",
+            "name": "changeQuestion",
+            "memberof": "PreveiwQuestion",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "- ID o identificador en el arreglo",
+                    "type": "Int"
+                }
+            ],
+            "description": "Función que ejecuta el ciclo del arreglo en la aplicación",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 462,
+            "itemtype": "method",
+            "name": "playMedia",
+            "memberof": "PreveiwQuestion",
+            "params": [
+                {
+                    "name": "option",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "isAyuno",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "description": "Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 488,
+            "itemtype": "method",
+            "name": "playMediaOption",
+            "memberof": "PreveiwQuestion",
+            "params": [
+                {
+                    "name": "option",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "isAyuno",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "description": "Pausa del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios",
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\chemical\\PreviewQuestion.js",
+            "line": 556,
+            "memberof": "PreveiwQuestion",
+            "itemtype": "method",
+            "name": "render",
+            "description": "Renderizado de los elementos en la apicación",
+            "todo": [
+                "Optimizar o remover las validaciones if"
+            ],
+            "class": "PreveiwQuestion",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\App.js",
+            "line": 1,
+            "description": "Sample React Native App\nhttps://github.com/facebook/react-native",
+            "format": "",
+            "flow": "",
+            "class": "App",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\App.js",
+            "line": 28,
+            "itemtype": "method",
+            "name": "ChemicalStack",
+            "memberof": "App",
+            "description": "Enrutamiento de la sección de los usuarios Quimicos",
+            "class": "App",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\App.js",
+            "line": 54,
+            "itemtype": "method",
+            "name": "RootStack",
+            "memberof": "App",
+            "description": "Enrutamiento principal de la aplicación",
+            "class": "App",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "src\\Menu.js",
+            "line": 1,
+            "description": "Sample React Native App\nhttps://github.com/facebook/react-native",
+            "format": "",
+            "flow": "",
+            "class": "Menu",
+            "module": "PreviewStates"
+        },
+        {
+            "file": "index.js",
+            "line": 1,
+            "class": "",
+            "module": "PreviewStates"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: constant",
+            "line": " src\\Ayuda\\About.js:4"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\Ayuda\\About.js:4"
+        },
+        {
+            "message": "unknown tag: constant",
+            "line": " src\\Ayuda\\Help.js:6"
+        },
+        {
+            "message": "unknown tag: constant",
+            "line": " src\\Ayuda\\Help.js:6"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\Ayuda\\Help.js:6"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\states\\BloodTestStates.js:2"
+        },
+        {
+            "message": "unknown tag: constant",
+            "line": " src\\chemical\\states\\BloodTestStates.js:2"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\states\\PreviewStates.js:1"
+        },
+        {
+            "message": "unknown tag: constant",
+            "line": " src\\chemical\\states\\PreviewStates.js:1"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\utils\\RenderButtons.js:14"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\utils\\RenderButtons.js:26"
+        },
+        {
+            "message": "unknown tag: constant",
+            "line": " src\\chemical\\BloodTest.js:16"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\BloodTest.js:16"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\BloodTest.js:40"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\BloodTest.js:53"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\BloodTest.js:65"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\BloodTest.js:84"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\BloodTest.js:100"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\BloodTest.js:117"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\BloodTest.js:133"
+        },
+        {
+            "message": "unknown tag: format",
+            "line": " src\\chemical\\Menu.js:1"
+        },
+        {
+            "message": "unknown tag: flow",
+            "line": " src\\chemical\\Menu.js:1"
+        },
+        {
+            "message": "unknown tag: constant",
+            "line": " src\\chemical\\PreviewQuestion.js:16"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:16"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:62"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:110"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:125"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:177"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:188"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:199"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:211"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:256"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:310"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:375"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:429"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:446"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:462"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:488"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\chemical\\PreviewQuestion.js:556"
+        },
+        {
+            "message": "unknown tag: format",
+            "line": " src\\App.js:1"
+        },
+        {
+            "message": "unknown tag: flow",
+            "line": " src\\App.js:1"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\App.js:28"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " src\\App.js:54"
+        },
+        {
+            "message": "unknown tag: format",
+            "line": " src\\Menu.js:1"
+        },
+        {
+            "message": "unknown tag: flow",
+            "line": " src\\Menu.js:1"
+        },
+        {
+            "message": "Missing item type\nTextos contenidos en el acordeon",
+            "line": " src\\Ayuda\\About.js:4"
+        },
+        {
+            "message": "Missing item type\nDimensiones de la pantalla",
+            "line": " src\\Ayuda\\Help.js:6"
+        },
+        {
+            "message": "Missing item type\nDimensiones de la pantalla",
+            "line": " src\\chemical\\BloodTest.js:16"
+        },
+        {
+            "message": "Missing item type\nSample React Native App\nhttps://github.com/facebook/react-native",
+            "line": " src\\chemical\\Menu.js:1"
+        },
+        {
+            "message": "Missing item type\nDimensiones de la pantalla",
+            "line": " src\\chemical\\PreviewQuestion.js:16"
+        },
+        {
+            "message": "Missing item type\nSample React Native App\nhttps://github.com/facebook/react-native",
+            "line": " src\\App.js:1"
+        },
+        {
+            "message": "Missing item type\nSample React Native App\nhttps://github.com/facebook/react-native",
+            "line": " src\\Menu.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " index.js:1"
+        }
+    ]
+}

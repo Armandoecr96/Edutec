@@ -15,16 +15,21 @@ import PersonajesRecepcion from './assets/images/recepcion.jpg'
 import logo from './assets/images/logo.png'
 import EnConstruccion from './assets/images/enconstruccion.jpg'
 
-var { height, width } = Dimensions.get('window');
+var { height } = Dimensions.get('window')
 
+/**
+ * @class Menu
+ * @description Menú principal de la aplicación
+ */
 export default class Menu extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       isVisible: false
     }
   }
-  render() {
+
+  render () {
     return (
       <Container>
         <Content style={styles.content}>
@@ -79,7 +84,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E2E2E2'
   },
   images: {
-    height: height * .32,
+    height: height * 0.32,
     width: null,
     flex: 1,
     resizeMode: 'cover',

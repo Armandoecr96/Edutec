@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src\chemical\PreviewQuestion.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/About.html">About</a></li>
+                                <li><a href="../classes/App.html">App</a></li>
+                                <li><a href="../classes/BloodTest.html">BloodTest</a></li>
+                                <li><a href="../classes/Help.html">Help</a></li>
+                                <li><a href="../classes/Menu.html">Menu</a></li>
+                                <li><a href="../classes/PreveiwQuestion.html">PreveiwQuestion</a></li>
+                                <li><a href="../classes/RenderButtonsPQ.html">RenderButtonsPQ</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/BloodTestStates.html">BloodTestStates</a></li>
+                                <li><a href="../modules/PreviewStates.html">PreviewStates</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src\chemical\PreviewQuestion.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+import React, { Component } from &#x27;react&#x27;
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from &#x27;react-native&#x27;
+import states from &#x27;./states/PreviewStates&#x27;
+import { Container, Content, Card, CardItem, Button } from &#x27;native-base&#x27;
+import textBox from &#x27;../assets/images/box.png&#x27;
+import yesButton from &#x27;../assets/images/si.png&#x27;
+import noButton from &#x27;../assets/images/no.png&#x27;
+import moment from &quot;moment&quot;;
+import SoundPlayer from &#x27;react-native-sound&#x27;
+import playButtom from &#x27;../assets/images/play.png&#x27;
+import pauseButtom from &#x27;../assets/images/pausa.png&#x27;
+import stopButtom from &#x27;../assets/images/stop.png&#x27;
+import DatePicker from &#x27;react-native-datepicker&#x27;
+import RenderButtonsPQ from &#x27;./utils/RenderButtons&#x27;
+
+/**
+ * @constant {int} height
+ * @memberof PreveiwQuestion
+ * @description Dimensiones de la pantalla
+ */
+var { height } = Dimensions.get(&#x27;window&#x27;);
+
+/**
+ * @class PreveiwQuestion
+ * @description Interacción de las preguntas previas a la toma de sangre
+ * @todo Optimizar el cambio de pistas de audio de la aplicación
+ */
+export default class PreveiwQuestion extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            index: 0,
+            pause: false,
+            song: null,
+            correrAudio: null,
+            caminarAudio: null,
+            estirarAudio: null,
+            yesAudio: null,
+            yesAyunoAudio: null,
+            noAudio: null,
+            noAyunoAudio: null,
+            isVisible: false,
+            dateChoose: &quot;&quot;,
+            time: &quot;&quot;,
+            date: new Date(),
+            verificacion: false,
+            playVisibility: &#x27;flex&#x27;,
+            pauseVisibbility: &#x27;none&#x27;,
+            playVisibilityYes: &#x27;flex&#x27;,
+            playVisibilityNo: &#x27;flex&#x27;,
+            pauseVisibbilityYes: &#x27;none&#x27;,
+            pauseVisibbilityNo: &#x27;none&#x27;,
+            playVisibilityCorrer: &#x27;flex&#x27;,
+            playVisibilityCaminar: &#x27;flex&#x27;,
+            playVisibilityEstirar: &#x27;flex&#x27;,
+            pauseVisibbilityCorrer: &#x27;none&#x27;,
+            pauseVisibbilityCaminar: &#x27;none&#x27;,
+            pauseVisibbilityEstirar: &#x27;none&#x27;
+        }
+    }
+
+    /**
+ * @method componentWillMount
+ * @memberof PreveiwQuestion
+ * @description Se hace la validación iniciar poniendo el primer elemento del arreglo en la pantalla y de todos los sonidos de está sección
+ */
+    componentWillMount() {
+        this.state.song = new SoundPlayer(states.questionary[0].audio, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+        this.state.yesAudio = new SoundPlayer(&#x27;audio23.m4a&#x27;, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+        this.state.noAudio = new SoundPlayer(&#x27;audio24.m4a&#x27;, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+        this.state.yesAyunoAudio = new SoundPlayer(&#x27;voz56.3gp&#x27;, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+        this.state.noAyunoAudio = new SoundPlayer(&#x27;voz57.3gp&#x27;, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+        this.state.correrAudio = new SoundPlayer(&#x27;audio18.m4a&#x27;, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+        this.state.caminarAudio = new SoundPlayer(&#x27;audio8.m4a&#x27;, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+        this.state.estirarAudio = new SoundPlayer(&#x27;audio19.m4a&#x27;, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+    }
+
+    /**
+     * @method handlerPicker
+     * @param {date} datetime - Fecha seleccionada
+     * @memberof PreveiwQuestion
+     * @description Actualización de la hora en los estados del componente
+     */
+    handlerPicker = (datetime) =&gt; {
+        this.setState({
+            isVisible: false,
+            date: datetime,
+            dateChoose: moment(datetime, &quot;YYYY-MM-DD HH:mm&quot;).utc().startOf(&#x27;hour&#x27;).fromNow()
+        })
+        this.verificacionDate(this.state.dateChoose);
+    }
+
+    /**
+     * @method verificacionDate
+     * @param {date} time - Fecha seleccionada
+     * @memberof PreveiwQuestion
+     * @description Validación de si el usuario cumplió con los requisitos de tiempo
+     */
+    verificacionDate = (time) =&gt; {
+        var hour = &#x27;&#x27;
+        var verificacionDate = false
+        if (time.includes(&#x27;day&#x27;) || time.includes(&#x27;days&#x27;)) {
+            this.setState({
+                time: &quot;Ha pasado más de un día&quot;
+            })
+            verificacionDate = &#x27;yes&#x27;
+        }
+        if (time === &#x27;an hour ago&#x27;) {
+            hour = 1
+        } else {
+            let obtainHours = time.split(&#x27; &#x27;)
+            hour = parseInt(obtainHours[0])
+        }
+        if (hour &gt; 10) {
+            this.setState({
+                time: &quot;Han pasado &quot; + hour + &quot; hora(s)&quot;,
+            })
+            verificacionDate = &#x27;yes&#x27;
+        }
+        if (hour &lt;= 10 &amp;&amp; hour &gt;= 8) {
+            this.setState({
+                time: &quot;Han pasado &quot; + hour + &quot; hora(s)&quot;,
+            })
+            verificacionDate = &#x27;wait&#x27;
+        }
+        if (hour &lt; 8) {
+            this.setState({
+                time: &quot;Han pasado &quot; + hour + &quot; hora(s)&quot;,
+            })
+            verificacionDate = &#x27;no&#x27;
+        }
+        if (verificacionDate === &#x27;yes&#x27;) {
+            setTimeout(() =&gt; this.changeQuestion(states.questionary[this.state.index].options[1].nextYes), 5000)
+        }
+
+        if (verificacionDate === &#x27;wait&#x27;) {
+            setTimeout(() =&gt; this.changeQuestion(states.questionary[this.state.index].options[1].nextProp), 5000)
+        }
+
+        if (verificacionDate === &#x27;no&#x27;) {
+            setTimeout(() =&gt; this.changeQuestion(states.questionary[this.state.index].options[1].nextNo), 5000)
+        }
+    }
+
+    /**
+     * @method hidePicker
+     * @memberof PreveiwQuestion
+     * @description Oculta el modal para seleccionar la fecha y hora
+     */
+    hidePicker = () =&gt; {
+        this.setState({
+            isVisible: false
+        })
+    }
+
+    /**
+     * @method showPicker
+     * @memberof PreveiwQuestion
+     * @description Muestra el modal para seleccionar la fecha y hora
+     */
+    showPicker = () =&gt; {
+        this.setState({
+            isVisible: true
+        })
+    }
+
+    /**
+* @method pauseToPlay
+* @memberof PreveiwQuestion
+* @description Cambio de vista de los botones de pausa a reproducción
+*/
+    pauseToPlay() {
+        this.setState({
+            playVisibility: &#x27;flex&#x27;,
+            pauseVisibbility: &#x27;none&#x27;
+        })
+    }
+
+    /**
+ * @method pauseOption
+ * @memberof PreveiwQuestion
+ * @param {string} selection - Titulo de la selección que se hizo dentro del componente
+ * @description Pausa del archivo actual de repoducción dependiendo de que elemento este activo en el momento
+ */
+    pauseOption(selection) {
+
+        switch (selection) {
+            case &quot;correr&quot;:
+                this.state.correrAudio.pause((succes) =&gt; {
+                    if (!succes) {
+                        console.log(&#x27;Error en reproducción&#x27;)
+                    }
+                })
+                this.setState({
+                    playVisibilityCorrer: &#x27;flex&#x27;,
+                    pauseVisibbilityCorrer: &#x27;none&#x27;
+                })
+                break;
+            case &quot;cami&quot;:
+                this.state.caminarAudio.pause((succes) =&gt; {
+                    if (!succes) {
+                        console.log(&#x27;Error en reproducción&#x27;)
+                    }
+                })
+                this.setState({
+                    playVisibilityCaminar: &#x27;flex&#x27;,
+                    pauseVisibbilityCaminar: &#x27;none&#x27;
+                })
+                break;
+            case &quot;estirar&quot;:
+                this.state.estirarAudio.pause((succes) =&gt; {
+                    if (!succes) {
+                        console.log(&#x27;Error en reproducción&#x27;)
+                    }
+                })
+                this.setState({
+                    playVisibilityEstirar: &#x27;flex&#x27;,
+                    pauseVisibbilityEstirar: &#x27;none&#x27;
+                })
+                break;
+        }
+    }
+
+    /**
+* @method playOption
+* @memberof PreveiwQuestion
+* @param {string} selection - Titulo de la selección que se hizo dentro del componente
+* @description Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios secundarios
+*/
+    playOption(selection) {
+        console.log(selection)
+        switch (selection) {
+            case &#x27;correr&#x27;:
+                this.state.correrAudio.play((succes) =&gt; {
+                    if (succes) {
+                        this.setState({
+                            playVisibilityCorrer: &#x27;flex&#x27;,
+                            pauseVisibbilityCorrer: &#x27;none&#x27;
+                        })
+                    }
+                })
+                this.setState({
+                    playVisibilityCorrer: &#x27;none&#x27;,
+                    pauseVisibbilityCorrer: &#x27;flex&#x27;
+                })
+                break;
+            case &#x27;cami&#x27;:
+                this.state.caminarAudio.play((succes) =&gt; {
+                    if (succes) {
+                        this.setState({
+                            playVisibilityCaminar: &#x27;flex&#x27;,
+                            pauseVisibbilityCaminar: &#x27;none&#x27;
+                        })
+                    }
+                })
+                this.setState({
+                    playVisibilityCaminar: &#x27;none&#x27;,
+                    pauseVisibbilityCaminar: &#x27;flex&#x27;
+                })
+                break;
+            case &#x27;estirar&#x27;:
+                this.state.estirarAudio.play((succes) =&gt; {
+                    if (succes) {
+                        this.setState({
+                            playVisibilityEstirar: &#x27;flex&#x27;,
+                            pauseVisibbilityEstirar: &#x27;none&#x27;
+                        })
+                    }
+                })
+                this.setState({
+                    playVisibilityEstirar: &#x27;none&#x27;,
+                    pauseVisibbilityEstirar: &#x27;flex&#x27;
+                })
+                break;
+        }
+    }
+
+    /**
+* @method play
+* @memberof PreveiwQuestion
+* @param {boolean} option
+* @param {boolean} isAyuno
+* @description Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios
+*/
+    play(option, isAyuno) {
+        if (option === undefined) {
+            if (this.state.song !== null) {
+                this.state.song.play((succes) =&gt; {
+                    if (succes) {
+                        this.pauseToPlay()
+                    } else {
+                        console.log(&#x27;Error&#x27;)
+                    }
+                })
+            }
+            this.setState({
+                playVisibility: &#x27;none&#x27;,
+                pauseVisibbility: &#x27;flex&#x27;
+            })
+        } else {
+            var yesAudio;
+            var noAudio;
+
+            if (isAyuno === true &amp;&amp; isAyuno !== null &amp;&amp; isAyuno !== undefined) {
+                yesAudio = this.state.yesAyunoAudio
+                noAudio = this.state.noAyunoAudio
+            }
+            else {
+                yesAudio = this.state.yesAudio
+                noAudio = this.state.noAudio
+            }
+
+            if (option) {
+                yesAudio.play((succes) =&gt; {
+                    if (succes) {
+                        this.setState({
+                            playVisibilityYes: &#x27;flex&#x27;,
+                            pauseVisibbilityYes: &#x27;none&#x27;
+                        })
+                    }
+                })
+                this.setState({
+                    playVisibilityYes: &#x27;none&#x27;,
+                    pauseVisibbilityYes: &#x27;flex&#x27;
+                })
+            } else {
+                noAudio.play((succes) =&gt; {
+                    if (succes) {
+                        this.setState({
+                            playVisibilityNo: &#x27;flex&#x27;,
+                            pauseVisibbilityNo: &#x27;none&#x27;
+                        })
+                    }
+                })
+                this.setState({
+                    playVisibilityNo: &#x27;none&#x27;,
+                    pauseVisibbilityNo: &#x27;flex&#x27;
+                })
+            }
+        }
+    }
+
+    /**
+* @method pause
+* @memberof PreveiwQuestion
+* @param {boolean} option
+* @param {boolean} isAyuno
+* @description Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios
+*/
+    pause(option, isAyuno) {
+        if (option === undefined) {
+            if (this.state.song !== null) {
+                this.state.song.pause((succes) =&gt; {
+                    if (!succes) {
+                        console.log(&#x27;Error en reproducción&#x27;)
+                    }
+                })
+            }
+            this.pauseToPlay()
+        } else {
+
+            var yesAudio;
+            var noAudio
+
+            if (isAyuno === true &amp;&amp; isAyuno !== null &amp;&amp; isAyuno !== undefined) {
+                yesAudio = this.state.yesAyunoAudio
+                noAudio = this.state.noAyunoAudio
+            }
+            else {
+                yesAudio = this.state.yesAudio
+                noAudio = this.state.noAudio
+            }
+            if (option) {
+                yesAudio.pause((succes) =&gt; {
+                    if (!succes) {
+                        console.log(&#x27;Error en reproducción&#x27;)
+                    }
+                })
+                this.setState({
+                    playVisibilityYes: &#x27;flex&#x27;,
+                    pauseVisibbilityYes: &#x27;none&#x27;
+                })
+            } else {
+                noAudio.pause((succes) =&gt; {
+                    if (!succes) {
+                        console.log(&#x27;Error en reproducción&#x27;)
+                    }
+                })
+                this.setState({
+                    playVisibilityNo: &#x27;flex&#x27;,
+                    pauseVisibbilityNo: &#x27;none&#x27;
+                })
+            }
+        }
+    }
+
+    /**
+     * @method stop
+     * @memberof PreveiwQuestion
+     * @description Alto total al elemento actual
+     */
+    stop() {
+        if (this.state.song !== null) {
+            // Para hacer alto total debemos primero ponerle play antes del stop
+            this.state.song.play()
+            this.state.song.stop((succes) =&gt; {
+                if (!succes) {
+                    this.pauseToPlay()
+                }
+            })
+        }
+    }
+
+    /**
+ * @method changeQuestion
+ * @memberof PreveiwQuestion
+ * @param {int} id - ID o identificador en el arreglo
+ * @description Función que ejecuta el ciclo del arreglo en la aplicación
+ */
+    changeQuestion = (id) =&gt; {
+        this.setState({ index: id, time: &quot;&quot; })
+        delete this.state.song
+        this.state.song = new SoundPlayer(states.questionary[id].audio, SoundPlayer.MAIN_BUNDLE, (error) =&gt; {
+            if (error) {
+                console.log(&#x27;failed to load the sound&#x27;, error)
+            }
+        })
+    }
+
+    /**
+* @method playMedia
+* @memberof PreveiwQuestion
+* @param {boolean} option
+* @param {boolean} isAyuno
+* @description Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios
+*/
+    playMedia = (option, isAyuno) =&gt; {
+        return (
+            &lt;View style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;row&#x27;, justifyContent: &#x27;space-around&#x27; }}&gt;
+                &lt;Button
+                    transparent
+                    onPress={() =&gt; this.play(option ? true : false, isAyuno)}
+                    style={{ width: 40, height: 40, display: option ? this.state.playVisibilityYes : this.state.playVisibilityNo }}
+                &gt;
+                    &lt;Image source={playButtom} style={{ width: 30, height: 30 }} /&gt;&lt;/Button&gt;
+                &lt;Button
+                    transparent
+                    onPress={() =&gt; this.pause(option ? true : false, isAyuno)}
+                    style={{ width: 40, height: 40, display: option ? this.state.pauseVisibbilityYes : this.state.pauseVisibbilityNo }}
+                &gt;
+                    &lt;Image source={pauseButtom} style={{ width: 30, height: 30 }} /&gt;&lt;/Button&gt;
+            &lt;/View&gt;
+        )
+    }
+
+        /**
+* @method playMediaOption
+* @memberof PreveiwQuestion
+* @param {boolean} option
+* @param {boolean} isAyuno
+* @description Pausa del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios
+*/
+    playMediaOption = (selection) =&gt; {
+        switch (selection) {
+            case &quot;correr&quot;:
+                return (
+                    &lt;View style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;row&#x27;, justifyContent: &#x27;space-around&#x27; }}&gt;
+                        &lt;Button
+                            transparent
+                            onPress={() =&gt; this.playOption(selection)}
+                            style={{ width: 40, height: 40, display: this.state.playVisibilityCorrer }}
+                        &gt;
+                            &lt;Image source={playButtom} style={{ width: 30, height: 30 }} /&gt;&lt;/Button&gt;
+                        &lt;Button
+                            transparent
+                            onPress={() =&gt; this.pauseOption(selection)}
+                            style={{ width: 40, height: 40, display: this.state.pauseVisibbilityCorrer }}
+                        &gt;
+                            &lt;Image source={pauseButtom} style={{ width: 30, height: 30 }} /&gt;&lt;/Button&gt;
+                    &lt;/View&gt;
+                )
+                break;
+            case &quot;cami&quot;:
+                return (
+                    &lt;View style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;row&#x27;, justifyContent: &#x27;space-around&#x27; }}&gt;
+                        &lt;Button
+                            transparent
+                            onPress={() =&gt; this.playOption(selection)}
+                            style={{ width: 40, height: 40, display: this.state.playVisibilityCaminar }}
+                        &gt;
+                            &lt;Image source={playButtom} style={{ width: 30, height: 30 }} /&gt;&lt;/Button&gt;
+                        &lt;Button
+                            transparent
+                            onPress={() =&gt; this.pauseOption(selection)}
+                            style={{ width: 40, height: 40, display: this.state.pauseVisibbilityCaminar }}
+                        &gt;
+                            &lt;Image source={pauseButtom} style={{ width: 30, height: 30 }} /&gt;&lt;/Button&gt;
+                    &lt;/View&gt;
+                )
+
+                break;
+            case &quot;estirar&quot;:
+                return (
+                    &lt;View style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;row&#x27;, justifyContent: &#x27;space-around&#x27; }}&gt;
+                        &lt;Button
+                            transparent
+                            onPress={() =&gt; this.playOption(selection)}
+                            style={{ width: 40, height: 40, display: this.state.playVisibilityEstirar }}
+                        &gt;
+                            &lt;Image source={playButtom} style={{ width: 30, height: 30 }} /&gt;&lt;/Button&gt;
+                        &lt;Button
+                            transparent
+                            onPress={() =&gt; this.pauseOption(selection)}
+                            style={{ width: 40, height: 40, display: this.state.pauseVisibbilityEstirar }}
+                        &gt;
+                            &lt;Image source={pauseButtom} style={{ width: 30, height: 30 }} /&gt;&lt;/Button&gt;
+                    &lt;/View&gt;
+                )
+
+                break;
+        }
+    }
+
+    /**
+ * @memberof PreveiwQuestion
+ * @method render
+ * @description Renderizado de los elementos en la apicación
+ * @todo Optimizar o remover las validaciones if
+ */
+    render() {
+        return (
+            &lt;Container&gt;
+                &lt;Content&gt;
+                    &lt;ImageBackground resizeMode={&#x27;stretch&#x27;} source={require(&#x27;../assets/images/bg1.jpg&#x27;)} style={styles.background}&gt;
+                        &lt;View style={{ height: height, marginBottom: 88 }}&gt;
+                            &lt;Card transparent style={styles.card}&gt;
+                                &lt;CardItem style={styles.cardItem}&gt;
+                                    &lt;Image source={textBox} style={styles.cardImage} /&gt;
+                                    &lt;Text style={styles.title}&gt;Español&lt;/Text&gt;
+                                    &lt;Text style={[styles.cardText, styles.ajuste]}&gt;{states.questionary[this.state.index].spanishText ? states.questionary[this.state.index].spanishText : &#x27;&#x27;}&lt;/Text&gt;
+                                &lt;/CardItem&gt;
+                            &lt;/Card&gt;
+
+                            {states.questionary[this.state.index].mayan !== false &amp;&amp; &lt;Card transparent style={styles.card}&gt;
+                                &lt;CardItem style={styles.cardItem}&gt;
+                                    &lt;Image source={textBox} style={styles.cardImage} /&gt;
+                                    &lt;Text style={styles.title}&gt;Maya&lt;/Text&gt;
+                                    &lt;Text style={styles.cardText}&gt;{states.questionary[this.state.index].mayanText ? states.questionary[this.state.index].mayanText : &#x27;&#x27;}&lt;/Text&gt;
+                                &lt;/CardItem&gt;
+                            &lt;/Card&gt;}
+
+                            &lt;Text style={{ textAlign: &quot;center&quot;, color: &quot;#FFFFFF&quot;, fontSize: 17, fontWeight: &#x27;bold&#x27; }}&gt;{this.state.time}&lt;/Text&gt;
+
+                            &lt;View style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27; }}&gt;
+
+                                {states.questionary[this.state.index].mayan !== false &amp;&amp; &lt;View style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;row&#x27;, justifyContent: &#x27;space-around&#x27; }}&gt;
+                                    &lt;Button
+                                        transparent
+                                        onPress={() =&gt; this.play()}
+                                        style={{ width: 80, height: 80, display: this.state.playVisibility }}
+                                    &gt;
+                                        &lt;Image source={playButtom} style={styles.imageButton} /&gt;&lt;/Button&gt;
+                                    &lt;Button
+                                        transparent
+                                        onPress={() =&gt; this.pause()}
+                                        style={{ width: 80, height: 80, display: this.state.pauseVisibbility }}
+                                    &gt;
+                                        &lt;Image source={pauseButtom} style={styles.imageButton} /&gt;&lt;/Button&gt;
+                                    &lt;Button
+                                        transparent
+                                        onPress={() =&gt; this.stop()}
+                                        style={{ width: 80, height: 80 }}
+                                    &gt;
+                                        &lt;Image source={stopButtom} style={styles.imageButton} /&gt;&lt;/Button&gt;
+                                &lt;/View&gt;}
+                                &lt;View style={{ marginTop: 24, display: &#x27;flex&#x27;, flexDirection: &#x27;row&#x27;, justifyContent: &#x27;space-evenly&#x27;, flexWrap: &#x27;wrap&#x27; }}&gt;
+                                    {states.questionary[this.state.index].options.map((selection, key) =&gt; {
+                                        return (
+                                            selection.title === &#x27;Si&#x27; ?
+                                                &lt;View&gt;
+                                                    &lt;Button transparent key={key} onPress={() =&gt; this.changeQuestion(selection.nextID)} style={styles.buttonDecision} &gt;
+                                                        &lt;Image source={yesButton} style={styles.imageButton} /&gt;
+                                                    &lt;/Button&gt;
+                                                    {this.state.index !== 6 ? this.playMedia(true, false) : this.playMedia(false, true)}
+                                                &lt;/View&gt;
+                                                : selection.title === &#x27;No&#x27;
+                                                    ? &lt;View&gt;&lt;Button transparent key={key} onPress={() =&gt; this.changeQuestion(selection.nextID)} style={styles.buttonDecision} &gt;
+                                                        &lt;Image source={noButton} style={styles.imageButton} /&gt;
+                                                    &lt;/Button&gt;
+                                                        {this.state.index !== 6 ? this.playMedia(false, false) : this.playMedia(true, true)}
+                                                    &lt;/View&gt;
+                                                    : selection.title === &#x27;Siguiente&#x27; || selection.title === &#x27;Atrás&#x27; || selection.title === &#x27;Salir&#x27; ?
+                                                        &lt;RenderButtonsPQ
+                                                            title={selection.title}
+                                                            handleChangeQuestion={this.changeQuestion}
+                                                            nextID={selection.nextID}
+                                                            backID={selection.backID}
+                                                            exit={this.props.navigation.navigate}
+                                                        /&gt;
+                                                        : selection.title === &#x27;Hora&#x27; ? &lt;DatePicker
+                                                            key={key}
+                                                            style={{ width: 200 }}
+                                                            date={this.state.date}
+                                                            mode=&quot;datetime&quot;
+                                                            placeholder=&quot;select date&quot;
+                                                            format=&quot;YYYY-MM-DD HH:mm&quot;
+                                                            maxDate={new Date()}
+                                                            confirmBtnText=&quot;Confirm&quot;
+                                                            cancelBtnText=&quot;Cancel&quot;
+                                                            is24Hour={true}
+                                                            customStyles={{
+                                                                dateIcon: {
+                                                                    position: &#x27;absolute&#x27;,
+                                                                    left: 0,
+                                                                    top: 4,
+                                                                    marginLeft: 0
+                                                                },
+                                                                dateInput: {
+                                                                    color: &#x27;#FFFFFF&#x27;,
+                                                                    marginRight: 16
+                                                                },
+                                                                dateText: {
+                                                                    color: &#x27;#FFFFFF&#x27;,
+                                                                }
+
+                                                            }}
+                                                            onDateChange={this.handlerPicker}
+                                                        /&gt;
+                                                            :
+                                                            selection.title === &quot;correr&quot; ?
+                                                                &lt;View&gt;
+                                                                    &lt;Button
+                                                                        transparent key={key}
+                                                                        onPress={() =&gt; this.changeQuestion(selection.nextID)}
+                                                                    &gt;
+                                                                        &lt;View&gt;
+                                                                            &lt;Image source={selection.src} style={styles.imageButtonDecision} /&gt;
+                                                                        &lt;/View&gt;
+                                                                    &lt;/Button&gt;
+                                                                    {this.playMediaOption(&quot;correr&quot;)}
+                                                                &lt;/View&gt;
+                                                                :
+                                                                selection.title === &quot;caminar&quot; ?
+                                                                    &lt;View&gt;
+                                                                        &lt;Button
+                                                                            transparent key={key}
+                                                                            onPress={() =&gt; this.changeQuestion(selection.nextID)}
+                                                                        &gt;
+                                                                            &lt;Image source={selection.src} style={styles.imageButtonDecision} /&gt;
+                                                                        &lt;/Button&gt;
+                                                                        {this.playMediaOption(&quot;cami&quot;)}
+                                                                    &lt;/View&gt;
+                                                                    :
+                                                                    selection.title === &quot;estiramiento&quot; ?
+                                                                        &lt;View&gt;
+                                                                            &lt;Button
+                                                                                transparent key={key}
+                                                                                onPress={() =&gt; this.changeQuestion(selection.nextID)}
+                                                                            &gt;
+                                                                                &lt;Image source={selection.src} style={styles.imageButtonDecision} /&gt;
+                                                                            &lt;/Button&gt;
+                                                                            {this.playMediaOption(&quot;estirar&quot;)}
+                                                                        &lt;/View&gt;
+
+                                                                        :
+
+                                                                        &lt;Button
+                                                                            transparent key={key}
+                                                                            onPress={() =&gt; this.changeQuestion(selection.nextID)}
+                                                                        &gt;
+                                                                            &lt;View&gt;
+                                                                                &lt;Image source={selection.src} style={styles.imageButtonDecision} /&gt;
+                                                                            &lt;/View&gt;
+                                                                        &lt;/Button&gt;
+                                        )
+                                    })}
+                                &lt;/View&gt;
+                            &lt;/View&gt;
+                        &lt;/View&gt;
+                    &lt;/ImageBackground&gt;
+                &lt;/Content&gt;
+            &lt;/Container&gt;
+        )
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: &#x27;#F5FCFF&#x27;
+    },
+    background: {
+        flex: 1,
+        paddingBottom: height * .08
+    },
+    welcome: {
+        fontSize: 20,
+        margin: 10
+    },
+    playerButtom: {
+        width: 80,
+        height: 80
+    },
+    card: {
+        width: &#x27;100%&#x27;
+    },
+    cardItem: {
+        width: &#x27;100%&#x27;,
+        backgroundColor: &#x27;rgba(0,0,0,0)&#x27;
+    },
+    cardImage: {
+        width: &#x27;100%&#x27;,
+        resizeMode: &#x27;stretch&#x27;
+    },
+    ajuste: {
+        marginLeft: -90
+    },
+    title: {
+        marginLeft: &#x27;-90%&#x27;,
+        color: &#x27;#FFFFFF&#x27;,
+        fontWeight: &#x27;900&#x27;,
+        fontSize: 24,
+        marginTop: -120
+    },
+    cardText: {
+        color: &#x27;#FFFFFF&#x27;,
+        fontWeight: &#x27;900&#x27;,
+        marginLeft: -40,
+        fontSize: 24,
+        marginRight: 40,
+        marginTop: 48,
+        width: &#x27;80%&#x27;
+    },
+    button: {
+        width: null,
+        height: 60,
+        backgroundColor: &#x27;#330066&#x27;,
+        justifyContent: &#x27;center&#x27;,
+        marginTop: 8,
+        marginLeft: 8,
+        marginRight: 8
+    },
+    text: {
+        fontSize: 18,
+        color: &#x27;white&#x27;,
+        textAlign: &#x27;center&#x27;,
+        fontSize: 20,
+        maxWidth: &#x27;80%&#x27;,
+        padding: 8,
+    },
+    buttonDecision: {
+        marginRight: 8,
+        marginBottom: 16,
+        width: 80,
+        height: 70,
+    },
+    buttonDecisionDrink: {
+        display: &#x27;flex&#x27;,
+        marginRight: 8,
+        marginBottom: 16,
+        marginTop: 8
+    },
+    imageButton: {
+        width: 80,
+        height: 80
+    },
+    imageButtonDecision: {
+        width: 100,
+        height: 70
+    }
+})
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -13,9 +13,19 @@ import stopButtom from '../assets/images/stop.png'
 import DatePicker from 'react-native-datepicker'
 import RenderButtonsPQ from './utils/RenderButtons'
 
+/**
+ * @constant {int} height
+ * @memberof PreveiwQuestion
+ * @description Dimensiones de la pantalla
+ */
 var { height } = Dimensions.get('window');
 
-export default class BloodTest extends Component {
+/**
+ * @class PreveiwQuestion
+ * @description Interacción de las preguntas previas a la toma de sangre
+ * @todo Optimizar el cambio de pistas de audio de la aplicación
+ */
+export default class PreveiwQuestion extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -49,6 +59,11 @@ export default class BloodTest extends Component {
         }
     }
 
+    /**
+ * @method componentWillMount
+ * @memberof PreveiwQuestion
+ * @description Se hace la validación iniciar poniendo el primer elemento del arreglo en la pantalla y de todos los sonidos de está sección
+ */
     componentWillMount() {
         this.state.song = new SoundPlayer(states.questionary[0].audio, SoundPlayer.MAIN_BUNDLE, (error) => {
             if (error) {
@@ -92,6 +107,12 @@ export default class BloodTest extends Component {
         })
     }
 
+    /**
+     * @method handlerPicker
+     * @param {date} datetime - Fecha seleccionada
+     * @memberof PreveiwQuestion
+     * @description Actualización de la hora en los estados del componente
+     */
     handlerPicker = (datetime) => {
         this.setState({
             isVisible: false,
@@ -101,6 +122,12 @@ export default class BloodTest extends Component {
         this.verificacionDate(this.state.dateChoose);
     }
 
+    /**
+     * @method verificacionDate
+     * @param {date} time - Fecha seleccionada
+     * @memberof PreveiwQuestion
+     * @description Validación de si el usuario cumplió con los requisitos de tiempo
+     */
     verificacionDate = (time) => {
         var hour = ''
         var verificacionDate = false
@@ -135,35 +162,45 @@ export default class BloodTest extends Component {
             verificacionDate = 'no'
         }
         if (verificacionDate === 'yes') {
-            // setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextYes }), 5000)
             setTimeout(() => this.changeQuestion(states.questionary[this.state.index].options[1].nextYes), 5000)
-
         }
 
         if (verificacionDate === 'wait') {
-            // setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextProp }), 5000)
             setTimeout(() => this.changeQuestion(states.questionary[this.state.index].options[1].nextProp), 5000)
         }
 
         if (verificacionDate === 'no') {
-            // setTimeout(() => this.setState({ index: states.questionary[this.state.index].options[1].nextNo }), 5000)
             setTimeout(() => this.changeQuestion(states.questionary[this.state.index].options[1].nextNo), 5000)
-
         }
     }
 
+    /**
+     * @method hidePicker
+     * @memberof PreveiwQuestion
+     * @description Oculta el modal para seleccionar la fecha y hora
+     */
     hidePicker = () => {
         this.setState({
             isVisible: false
         })
     }
 
+    /**
+     * @method showPicker
+     * @memberof PreveiwQuestion
+     * @description Muestra el modal para seleccionar la fecha y hora
+     */
     showPicker = () => {
         this.setState({
             isVisible: true
         })
     }
 
+    /**
+* @method pauseToPlay
+* @memberof PreveiwQuestion
+* @description Cambio de vista de los botones de pausa a reproducción
+*/
     pauseToPlay() {
         this.setState({
             playVisibility: 'flex',
@@ -171,6 +208,12 @@ export default class BloodTest extends Component {
         })
     }
 
+    /**
+ * @method pauseOption
+ * @memberof PreveiwQuestion
+ * @param {string} selection - Titulo de la selección que se hizo dentro del componente
+ * @description Pausa del archivo actual de repoducción dependiendo de que elemento este activo en el momento
+ */
     pauseOption(selection) {
 
         switch (selection) {
@@ -210,6 +253,12 @@ export default class BloodTest extends Component {
         }
     }
 
+    /**
+* @method playOption
+* @memberof PreveiwQuestion
+* @param {string} selection - Titulo de la selección que se hizo dentro del componente
+* @description Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios secundarios
+*/
     playOption(selection) {
         console.log(selection)
         switch (selection) {
@@ -258,7 +307,13 @@ export default class BloodTest extends Component {
         }
     }
 
-
+    /**
+* @method play
+* @memberof PreveiwQuestion
+* @param {boolean} option
+* @param {boolean} isAyuno
+* @description Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios
+*/
     play(option, isAyuno) {
         if (option === undefined) {
             if (this.state.song !== null) {
@@ -317,6 +372,13 @@ export default class BloodTest extends Component {
         }
     }
 
+    /**
+* @method pause
+* @memberof PreveiwQuestion
+* @param {boolean} option
+* @param {boolean} isAyuno
+* @description Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios
+*/
     pause(option, isAyuno) {
         if (option === undefined) {
             if (this.state.song !== null) {
@@ -364,8 +426,14 @@ export default class BloodTest extends Component {
         }
     }
 
+    /**
+     * @method stop
+     * @memberof PreveiwQuestion
+     * @description Alto total al elemento actual
+     */
     stop() {
         if (this.state.song !== null) {
+            // Para hacer alto total debemos primero ponerle play antes del stop
             this.state.song.play()
             this.state.song.stop((succes) => {
                 if (!succes) {
@@ -375,6 +443,12 @@ export default class BloodTest extends Component {
         }
     }
 
+    /**
+ * @method changeQuestion
+ * @memberof PreveiwQuestion
+ * @param {int} id - ID o identificador en el arreglo
+ * @description Función que ejecuta el ciclo del arreglo en la aplicación
+ */
     changeQuestion = (id) => {
         this.setState({ index: id, time: "" })
         delete this.state.song
@@ -385,6 +459,13 @@ export default class BloodTest extends Component {
         })
     }
 
+    /**
+* @method playMedia
+* @memberof PreveiwQuestion
+* @param {boolean} option
+* @param {boolean} isAyuno
+* @description Reproducción del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios
+*/
     playMedia = (option, isAyuno) => {
         return (
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
@@ -404,6 +485,13 @@ export default class BloodTest extends Component {
         )
     }
 
+        /**
+* @method playMediaOption
+* @memberof PreveiwQuestion
+* @param {boolean} option
+* @param {boolean} isAyuno
+* @description Pausa del archivo actual de audio dependiendo de que elemento este activo en el momento de audios principales y secundarios
+*/
     playMediaOption = (selection) => {
         switch (selection) {
             case "correr":
@@ -465,6 +553,12 @@ export default class BloodTest extends Component {
         }
     }
 
+    /**
+ * @memberof PreveiwQuestion
+ * @method render
+ * @description Renderizado de los elementos en la apicación
+ * @todo Optimizar o remover las validaciones if
+ */
     render() {
         return (
             <Container>
@@ -629,7 +723,7 @@ const styles = StyleSheet.create({
     },
     background: {
         flex: 1,
-        paddingBottom: height*.08
+        paddingBottom: height * .08
     },
     welcome: {
         fontSize: 20,

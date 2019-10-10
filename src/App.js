@@ -20,6 +20,16 @@ import PreviewQuestion from './chemical/PreviewQuestion'
 
 // Recepción
 
+/**
+ * @class App
+ * @description Inicio de la aplicación, clase principal
+ */
+
+/**
+  * @method ChemicalStack
+  * @memberof App
+  * @description Enrutamiento de la sección de los usuarios Quimicos
+  */
 const ChemicalStack = createStackNavigator({
   HomeChemical: {
     screen: MainChemical,
@@ -41,6 +51,11 @@ const ChemicalStack = createStackNavigator({
   }
 })
 
+/**
+  * @method RootStack
+  * @memberof App
+  * @description Enrutamiento principal de la aplicación
+  */
 const RootStack = createStackNavigator({
   Home: {
     screen: Main,
